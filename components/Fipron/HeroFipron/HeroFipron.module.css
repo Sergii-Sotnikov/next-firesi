@@ -1,0 +1,72 @@
+.hero {
+  padding: 80px 0 60px 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 150px;
+}
+
+.heroTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.heroTitleText {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: var(--font-cera-stencil), sans-serif;
+  font-weight: 900;
+  font-style: Black;
+  font-size: 48px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+.heroTextMain {
+  color: #ffffff;
+  font-family: var(--font-roboto), sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-bottom: 80px;
+  margin-top: 0px;
+}
+
+.fipronLogo {
+  display: block;
+  margin: 0 auto 80px;
+}
+
+.heroText {
+  color: #ffffff;
+  font-family: var(--font-roboto), sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.heroTextBolt {
+  font-weight: 700;
+}
+
+.heroList {
+  list-style-type: disc;
+  padding-left: 35px;
+  
+}
+.heroItem {
+  color: #ffffff;
+  font-family: var(--font-roboto), sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
