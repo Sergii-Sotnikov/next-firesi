@@ -7,7 +7,7 @@ const HeaderFipron = () => {
       <div className={css.container}>
         <div className={css.heroTitle}>
           <Image
-            src="/img/attention.png"
+            src="/img/attention@2x.png"
             alt="Увага"
             width={225}
             height={225}

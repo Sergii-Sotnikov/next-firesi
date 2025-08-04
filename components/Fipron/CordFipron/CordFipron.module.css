@@ -1,0 +1,86 @@
+.cord {
+  padding: 60px 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 150px;
+}
+
+.cordWrapper {
+  padding: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+}
+
+.cordTitle {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: var(--font-cera-stencil), sans-serif;
+  font-weight: 900;
+  font-style: Black;
+  font-size: 40px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 0;
+}
+
+.cordImage {
+  display: block;
+  margin: 0 auto;
+  border-radius: 25px;
+  margin-bottom: 80px;
+}
+
+
+
+.cordText {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-style: Black;
+  font-size: 24px;
+  line-height: 1.37;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.cordTextBold {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.cordInfo {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-bottom: 80px;
+  align-items: center;
+}
+
+.cordImageFipron{
+  display: block;
+}
+
+.product {
+  background-color: #ffffff1a;
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 45px 63px;
+
+}
+
+.productText{
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.37;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 70px;
+}
+
+.productTextBold{
+  font-weight: 800;
+}
