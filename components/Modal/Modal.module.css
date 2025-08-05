@@ -14,24 +14,25 @@
 
 .modal {
   position: relative;
-  width:1200px;
-  border-radius: 25px;
-  max-height: 90vh;
-  background-color: #111111;
+  width: 100%;
+  max-width: 1200px;
   padding: 70px 126px;
+  border-radius: 25px;
+  background-color: #111111;
+  box-sizing: border-box;
 }
 
-.closeButton{
-    position: absolute;
-    top: 20px;
-    left: 1138px;
-    width: 35px;
-    height: 35px;
-    background-color: transparent;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+.closeButton {
+  position: absolute;
+  top: 27px;
+  left: 1116px;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

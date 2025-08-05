@@ -8,9 +8,8 @@ import { MdOutlineArrowBackIos } from "react-icons/md";
 const HeaderFipron = ()=>{
  return (
     <section className={css.header}>
-      <div className={css.container}>
+      <div className={css.containerHeader}>
         <Link className={css.linkLogo} href="/">
-        <Image className={css.logoGif} src="/img/fire.gif" width={44} height={52} alt="Fire animation"></Image>
           <p className={css.logoTextHeader}>
             Fire<span className={css.logoTextHeaderSpan}>tech</span>
           </p>
@@ -23,7 +22,6 @@ const HeaderFipron = ()=>{
         </nav>
         <button className={css.btnHeader}>
           <span className={css.btnText}>замовити</span>
-          <Image className={css.logoGif} src="/img/fire.gif" width={30} height={47} alt="Fire animation"></Image>
         </button>
       </div>
     </section>

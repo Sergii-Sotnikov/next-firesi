@@ -4,17 +4,16 @@
   backdrop-filter: blur(20px);
 }
 
-.container {
+.containerHeader {
   margin: 0 auto;
   width: 100%;
   height: 100%;
-  max-width: 1440px;
   padding: 0 150px;
+  max-width: 1440px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 100px;
+  justify-content: space-between;
 }
 
 .linkLogo {
@@ -27,15 +26,16 @@
 }
 
 .logoGif {
-  padding-bottom: 17px;
+  padding-bottom: 10px;
 }
 
 .logoTextHeader {
+  position: relative;
   font-family: var(--font-inter), sans-serif;
   color: #0a0000;
   font-size: 32px;
   font-weight: 700;
-  margin: 0;
+  margin-left: 52px;
   line-height: 1;
   text-shadow:
     -0.95px -0.95px 0 #ffb53f,
@@ -44,24 +44,27 @@
     0.95px 0.95px 0 #ffb53f;
 }
 
+.logoTextHeader::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 54px;
+  position: absolute;
+  top: -24px;
+  left: -43px;
+  background-image: url("/img/fire.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .logoTextHeaderSpan {
   color: #e00d1d;
 }
 
-.navHeader{
+.navHeader {
   width: 500px;
-}
-
-.navList {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 54px;
-}
-
-.navItem {
-  height: 48px;
-  display: flex;
 }
 
 .navElem {
@@ -84,10 +87,9 @@
 .navElem:hover,
 .navElem:active,
 .btnBack:hover,
-.btnBack:active{
-    color: #E00D1D;
+.btnBack:active {
+  color: #e00d1d;
 }
-
 
 .btnHeader {
   height: 50px;
@@ -118,22 +120,36 @@
 }
 
 .btnHeader:hover,
-.btnHeader:active{
-    color: #ffffff;
-      text-shadow:
+.btnHeader:active {
+  color: #ffffff;
+  text-shadow:
     -0.59px -0.59px 0 #000000,
     0.59px -0.59px 0 #000000,
     -0.59px 0.59px 0 #000000,
     0.59px 0.59px 0 #000000;
 }
 
-.btnText{
-    text-transform: uppercase;
-    margin-right: 5px;
+.btnText {
+  text-transform: uppercase;
+  margin-right: 5px;
 }
 
+.btnText::before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 41px;
+  position: absolute;
+  top: -5px;
+  left: 186px;
+  background-image: url("/img/fire.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
 
-.btnBack{
+.btnBack {
   margin-left: 16px;
   transition: all 0.3s ease;
 }

@@ -52,7 +52,6 @@ useEffect(() => {
         <button className={css.closeButton} onClick={closeModal} aria-label="Close modal">
             <MdClose size={24} color="#ffffff"/>
         </button>
-        {/* Тут рендериться переданий вміст із пропса children */}
         {children}
       </div>
     </div>,

@@ -8,6 +8,11 @@
   font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
   --font-inter: 'Inter', sans-serif;
