@@ -1,12 +1,13 @@
 @import "normalize.css";
 
 @font-face {
-  font-family: 'CeraStencil';
-  src: url('/src/fonts/Cera_Stencil_PRO_Trial_Black.otf') format('opentype');
+  font-family: 'Cera Stencil PRO';
+  src: url('/fonts/CeraStencilPRO-Black.woff2') format('woff2'),
+       url('/fonts/CeraStencilPRO-Black.woff') format('woff'),
+       url('/fonts/CeraStencilPRO-Black.ttf') format('truetype');
   font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+  font-style: normal;}
+
 
 *,
 *::before,

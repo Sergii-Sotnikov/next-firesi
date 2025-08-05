@@ -11,8 +11,7 @@
   border: 1.7px solid rgb(255, 255, 255);
   border-radius: 6px;
   background-color: transparent;
-  font-family: "Cera Stencil PRO";
-   font-family: var(--font-cera-stencil), sans-serif;
+   font-family: "Cera Stencil PRO", sans-serif;
   font-weight: 900;
   font-size: 20px;
   line-height: 1.5;

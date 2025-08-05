@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inter, roboto } from "@/src/lib/fonts";
+import { inter, roboto} from "@/src/lib/fonts";
 import "../globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
