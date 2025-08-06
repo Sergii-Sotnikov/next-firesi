@@ -17,11 +17,11 @@
 .cordTitle {
   color: #ffffff;
   text-transform: uppercase;
-font-family: "Cera Stencil PRO", sans-serif;
+  font-family:'Roboto', sans-serif;
   font-weight: 900;
-  font-style: Black;
   font-size: 40px;
   line-height: 1;
+  letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 80px;
   margin-top: 0;
@@ -34,10 +34,8 @@ font-family: "Cera Stencil PRO", sans-serif;
   margin-bottom: 80px;
 }
 
-
-
 .cordText {
-  font-family: var(--font-roboto), sans-serif;
+  font-family:'Roboto', sans-serif;
   font-weight: 400;
   font-style: Black;
   font-size: 24px;
@@ -72,10 +70,11 @@ font-family: "Cera Stencil PRO", sans-serif;
 }
 
 .productText{
-  font-family: var(--font-roboto), sans-serif;
+  font-family:'Roboto', sans-serif;
   font-weight: 400;
   font-size: 28px;
   line-height: 1.37;
+  letter-spacing: 0.03em;
   color: #ffffff;
   margin: 0;
   margin-bottom: 70px;

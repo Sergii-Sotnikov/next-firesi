@@ -1,5 +1,5 @@
 .hero {
-  padding: 120px 0 60px 0;
+  padding: 48px 0 60px 0;
 }
 
 .container {
@@ -19,8 +19,8 @@
 .heroTitleText {
   color: #ffffff;
   text-transform: uppercase;
-font-family: "Cera Stencil PRO", sans-serif;
-  font-weight: 1400;
+  font-family: 'Cera Stencil PRO';
+  font-weight: 900;
   font-style: Black;
   font-size: 48px;
   line-height: 1.5;
@@ -29,7 +29,7 @@ font-family: "Cera Stencil PRO", sans-serif;
 
 .heroTextMain {
   color: #ffffff;
-  font-family: var(--font-roboto), sans-serif;
+  font-family:'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;
@@ -45,7 +45,7 @@ font-family: "Cera Stencil PRO", sans-serif;
 
 .heroText {
   color: #ffffff;
-  font-family: var(--font-roboto), sans-serif;
+  font-family:'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;
@@ -60,11 +60,11 @@ font-family: "Cera Stencil PRO", sans-serif;
 .heroList {
   list-style-type: disc;
   padding-left: 35px;
-  
 }
+
 .heroItem {
   color: #ffffff;
-  font-family: var(--font-roboto), sans-serif;
+  font-family:'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;

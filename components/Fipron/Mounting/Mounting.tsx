@@ -1,15 +1,16 @@
-import css from "./WorksFipron.module.css";
 
-const WorksFipron = () => {
-  return (
-    <section className={css.works}>
+import css from "./Mounting.module.css"
+
+const Mounting = ()=>{
+return (
+    <section className={css.mounting}>
       <div className={css.container}>
-        <h2 className={css.worksTitle}>як це працює</h2>
+        <h2 className={css.mountingTitle}>як монтувати</h2>
         <div className={css.videoWrapper}>
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/hbNLyqIrR3A"
+            src="https://www.youtube.com/embed/J3FdlAiFuec"
             title="FIPRON Video"
             frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -19,6 +20,6 @@ const WorksFipron = () => {
       </div>
     </section>
   );
-};
+}
 
-export default WorksFipron;
+export default Mounting

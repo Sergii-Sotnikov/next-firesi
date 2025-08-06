@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { inter, roboto, } from "@/src/lib/fonts";
 import "../globals.css";
 import Footer from "@/components/Footer/Footer";
 import HeaderFipron from "@/components/Fipron/HeaderFipron/HeaderFipron";
+import ClientModalButton from "@/components/Fipron/ClientModalButton/ClientModalButton";
 
 
 export const metadata: Metadata = {
@@ -45,8 +45,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="uk">
-      <body className={`${inter.variable} ${roboto.variable}`}>
-        <HeaderFipron />
+      <body>
+        <HeaderFipron>
+        <ClientModalButton productName="Замовити" id="1"/>
+        </HeaderFipron>
         <main>{children}</main>
         <Footer />
         <div id="modal-root" />

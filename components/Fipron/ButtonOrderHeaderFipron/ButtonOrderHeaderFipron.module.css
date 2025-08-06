@@ -1,0 +1,63 @@
+.btnHeader {
+  height: 50px;
+  width: 230px;
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  background-image: url("/img/btn_fire_background.png");
+  background-size: 231px 105px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #000000;
+  text-shadow:
+    -0.59px -0.59px 0 #ffb53f,
+    0.59px -0.59px 0 #ffb53f,
+    -0.59px 0.59px 0 #ffb53f,
+    0.59px 0.59px 0 #ffb53f;
+  transition: all 0.3s ease;
+}
+
+.btnHeader:hover,
+.btnHeader:active {
+  color: #ffffff;
+  text-shadow:
+    -0.59px -0.59px 0 #000000,
+    0.59px -0.59px 0 #000000,
+    -0.59px 0.59px 0 #000000,
+    0.59px 0.59px 0 #000000;
+}
+
+.btnText {
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+.btnText::before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 41px;
+  position: absolute;
+  top: -5px;
+  left: 186px;
+  background-image: url("/img/fire.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btnBack {
+  margin-left: 16px;
+  transition: all 0.3s ease;
+}
+

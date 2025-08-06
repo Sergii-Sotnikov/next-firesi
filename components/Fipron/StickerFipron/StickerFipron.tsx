@@ -44,7 +44,7 @@ const StickerFipron = ({children}:Props) => {
               </p>
             </div>
             <Image
-              className={css.stickerImage}
+              className={css.stickerImageAdd}
               src="/img/fipron_sticker_add@2x.jpg"
               width={557}
               height={649}
@@ -56,13 +56,13 @@ const StickerFipron = ({children}:Props) => {
             <ul className={css.productList}>
               <li className={css.productItem}>
               <p className={css.productName}>1. <span className={css.productNameRed}>FIPRON™</span> Стікер P:</p>
-              <p className={css.productDescription}>Об’єм гасіння: <span className={css.productValue}>0,2 літра</span></p>
-              <p className={css.productDescription}>Ціна: <span className={css.productValue}>600 грн / шт</span></p>
+              <p className={css.productDescription}> Об’єм гасіння: <span className={css.productValue}>0,2 літра</span></p>
+              <p className={css.productDescription}> Ціна: <span className={css.productValue}>600 грн / шт</span></p>
               </li>
                             <li className={css.productItem}>
               <p className={css.productName}>2. <span className={css.productNameRed}>FIPRON™</span> Стікер P (в листах):</p>
-              <p className={css.productDescription}>Об’єм гасіння: <span className={css.productValue}>15 літрів</span></p>
-              <p className={css.productDescription}>Ціна: <span className={css.productValue}>1320 грн / шт</span></p>
+              <p className={css.productDescription}> Об’єм гасіння: <span className={css.productValue}>15 літрів</span></p>
+              <p className={css.productDescription}> Ціна: <span className={css.productValue}>1100 грн / шт</span></p>
               </li>
             </ul>
             {children}

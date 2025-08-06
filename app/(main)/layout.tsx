@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { inter, roboto} from "@/src/lib/fonts";
 import "../globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import Contact from "@/components/Contact/Contact";
 
 
 export const metadata: Metadata = {
@@ -17,9 +17,10 @@ export default function MainLayout({
 }>) {
   return (
     <html lang="uk">
-      <body className={`${inter.variable} ${roboto.variable}`}>
+      <body>
         <Header/>
         <main id="main-content">{children}</main>
+        <Contact/>
         <Footer/>
       </body>
     </html>

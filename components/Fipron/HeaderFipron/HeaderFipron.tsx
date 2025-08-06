@@ -1,11 +1,14 @@
 
 import Link from "next/link";
 import css from "./HeaderFipron.module.css"
-import Image from "next/image";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 
+type Prop={
+  children?: React.ReactNode;
+}
 
-const HeaderFipron = ()=>{
+
+const HeaderFipron = ({children}:Prop)=>{
  return (
     <section className={css.header}>
       <div className={css.containerHeader}>
@@ -20,9 +23,7 @@ const HeaderFipron = ()=>{
                 <MdOutlineArrowBackIos /> <span className={css.btnBack}>Повернутись на головну сторінку</span>
               </Link>
         </nav>
-        <button className={css.btnHeader}>
-          <span className={css.btnText}>замовити</span>
-        </button>
+        {children}
       </div>
     </section>
   );

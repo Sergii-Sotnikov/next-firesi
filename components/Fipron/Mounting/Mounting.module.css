@@ -1,0 +1,31 @@
+.mounting {
+  padding: 60px 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 150px;
+}
+
+.mountingTitle {
+  color: #ffffff;
+  text-transform: uppercase;
+font-family: "Cera Stencil PRO", sans-serif;
+  font-weight: 900;
+  font-style: Black;
+  font-size: 40px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 0px;
+}
+
+.videoWrapper {
+  width: 1140px;
+  height: 645px;
+  margin: 0 auto;
+  border-radius: 40px;
+  border: 1px solid #ffffff;
+  overflow: hidden;
+}

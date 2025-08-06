@@ -56,10 +56,11 @@ const CordFipron = ({ children }: Props) => {
             <p className={css.productText}>
               Один погонний метр{" "}
               <span className={css.productTextBold}>FIPRON™ Cord</span>{" "}
-              забезпечує ефективний захист об’єму до 300 літрів.
+              забезпечує ефективний <br/> 
+              захист об’єму до 300 літрів.
               <br />
               <span className={css.productTextBold}>
-                Вартість 1 м.п. - 27 790 грн. Шнур легко
+                Вартість 1 м.п. - 23 100 грн.
               </span>
               <br />
               Шнур легко нарізається на необхідну довжину відповідно до

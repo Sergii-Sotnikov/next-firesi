@@ -1,24 +1,23 @@
 @import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+
 
 @font-face {
-  font-family: 'Cera Stencil PRO';
-  src: url('/fonts/CeraStencilPRO-Black.woff2') format('woff2'),
-       url('/fonts/CeraStencilPRO-Black.woff') format('woff'),
-       url('/fonts/CeraStencilPRO-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;}
+    font-family: 'Cera Stencil PRO';
+    src: local('Cera Stencil PRO Black'), local('Cera-Stencil-PRO-Black'),
+        url('/fonts/CeraStencilPRO-Black/CeraStencilPRO-Black.woff2') format('woff2'),
+        url('/fonts/CeraStencilPRO-Black/CeraStencilPRO-Black.woff') format('woff'),
+        url('/fonts/CeraStencilPRO-Black/CeraStencilPRO-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
 
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-:root {
-  --font-inter: 'Inter', sans-serif;
-  --font-roboto: 'Roboto', sans-serif;
-  --font-cera: 'CeraStencil', sans-serif;
 }
 
 html {
