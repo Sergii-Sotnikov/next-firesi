@@ -1,14 +1,21 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  max-width: 1440px;
   height: 70px;
+  margin: 0 auto;
   background-color: #ffffff1a;
   backdrop-filter: blur(20px);
 }
 
 .container {
   margin: 0 auto;
-  width: 100%;
+  width: 1440;
   height: 100%;
-  padding: 0 150px;
+  padding: 0px 150px;
   max-width: 1440px;
   display: flex;
   flex-direction: row;
@@ -31,12 +38,12 @@
 
 .logoTextHeader {
   position: relative;
-  font-family: var(--font-inter), sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #0a0000;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
   margin-left: 52px;
-  line-height: 1;
+  line-height: 1.5;
   text-shadow:
     -0.95px -0.95px 0 #ffb53f,
     0.95px -0.95px 0 #ffb53f,
@@ -50,8 +57,8 @@
   width: 40px;
   height: 54px;
   position: absolute;
-  top: -24px;
-  left: -43px;
+  top: -6px;
+  left: -41px;
   background-image: url("/img/fire.gif");
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,14 +74,21 @@
   width: 500px;
 }
 
+.navList{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around
+}
+
 .navElem {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 48px;
   width: 100%;
   padding: 0;
-  font-family: var(--font-roboto), sans-serif;
+  font-family:'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1;
@@ -82,6 +96,7 @@
   text-decoration: none;
   color: #ffffff;
   transition: all 0.3s ease;
+  
 }
 
 .navElem:hover,
@@ -91,44 +106,9 @@
   color: #e00d1d;
 }
 
-.navList {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 54px;
-  width: 500px;
+.btnBack{
+  margin-left: 16px;
 }
-
-.navItem {
-  height: 48px;
-  display: flex;
-}
-
-.navElem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  font-family: var(--font-roboto), sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0em;
-  text-decoration: none;
-  color: #ffffff;
-  transition: all 0.3s ease;
-}
-
-.navElem:hover,
-.navElem:active,
-.btnBack:hover,
-.btnBack:active{
-    color: #E00D1D;
-}
-
 
 
 .btnHeader {
@@ -146,7 +126,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-inter), sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 25px;
   font-weight: 700;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -194,143 +174,3 @@
   transition: all 0.3s ease;
 }
 
-/* .header {
-  height: 70px;
-  background-color: #ffffff1a;
-  backdrop-filter: blur(20px);
-}
-
-.container {
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  max-width: 1440px;
-  padding: 0 150px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 100px;
-}
-
-.linkLogo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: auto;
-  height: 64px;
-  text-decoration: none;
-}
-
-.logoGif {
-  padding-bottom: 17px;
-}
-
-.logoTextHeader {
-  font-family: var(--font-inter), sans-serif;
-  color: #0a0000;
-  font-size: 32px;
-  font-weight: 700;
-  margin: 0;
-  line-height: 1;
-  text-shadow:
-    -0.95px -0.95px 0 #ffb53f,
-    0.95px -0.95px 0 #ffb53f,
-    -0.95px 0.95px 0 #ffb53f,
-    0.95px 0.95px 0 #ffb53f;
-}
-
-.logoTextHeaderSpan {
-  color: #e00d1d;
-}
-
-.navHeader{
-  width: 500px;
-}
-
-.navList {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 54px;
-}
-
-.navItem {
-  height: 48px;
-  display: flex;
-}
-
-.navElem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  font-family: var(--font-roboto), sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0em;
-  text-decoration: none;
-  color: #ffffff;
-  transition: all 0.3s ease;
-}
-
-.navElem:hover,
-.navElem:active,
-.btnBack:hover,
-.btnBack:active{
-    color: #E00D1D;
-}
-
-
-.btnHeader {
-  height: 50px;
-  width: 230px;
-  position: relative;
-  border: none;
-  border-radius: 8px;
-  padding: 0;
-  cursor: pointer;
-  background-image: url("/img/btn_fire_background.png");
-  background-size: 231px 105px;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-inter), sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  color: #000000;
-  text-shadow:
-    -0.59px -0.59px 0 #ffb53f,
-    0.59px -0.59px 0 #ffb53f,
-    -0.59px 0.59px 0 #ffb53f,
-    0.59px 0.59px 0 #ffb53f;
-  transition: all 0.3s ease;
-}
-
-.btnHeader:hover,
-.btnHeader:active{
-    color: #ffffff;
-      text-shadow:
-    -0.59px -0.59px 0 #000000,
-    0.59px -0.59px 0 #000000,
-    -0.59px 0.59px 0 #000000,
-    0.59px 0.59px 0 #000000;
-}
-
-.btnText{
-    text-transform: uppercase;
-    margin-right: 5px;
-}
-
-
-.btnBack{
-  margin-left: 16px;
-  transition: all 0.3s ease;
-}
- */

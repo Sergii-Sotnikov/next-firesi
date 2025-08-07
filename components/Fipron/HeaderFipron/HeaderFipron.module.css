@@ -1,14 +1,21 @@
 .header {
+    position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  max-width: 1440px;
   height: 70px;
+  margin: 0 auto;
   background-color: #ffffff1a;
   backdrop-filter: blur(20px);
 }
 
 .containerHeader {
   margin: 0 auto;
-  width: 100%;
+  width: 1440;
   height: 100%;
-  padding: 0 150px;
+  padding: 0px 150px;
   max-width: 1440px;
   display: flex;
   flex-direction: row;
@@ -82,7 +89,6 @@
   text-decoration: none;
   color: #ffffff;
   transition: all 0.3s ease;
-  
 }
 
 .navElem:hover,

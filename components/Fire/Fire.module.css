@@ -1,0 +1,18 @@
+.fire {
+  position: relative;
+  height: 372px;
+  overflow: visible;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  margin-top: -162px;
+  margin-bottom: 163px;
+}
+
+.fireImage {
+  width: 100vw;
+  height: 620px;
+  object-fit: contain;
+  z-index: -1;
+}

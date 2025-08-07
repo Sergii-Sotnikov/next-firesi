@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "FIRESI - зупиняє будь-яке загоряння за секунди. Без бруду, без наслідків.",
 };
 
-export default function MainLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;

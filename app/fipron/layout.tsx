@@ -50,7 +50,6 @@ export default function RootLayout({
         <ClientModalButton productName="Замовити" id="1"/>
         </HeaderFipron>
         <main>{children}</main>
-        <Footer />
         <div id="modal-root" />
       </body>
     </html>

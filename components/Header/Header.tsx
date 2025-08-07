@@ -1,10 +1,10 @@
 import css from "./Header.module.css";
 import Link from "next/link";
-import Image from "next/image";
+
 
 const Header = () => {
   return (
-    <section className={css.header}>
+    <section className={css.header} id="hero">
       <div className={css.container}>
         <Link className={css.linkLogo} href="/">
           <p className={css.logoTextHeader}>
@@ -30,9 +30,9 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <button className={css.btnHeader}>
-          <span className={css.btnText}>замовити</span>
-        </button>
+        <button className={css.btnHeader} type="button">
+            <span className={css.btnText}>Замовити</span> 
+            </button>
       </div>
     </section>
   );

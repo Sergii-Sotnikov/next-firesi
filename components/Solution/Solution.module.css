@@ -1,0 +1,56 @@
+.solution{
+padding-top: 60px;
+padding-bottom: 61px;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1440px;
+    padding: 0 150px;
+}
+
+.title{
+font-family: "Alumni Sans SC", sans-serif;
+font-weight: 400;
+font-size: 48px;
+line-height: 1.35;
+letter-spacing: 0.07em;
+text-align: center;
+text-transform: uppercase;
+color: #E00D1D;
+margin: 0;
+}
+
+.addtitle{
+    font-family: "Cera Stencil PRO";
+font-weight: 900;
+font-style: Black;
+font-size: 42px;
+line-height: 1.35;
+letter-spacing: 0.07em;
+text-align: center;
+color: #ffffff;
+margin: 0;
+margin-bottom: 48px;
+}
+
+.text{
+font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-size: 24px;
+line-height: 1.5;
+letter-spacing: 0;
+color: #ffffff;
+margin: 0;
+margin-bottom: 48px;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 57px;
+    justify-content: center
+}
+

@@ -1,0 +1,201 @@
+.heroMain {
+  padding-top: 110px;
+  padding-bottom: 0px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 150px;
+}
+
+.heroMainTitle {
+  font-family: "Alumni Sans SC", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.5;
+  letter-spacing: 0.19em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e00d1d;
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.heroMainTitleAdd {
+  font-family: "Cera Stencil PRO";
+  font-weight: 900;
+  font-style: Black;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.heroMainSecondTitle {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-size: 160px;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(
+    180deg,
+    rgb(14, 17, 24),
+    rgb(255, 255, 255),
+    rgb(14, 17, 24)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.informationHero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.descriptionHero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  margin-left: 23px;
+}
+
+.descriptionHeroAddtext {
+  position: absolute;
+  width: 395px;
+  display: inline-flex;
+  align-items: center;
+  gap: 21px;
+  transform: rotate(270deg);
+  transform-origin: left top;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #ffb53f;
+  top: 544px;
+  left: 1129px;
+}
+
+.descriptionHeroAddtextPoint {
+  fill: #ffb53f;
+}
+
+.pictureHeroLogo{
+    margin-bottom: 41px;
+}
+
+.pictureHero{
+    border-radius: 35px;
+    z-index: 10;
+}
+
+.descriptionHeroText {
+  font-family: "Cera Stencil PRO";
+  font-weight: 900;
+  font-style: Black;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 41px;
+}
+
+.descriptionText {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.27;
+  letter-spacing: 0.03em;
+  margin-bottom: 41px;
+  color: #ffffff;
+margin: 0;
+  margin-bottom: 41px;
+  z-index: 10;
+}
+
+.descriptionHeroBtn {
+  cursor: pointer;
+  width: 380px;
+  height: 70px;
+  padding: 10px 11px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1.7px solid rgb(255, 255, 255);
+  border-radius: 7px;
+  background-color: transparent;
+  font-family: "Cera Stencil PRO";
+  font-weight: 400;
+  font-style: Black;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #ffffff;
+  transition: all 300ms ease;
+  z-index: 1;
+}
+
+
+.descriptionHeroBtn:hover{
+    text-shadow:
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+}
+
+
+.descriptionHeroBtn:active{
+    color: #000000;
+        text-shadow:
+    -1px -1px 0 #E00D1D,
+    1px -1px 0 #E00D1D,
+    -1px 1px 0 #E00D1D,
+    1px 1px 0 #E00D1D;
+}
+
+
+.btnIcon:hover{
+  color: #ffffff;
+}
+
+.btnIcon:active{
+    color: #000000;
+        text-shadow:
+    -1px -1px 0 #E00D1D,
+    1px -1px 0 #E00D1D,
+    -1px 1px 0 #E00D1D,
+    1px 1px 0 #E00D1D;
+}
+
+.descriptionHeroBtnText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: #e00d1d;
+  box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
+  border-radius: 7px;
+}
+
+
+

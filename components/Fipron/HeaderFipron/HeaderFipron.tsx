@@ -10,7 +10,7 @@ type Prop={
 
 const HeaderFipron = ({children}:Prop)=>{
  return (
-    <section className={css.header}>
+    <section className={css.header} id="hero">
       <div className={css.containerHeader}>
         <Link className={css.linkLogo} href="/">
           <p className={css.logoTextHeader}>

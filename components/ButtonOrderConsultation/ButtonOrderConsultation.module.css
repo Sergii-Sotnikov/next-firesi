@@ -29,9 +29,6 @@
     1px 1px 0 #000000;
 }
 
-.btnIcon:hover{
-  color: #ffffff;
-}
 
 .btnOrderConsultation:active{
     color: #000000;
@@ -40,6 +37,10 @@
     1px -1px 0 #E00D1D,
     -1px 1px 0 #E00D1D,
     1px 1px 0 #E00D1D;
+}
+
+.btnIcon:hover{
+  color: #ffffff;
 }
 
 .btnIcon:active{

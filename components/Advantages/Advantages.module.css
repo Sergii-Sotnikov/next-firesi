@@ -1,0 +1,52 @@
+.advantages {
+}
+
+.containerAdvantages {
+  position: relative;
+  padding: 0 140px;
+  margin: 0 auto;
+  width: 1440px;
+}
+
+.advantagesTitle {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-size: 150px;
+  line-height: 1.56;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  background: linear-gradient(
+    180deg,
+    rgb(14, 17, 24),
+    rgb(255, 255, 255),
+    rgb(14, 17, 24)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+.advantagesTitleText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+    top: 145px;
+    left: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 110px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.pictureHero{
+  display: block;
+}
