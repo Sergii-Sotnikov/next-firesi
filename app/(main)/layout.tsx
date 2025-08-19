@@ -29,8 +29,8 @@ const AlumniSansSCFont = Alumni_Sans_SC({
 
 const AlumniSansPinstripeFont = Alumni_Sans_Pinstripe({
   weight: ["400"],
-  variable: "--font-alumni-sans-sc",
-  subsets: ["latin", "cyrillic"],
+  variable: "--font-alumni-pinstripe",
+  subsets: ["latin"],
   fallback: ["system-ui", "Arial", "sans-serif"],
   adjustFontFallback: false,
   display: "swap",
@@ -38,7 +38,7 @@ const AlumniSansPinstripeFont = Alumni_Sans_Pinstripe({
 
 const InterFont = Inter({
   weight: ["400", "500", "700"],
-  variable: "--font-alumni-sans-sc",
+  variable: "--font-inter",
   subsets: ["latin", "cyrillic"],
   fallback: ["system-ui", "Arial", "sans-serif"],
   adjustFontFallback: false,
@@ -70,11 +70,11 @@ export const metadata: Metadata = {
     openGraph: {
     title: `FIRETECH - інноваційне рішення для пожежогасіння`,
     description: `FIRESI - універсальні вогнегасники нового покоління. Гасить літій-іонні батареї, електрообладнання під напругою та всі класи пожеж без бруду і шкоди. Сертифіковано в Україні. Захистіть свій дім та бізнес вже сьогодні!`,
-    url: `https://next-firesi.vercel.app/`,
+    url: "/",
     siteName: "FIRETECH",
     images: [
       {
-        url: "ogImage",
+        url: ogImage,
         width: 563,
         height: 705,
         alt: `FIRETECH - інноваційне рішення для пожежогасіння`,
