@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import Footer from "@/components/Footer/Footer";
 import HeaderFipron from "@/components/Fipron/HeaderFipron/HeaderFipron";
 import ClientModalButton from "@/components/Fipron/ClientModalButton/ClientModalButton";
 
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function FipronLayout({
   children,
 }: {
   children: React.ReactNode;
