@@ -1,7 +1,6 @@
 import css from "./Header.module.css";
 import Link from "next/link";
 
-
 const Header = () => {
   return (
     <section className={css.header} id="hero">
@@ -30,9 +29,9 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <button className={css.btnHeader} type="button">
-            <span className={css.btnText}>Замовити</span> 
-            </button>
+        <Link href="#order" className={css.btnHeader}>
+          <span className={css.btnText}>Замовити</span>
+        </Link>
       </div>
     </section>
   );

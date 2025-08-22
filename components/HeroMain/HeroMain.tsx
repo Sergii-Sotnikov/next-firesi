@@ -1,6 +1,7 @@
 import css from "./HeroMain.module.css";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 const HeroMain = () => {
   return (
@@ -27,11 +28,12 @@ const HeroMain = () => {
               Сертифіковано в Україні
             </span>
             <Image
-                        className={css.pictureHeroLogo}
-            src="/img/firesi@2x.png"
-            width={373}
-            height={157}
-            alt="Логотип Firesi"/>
+              className={css.pictureHeroLogo}
+              src="/img/firesi@2x.png"
+              width={373}
+              height={157}
+              alt="Логотип Firesi"
+            />
             <p className={css.descriptionHeroText}>
               Зупиніть будь яку пожежу за лічені секунди.
             </p>
@@ -41,11 +43,12 @@ const HeroMain = () => {
               бруду. Збережіть свій дім. Захистіть найдорожчих. Створено в
               Європі.
             </p>
-            <button className={css.descriptionHeroBtn} type="button">
+            <Link href="#order" className={css.descriptionHeroBtn}>
               <span className={css.descriptionHeroBtnText}>
-                ВИБРАТИ вогнегасник FRSE <FaArrowRight className={css.btnIcon} size={20}/>
+                ВИБРАТИ вогнегасник FRSE
+                <FaArrowRight className={css.btnIcon} size={20} />
               </span>
-            </button>
+            </Link>
           </div>
           <Image
             className={css.pictureHero}
@@ -53,7 +56,7 @@ const HeroMain = () => {
             width={562}
             height={705}
             alt="Вогнегасник FIPRON"
-          /> 
+          />
         </div>
       </div>
     </section>

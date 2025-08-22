@@ -2,7 +2,7 @@ import css from "./Сhoice.module.css";
 
 export default function Choice() {
   return (
-    <section className={css.choice}>
+    <section className={css.choice} id="order">
       <div className={css.container}>
         <h3 className={css.title}>Вибери свого надійного захисника</h3>
         <ul className={css.productList}>

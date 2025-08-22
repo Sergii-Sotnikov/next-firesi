@@ -1,8 +1,16 @@
 import css from "./Arguments.module.css";
+import Image from "next/image";
 
 export default function Arguments() {
   return (
     <section className={css.arguments}>
+                          <Image
+        className={css.fireImage}
+        src="/img/webp/fire_bg@2x.webp"
+        width={1440}
+        height={650}
+        alt="Fire background"
+      />
       <div className={css.container}>
         <h3 className={css.title}>чому варто обрати саме Firesi ?</h3>
         <ul className={css.list}>

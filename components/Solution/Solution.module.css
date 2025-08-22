@@ -10,7 +10,7 @@ padding-bottom: 61px;
 }
 
 .title{
-font-family: "Alumni Sans SC", sans-serif;
+font-family: var(--font-alumni-sans-sc), sans-serif;
 font-weight: 400;
 font-size: 48px;
 line-height: 1.35;
@@ -35,7 +35,7 @@ margin-bottom: 48px;
 }
 
 .text{
-font-family: "Roboto", sans-serif;
+font-family: var(--font-roboto), sans-serif;
 font-weight: 400;
 font-size: 24px;
 line-height: 1.5;

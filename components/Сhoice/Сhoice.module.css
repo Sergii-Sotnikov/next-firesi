@@ -1,6 +1,7 @@
 .choice {
   padding-top: 45px;
-  padding-bottom: 50px;
+  padding-bottom: 62px;
+  scroll-margin-top: 75px;
 }
 
 .container {
@@ -43,7 +44,7 @@
 }
 
 .productTitle {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter), sans-serif;
   font-weight: 700;
   font-size: 31px;
   line-height: 1;
@@ -56,7 +57,7 @@
 }
 
 .productName {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter), sans-serif;
   font-weight: 700;
   font-size: 31px;
   line-height: 1;
@@ -86,7 +87,7 @@
 }
 
 .descriptionName {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.4;
@@ -96,7 +97,7 @@
 }
 
 .descriptionList {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.4;
@@ -127,7 +128,7 @@
 }
 
 .classText {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.3;
@@ -141,7 +142,7 @@
 }
 
 .textPrice {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 20px;
@@ -156,7 +157,7 @@
 
 
 .textPriceExchange{
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-roboto), sans-serif;
 font-weight: 200;
 font-size: 16px;
 line-height: 1;

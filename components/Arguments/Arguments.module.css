@@ -1,6 +1,17 @@
 .arguments {
   padding-top: 32px;
   padding-bottom: 45px;
+  position: relative;
+}
+
+.fireImage {
+  width: 100vw;
+  height: 620px;
+  object-fit: contain;
+  z-index: 0;
+  position: absolute;
+  top: 618px;
+  left: -6px;
 }
 
 .container {
@@ -19,9 +30,8 @@
   text-align: center;
   text-transform: uppercase;
   color: #e00d1d;
-    margin: 0;
+  margin: 0;
   margin-bottom: 32px;
-
 }
 
 .list {
@@ -31,20 +41,25 @@
   flex-wrap: wrap;
   row-gap: 36px;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 .item {
   width: 500px;
   padding: 26px 15px;
   border-radius: 25px;
-  background: rgba(255, 255, 255, 0.1); /* #FFFFFF1A */
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: #ffffff1a;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+}
+
+.list li:nth-child(2) {
+  height: 476px;
 }
 
 .number {
-  font-family: 'Cera Stencil PRO Trial Medium';
+  font-family: "Cera Stencil PRO Trial Medium";
   font-style: Medium;
   font-weight: 400;
   font-size: 36px;
@@ -70,20 +85,21 @@
   letter-spacing: 0;
   color: #ffffff;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .text {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 1.2;
   letter-spacing: 0;
-    color: #B3B3B3;
+  color: #b3b3b3;
+  margin: 0px;
 }
 
 .additionalList {
   list-style: disc;
   padding-left: 35px;
-  color: #B3B3B3;
+  color: #b3b3b3;
 }

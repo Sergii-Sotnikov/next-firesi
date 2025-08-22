@@ -9,7 +9,7 @@
 }
 
 .advantagesTitle {
-  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-family: var(--font-alumni-pinstripe), sans-serif;
   font-weight: 400;
   font-size: 150px;
   line-height: 1.56;
@@ -38,7 +38,7 @@
   position: absolute;
     top: 145px;
     left: 8px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter), sans-serif;
   font-weight: 700;
   font-size: 110px;
   line-height: 1.5;

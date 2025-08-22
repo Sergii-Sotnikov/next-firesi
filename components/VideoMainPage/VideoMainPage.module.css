@@ -4,9 +4,9 @@
   background-color: #000;
 }
 
-.container{
-    margin: 0 auto;
-    padding: 0 150px;
+.container {
+  margin: 0 auto;
+  padding: 0 150px;
 }
 
 .videoWrapper {
@@ -20,6 +20,6 @@
   height: 100%;
   border: none;
   display: block;
-    border-radius: 40px;
+  border-radius: 40px;
   border: 1px solid #ffffff;
 }
