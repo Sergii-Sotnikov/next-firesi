@@ -17,7 +17,6 @@ const ClientModalButton = ({ productName, id }: Props) => {
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
-  console.log(productName)
   if(id === "1"){
     return (
     <>

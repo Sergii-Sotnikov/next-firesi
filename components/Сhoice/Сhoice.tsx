@@ -1,6 +1,8 @@
+import { useState } from "react";
 import css from "./Сhoice.module.css";
 
 export default function Choice() {
+  const [modalIsOpen, setModalIsOPen] = useState(false)
   return (
     <section className={css.choice} id="order">
       <div className={css.container}>
