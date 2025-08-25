@@ -1,0 +1,56 @@
+.btnChoice {
+  cursor: pointer;
+  width: 100%;
+  height: 70px;
+  padding: 10px 11px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1.7px solid rgb(255, 255, 255);
+  border-radius: 7px;
+  background-color: transparent;
+  font-family: "Cera Stencil PRO Trial Medium";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 29px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #ffffff;
+  transition: all 300ms ease;
+  z-index: 1;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  margin-top: 22px;
+}
+
+.btnChoice:hover{
+    text-shadow:
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+}
+
+.btnChoice:active{
+    color: #000000;
+        text-shadow:
+    -1px -1px 0 #E00D1D,
+    1px -1px 0 #E00D1D,
+    -1px 1px 0 #E00D1D,
+    1px 1px 0 #E00D1D;
+}
+
+
+.btnChoiceSpan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: #e00d1d;
+  box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
+  border-radius: 7px;
+}

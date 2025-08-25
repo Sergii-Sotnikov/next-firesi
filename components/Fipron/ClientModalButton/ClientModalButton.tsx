@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Modal from '@/components/Modal/Modal';
-import ButtonOrderConsultation from '@/components/ButtonOrderConsultation/ButtonOrderConsultation';
-import Callback from '@/components/Callback/CallBack';
-import ButtonOrderHeaderFipron from '../ButtonOrderHeaderFipron/ButtonOrderHeaderFipron';
+import { useState } from "react";
+import Modal from "@/components/Modal/Modal";
+import ButtonOrderConsultation from "@/components/ButtonOrderConsultation/ButtonOrderConsultation";
+import Callback from "@/components/Callback/CallBack";
+import ButtonOrderHeaderFipron from "../ButtonOrderHeaderFipron/ButtonOrderHeaderFipron";
 
 interface Props {
   productName: string;
-  id?:string;
+  id?: string;
 }
 
 const ClientModalButton = ({ productName, id }: Props) => {
@@ -17,21 +17,19 @@ const ClientModalButton = ({ productName, id }: Props) => {
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
-  if(id === "1"){
+  if (id === "1") {
     return (
-    <>
-      <ButtonOrderHeaderFipron openModal={openModal} id={"1"}/>
+      <>
+        <ButtonOrderHeaderFipron openModal={openModal} id={"1"} />
 
-      {isOpen && (
-        <Modal closeModal={closeModal}>
-            
-          <Callback closeModal={closeModal} productName={productName}/>
-        </Modal >
-      )}
-    </>
-  );
+        {isOpen && (
+          <Modal closeModal={closeModal}>
+            <Callback closeModal={closeModal} productName={productName} />
+          </Modal>
+        )}
+      </>
+    );
   }
-
 
   return (
     <>
@@ -41,9 +39,8 @@ const ClientModalButton = ({ productName, id }: Props) => {
 
       {isOpen && (
         <Modal closeModal={closeModal}>
-            
-          <Callback closeModal={closeModal} productName={productName}/>
-        </Modal >
+          <Callback closeModal={closeModal} productName={productName} />
+        </Modal>
       )}
     </>
   );

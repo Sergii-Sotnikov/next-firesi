@@ -1,0 +1,172 @@
+.callBackForm{
+  width: 948px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.productName{
+color: #ffffff;
+margin: 0;
+text-align: center;
+ font-family: var(--font-roboto), sans-serif;
+font-weight: 700;
+font-size: 48px;
+line-height: 1;
+letter-spacing: 0.19em;
+margin-bottom: 50px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.labelName,
+.labelPhone{
+font-family: var(--font-roboto), sans-serif;
+font-weight: 400;
+font-size: 24px;
+line-height: 1;
+letter-spacing: 0;
+color: #ffffff;
+width: 100%;
+}
+
+
+.inputName,
+.inputPhone {
+  width: 100%;
+  height: 74px;
+  padding: 23px 35px;
+  border-radius: 6px;
+  background: rgba(251, 251, 251, 0.15);
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin-top: 16px;
+  box-sizing: border-box;
+}
+.inputName:focus,
+.inputPhone:focus {
+  outline: none;
+  border: 1px solid rgba(251, 251, 251, 0.15);
+}
+
+.inputName:focus-visible,
+.inputPhone:focus-visible{
+  border-color: #ffffff;
+}
+
+.inputPhone::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: 0;
+  color: #615e5b;
+}
+
+.errorName,
+.errorPhone,
+.errorConsent{
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #e00d1d;
+}
+
+.checkboxLabel{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0;
+ color: #ffffff;
+}
+
+.checkboxInput{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  margin-right: 32px;
+  border: 1px solid #ffffff;
+  background-color: #111111;
+  cursor: pointer;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+}
+
+.checkboxInput:checked::before {
+  content: "✓";
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.buttonGroup{
+  display: flex;
+  flex-direction: row;
+  gap: 27px;
+}
+
+.btnContact,
+.btnContactCancel {
+  cursor: pointer;
+  width: 532px;
+  height: 80px;
+  padding: 10px 11px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1.7px solid rgb(255, 255, 255);
+  border-radius: 7px;
+  background-color: transparent;
+font-family: "Cera Stencil PRO", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #ffffff;
+  transition: all 300ms ease;
+  z-index: 1;
+}
+
+.btnContact:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnContactSpan,
+.btnContactSpanCancel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: #e00d1d;
+  box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
+  border-radius: 7px;
+}
+
+.btnContactSpanCancel{
+ background-color: #8E8C95;
+}
+
+.btnContactCancel{
+  width: 389px;
+}

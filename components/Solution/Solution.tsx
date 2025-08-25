@@ -5,7 +5,7 @@ export default function Solution() {
   return (
     <section className={css.solution}>
       <div className={css.container}>
-        <p className={css.title}>Гасить aбсалютно ВСЕ!</p>
+        <p className={css.title}>Гасить абсолютно все!</p>
         <p className={css.addtitle}>
           багато загроз одне рішення вогнегасник FIRESI
         </p>

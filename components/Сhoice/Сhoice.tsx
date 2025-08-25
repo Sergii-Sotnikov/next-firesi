@@ -1,8 +1,8 @@
-import { useState } from "react";
+import ButtonOrderProduct from "../ButtonOrderProduct/ButtonOrderProduct";
 import css from "./Сhoice.module.css";
 
 export default function Choice() {
-  const [modalIsOpen, setModalIsOPen] = useState(false)
+
   return (
     <section className={css.choice} id="order">
       <div className={css.container}>
@@ -91,9 +91,7 @@ export default function Choice() {
             <p className={css.textPriceExchange}>
               розрахунок в гривнях по курсу НБУ
             </p>
-            <button className={css.btnChoice} type="button">
-              <span className={css.btnChoiceSpan}>замовити</span>
-            </button>
+            <ButtonOrderProduct productId="FRSE-FS"/>
           </li>
 
           <li className={css.productItem}>
@@ -180,9 +178,7 @@ export default function Choice() {
             <p className={css.textPriceExchange}>
               розрахунок в гривнях по курсу НБУ
             </p>
-            <button className={css.btnChoice} type="button">
-              <span className={css.btnChoiceSpan}>замовити</span>
-            </button>
+            <ButtonOrderProduct productId="FRSE-F2"/>
           </li>
 
           <li className={css.productItem}>
@@ -269,9 +265,7 @@ export default function Choice() {
             <p className={css.textPriceExchange}>
               розрахунок в гривнях по курсу НБУ
             </p>
-            <button className={css.btnChoice} type="button">
-              <span className={css.btnChoiceSpan}>замовити</span>
-            </button>
+            <ButtonOrderProduct productId="FRSE-F6"/>
           </li>
         </ul>
       </div>
