@@ -1,38 +1,102 @@
-.callBackForm{
+.callBackForm {
   width: 948px;
   max-width: 100%;
   box-sizing: border-box;
 }
 
-.productName{
-color: #ffffff;
-margin: 0;
-text-align: center;
- font-family: var(--font-roboto), sans-serif;
-font-weight: 700;
-font-size: 48px;
-line-height: 1;
-letter-spacing: 0.19em;
-margin-bottom: 50px;
+.productName {
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: 0.19em;
+  margin-bottom: 50px;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.labelName,
-.labelPhone{
-font-family: var(--font-roboto), sans-serif;
-font-weight: 400;
-font-size: 24px;
-line-height: 1;
-letter-spacing: 0;
-color: #ffffff;
-width: 100%;
+.formProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
+.labelName,
+.labelProduct,
+.labelPhone,
+.optionText {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #ffffff;
+  width: 100%;
+}
+
+.selectProduct {
+  height: 74px;
+  border-radius: 6px;
+  background: rgba(251, 251, 251, 0.15);
+  font-family: var(--font-roboto), sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0;
+  border: 1px solid transparent;
+  padding: 0 40px 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+.selectProduct:focus,
+.selectProduct:focus-visible {
+  border-color: #fff;
+}
+
+.selectProduct[data-state="open"] svg {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+.productPreview {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.productTitle {
+  margin: 0px 0px 10px 0px;
+  color: #fff;
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.descrText {
+  margin: 0px;
+  color: #fff;
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.title {
+  margin-right: 25px;
+}
 
 .inputName,
 .inputPhone {
@@ -41,29 +105,27 @@ width: 100%;
   padding: 23px 35px;
   border-radius: 6px;
   background: rgba(251, 251, 251, 0.15);
-  border: none;
-  font-family: "Inter", sans-serif;
+  border: 1px solid transparent;
+  font-family: var(--font-inter), sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.5;
-  letter-spacing: 0;
   color: #ffffff;
   margin-top: 16px;
   box-sizing: border-box;
-}
-.inputName:focus,
-.inputPhone:focus {
   outline: none;
-  border: 1px solid rgba(251, 251, 251, 0.15);
+  transition: border-color 0.2s ease;
 }
 
+.inputName:focus,
+.inputPhone:focus,
 .inputName:focus-visible,
-.inputPhone:focus-visible{
+.inputPhone:focus-visible {
   border-color: #ffffff;
 }
 
 .inputPhone::placeholder {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.25;
@@ -73,8 +135,8 @@ width: 100%;
 
 .errorName,
 .errorPhone,
-.errorConsent{
-  font-family: "Inter", sans-serif;
+.errorConsent {
+  font-family: var(--font-inter), sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -82,20 +144,20 @@ width: 100%;
   color: #e00d1d;
 }
 
-.checkboxLabel{
+.checkboxLabel {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 1;
   letter-spacing: 0;
- color: #ffffff;
+  color: #ffffff;
 }
 
-.checkboxInput{
+.checkboxInput {
   appearance: none;
   -webkit-appearance: none;
   width: 24px;
@@ -115,7 +177,7 @@ width: 100%;
   font-size: 18px;
 }
 
-.buttonGroup{
+.buttonGroup {
   display: flex;
   flex-direction: row;
   gap: 27px;
@@ -134,7 +196,7 @@ width: 100%;
   border: 1.7px solid rgb(255, 255, 255);
   border-radius: 7px;
   background-color: transparent;
-font-family: "Cera Stencil PRO", sans-serif;
+  font-family: "Cera Stencil PRO", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 1.5;
@@ -163,10 +225,71 @@ font-family: "Cera Stencil PRO", sans-serif;
   border-radius: 7px;
 }
 
-.btnContactSpanCancel{
- background-color: #8E8C95;
+.btnContactSpanCancel {
+  background-color: #8e8c95;
 }
 
-.btnContactCancel{
+.btnContactCancel {
   width: 389px;
+}
+
+:global(.rdxContent) {
+  color: #fff;
+  border: 1px solid #fff;
+  background: #343434;
+  border-radius: 6px;
+  padding: 20px 0px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  min-width: var(--radix-select-trigger-width); /* ширина = тригеру */
+}
+:global(.rdxViewport) {
+  height: 230px;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  background: #343434;
+}
+:global(.rdxItem) {
+  color: #fff;
+  padding: 8px 50px 8px 25px;
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0;
+  cursor: pointer;
+  outline: none;
+}
+:global(.rdxItem):hover,
+:global(.rdxItem)[data-highlighted] {
+  background: #8e8c95;
+  box-shadow:
+    inset 0 1px 0 #fff,
+    inset 0 -1px 0 #fff;
+}
+
+:global(.row) {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+:global(.title) {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+:global(.price) {
+  width: 180px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+@supports selector(:has(*)) {
+  .formProduct:has(.errorProduct:not(:empty)) .selectProduct {
+    border-color: #e00d1d;
+  }
 }

@@ -1,0 +1,147 @@
+.mainDiv {
+  margin: 0 auto;
+  width: 800px;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 25px;
+  border-radius: 25px;
+  background: rgba(251, 251, 251, 0.15);
+  margin-bottom: 87px;
+}
+
+.title {
+  color: #fff;
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin: 0;
+}
+
+.mainText {
+  margin: 0;
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 900;
+  font-style: Black;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-shadow:
+    -0.95px -0.95px 0 #ffb53f,
+    0.95px -0.95px 0 #ffb53f,
+    -0.95px 0.95px 0 #ffb53f,
+    0.95px 0.95px 0 #ffb53f;
+}
+
+.logoTextHeader {
+  margin: 0;
+  position: relative;
+  font-family: var(--font-inter), sans-serif;
+  color: #0a0000;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-shadow:
+    -0.95px -0.95px 0 #ffb53f,
+    0.95px -0.95px 0 #ffb53f,
+    -0.95px 0.95px 0 #ffb53f,
+    0.95px 0.95px 0 #ffb53f;
+}
+
+.logoTextHeader::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 54px;
+  position: absolute;
+  top: -6px;
+  left: -41px;
+  background-image: url("/img/fire.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.logoTextHeader::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  background-image: url("/img/hero_line.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.logoTextHeaderSpan {
+  color: #e00d1d;
+}
+
+.mainAdd {
+  color: #fff;
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
+.buttonGroup {
+  margin: 0 auto;
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnAll {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+  width: 100%;
+  height: 68px;
+  border-radius: 7px;
+    font-family: "Cera Stencil PRO Trial Medium";
+  font-style: Medium;
+  font-weight: 200;
+  color: #fff;
+  font-size: 18px;
+   line-height: 1;  
+  background: transparent;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btnAll:active,
+.btnAll:hover{
+   color: #FFB53F; 
+}
+
+.btnIcon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.btnLabel {
+  line-height: 1;
+  white-space: nowrap; 
+}
+

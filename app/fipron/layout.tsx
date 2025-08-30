@@ -3,40 +3,58 @@ import "../globals.css";
 import HeaderFipron from "@/components/Fipron/HeaderFipron/HeaderFipron";
 import ClientModalButton from "@/components/Fipron/ClientModalButton/ClientModalButton";
 
+const siteUrl = "https://next-firesi.vercel.app";
+const ogImage = "/img/og/extinguisher.webp";
+
 
 export const metadata: Metadata = {
-  title: "FIPRON - це автономне рішення для локального пожежогасіння",
+  metadataBase: new URL(siteUrl),
+  title: "FIRETECH - інноваційне рішення для пожежогасіння",
   description:
-    "До 80% пожеж виникає через проблеми з електропроводкою. Серія пристроїв FIPRON забезпечує автономний захист і миттєве гасіння загорянь без шкоди для людей і техніки.",
+    "FIRESI - універсальні вогнегасники нового покоління. Гасить літій-іонні батареї, електрообладнання під напругою та всі класи пожеж без бруду і шкоди. Сертифіковано в Україні. Захистіть свій дім та бізнес вже сьогодні!",
   keywords: [
-    "FIPRON",
+    "FIRESI",
+    "FIRETECH",
+    "вогнегасник",
     "пожежогасіння",
-    "коротке замикання",
-    "захист електропроводки",
-    "Novec 1230",
+    "літій-іонні батареї",
+    "електрообладнання під напругою",
+    "вогнегасник для авто",
     "пожежна безпека",
-    "локальне гасіння",
-    "пожежна безпека для підприємств",
-    "вогнегасна капсула",
-    "автономний пристрій",
+    "FIPRON",
   ],
-  openGraph: {
-    title: "FIPRON - це автономне рішення для пожежогасіння",
-    description:
-      "Сучасна система для гасіння пожеж в електрощитових, технічних приміщеннях, серверних. Без підключення, без шкоди, з Novec™ 1230.",
-    url: "https://firesi.com/fipron",
-    type: "website",
+  alternates: {
+    canonical: "/",
+  },
+    openGraph: {
+    title: `FIRETECH - інноваційне рішення для пожежогасіння`,
+    description: `FIRESI - універсальні вогнегасники нового покоління. Гасить літій-іонні батареї, електрообладнання під напругою та всі класи пожеж без бруду і шкоди. Сертифіковано в Україні. Захистіть свій дім та бізнес вже сьогодні!`,
+    url: "/",
+    siteName: "FIRETECH",
     images: [
       {
-        url: "https://firesi.com/img/webp/fipronSEO.webp",
-        width: 945,
-        height: 630,
-        alt: "Пристрій FIPRON для локального пожежогасіння",
+        url: ogImage,
+        width: 563,
+        height: 705,
+        alt: `FIRETECH - інноваційне рішення для пожежогасіння`,
       },
     ],
+    locale: "uk_UA",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
-
 export default function FipronLayout({
   children,
 }: {

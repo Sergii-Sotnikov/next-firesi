@@ -84,33 +84,10 @@ export default function Faq() {
             </Accordion.Content>
           </Accordion.Item>
 
-          <Accordion.Item value="item-2" className={css.item}>
-            <Accordion.Header className={css.header}>
-              <Accordion.Trigger className={css.trigger}>
-                Для квартири підходить?
-                <span
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    toggleItem("item-2");
-                  }}
-                >
-                  {renderIcon("item-2")}
-                </span>
-              </Accordion.Trigger>
-            </Accordion.Header>
-            <Accordion.Content className={css.content}>
-              <p className={css.faqText}>
-                Ідеально! Це універсальний захист для будь-якого дому, від
-                електроніки до кухні. Нетоксичний. Безпечний для дітей і тварин.
-                Не шкодить техніці. Еко-безпечний!
-              </p>
-            </Accordion.Content>
-          </Accordion.Item>
-
           <Accordion.Item value="item-3" className={css.item}>
             <Accordion.Header className={css.header}>
               <Accordion.Trigger className={css.trigger}>
-                Треба обслуговувати?
+                Для квартири підходить?
                 <span
                   onClick={(e) => {
                     e.stopPropagation();
@@ -123,8 +100,9 @@ export default function Faq() {
             </Accordion.Header>
             <Accordion.Content className={css.content}>
               <p className={css.faqText}>
-                Забудьте про це на 6 років! Він просто чекає свого часу, без
-                зайвих турбот.
+                Ідеально! Це універсальний захист для будь-якого дому, від
+                електроніки до кухні. Нетоксичний. Безпечний для дітей і тварин.
+                Не шкодить техніці. Еко-безпечний!
               </p>
             </Accordion.Content>
           </Accordion.Item>
@@ -132,7 +110,7 @@ export default function Faq() {
           <Accordion.Item value="item-4" className={css.item}>
             <Accordion.Header className={css.header}>
               <Accordion.Trigger className={css.trigger}>
-                Чим він кращий за інші?
+                Треба обслуговувати?
                 <span
                   onClick={(e) => {
                     e.stopPropagation();
@@ -140,6 +118,28 @@ export default function Faq() {
                   }}
                 >
                   {renderIcon("item-4")}
+                </span>
+              </Accordion.Trigger>
+            </Accordion.Header>
+            <Accordion.Content className={css.content}>
+              <p className={css.faqText}>
+                Забудьте про це на 6 років! Він просто чекає свого часу, без
+                зайвих турбот.
+              </p>
+            </Accordion.Content>
+          </Accordion.Item>
+
+          <Accordion.Item value="item-5" className={css.item}>
+            <Accordion.Header className={css.header}>
+              <Accordion.Trigger className={css.trigger}>
+                Чим він кращий за інші?
+                <span
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleItem("item-5");
+                  }}
+                >
+                  {renderIcon("item-5")}
                 </span>
               </Accordion.Trigger>
             </Accordion.Header>
@@ -153,17 +153,17 @@ export default function Faq() {
             </Accordion.Content>
           </Accordion.Item>
 
-          <Accordion.Item value="item-5" className={css.item}>
+          <Accordion.Item value="item-6" className={css.item}>
             <Accordion.Header className={css.header}>
               <Accordion.Trigger className={css.trigger}>
                 Можна гасити електроприлади під напругою?
                 <span
                   onClick={(e) => {
                     e.stopPropagation();
-                    toggleItem("item-5");
+                    toggleItem("item-6");
                   }}
                 >
-                  {renderIcon("item-5")}
+                  {renderIcon("item-6")}
                 </span>
               </Accordion.Trigger>
             </Accordion.Header>
