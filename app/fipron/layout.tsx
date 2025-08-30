@@ -4,7 +4,7 @@ import HeaderFipron from "@/components/Fipron/HeaderFipron/HeaderFipron";
 import ClientModalButton from "@/components/Fipron/ClientModalButton/ClientModalButton";
 
 const siteUrl = "https://next-firesi.vercel.app";
-const ogImage = "/img/og/extinguisher.webp";
+const ogImage = "/img/og/fipron.webp";
 
 
 export const metadata: Metadata = {
@@ -33,19 +33,19 @@ export const metadata: Metadata = {
   "замовити консультацію"
   ],
   alternates: {
-    canonical: "/",
+    canonical: "/fipron",
   },
     openGraph: {
-    title: `FIRETECH - інноваційне рішення для пожежогасіння`,
-    description: `FIRESI - універсальні вогнегасники нового покоління. Гасить літій-іонні батареї, електрообладнання під напругою та всі класи пожеж без бруду і шкоди. Сертифіковано в Україні. Захистіть свій дім та бізнес вже сьогодні!`,
-    url: "/",
+    title: `FIPRON: автономні системи пожежогасіння - Sticker та Cord`,
+    description: `FIPRON Sticker та FIPRON Cord гасять займання на старті: автономно, безпечно для електроніки й людей`,
+    url: "/fipron",
     siteName: "FIRETECH",
     images: [
       {
         url: ogImage,
-        width: 563,
-        height: 705,
-        alt: `FIRETECH - інноваційне рішення для пожежогасіння`,
+        width: 557,
+        height: 649,
+        alt: `FIPRON: автономні системи пожежогасіння`,
       },
     ],
     locale: "uk_UA",
@@ -64,6 +64,9 @@ export const metadata: Metadata = {
     },
   },
 };
+
+
+
 export default function FipronLayout({
   children,
 }: {
