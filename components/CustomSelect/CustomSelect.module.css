@@ -1,0 +1,64 @@
+.content {
+  color: #fff;
+  border: 1px solid #fff;
+  background: #343434;
+  border-radius: 6px;
+  padding: 20px 0;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  min-width: var(--radix-select-trigger-width);
+}
+
+.viewport {
+  height: 230px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  background: #343434;
+}
+
+.item {
+  color: #fff;
+  padding: 8px 50px 8px 25px;
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.item:hover,
+.item[data-highlighted] {
+  background: #8e8c95;
+  box-shadow: inset 0 1px 0 #fff, inset 0 -1px 0 #fff;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.title {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price {
+  width: 180px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* можно оставить здесь — это локальные классы формы */
+@supports selector(:has(*)) {
+  .formProduct:has(.errorProduct:not(:empty)) .selectProduct {
+    border-color: #e00d1d;
+  }
+}
