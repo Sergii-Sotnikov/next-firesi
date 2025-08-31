@@ -223,6 +223,7 @@
   background-color: #e00d1d;
   box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
   border-radius: 7px;
+  text-transform: uppercase;
 }
 
 .btnContactSpanCancel {

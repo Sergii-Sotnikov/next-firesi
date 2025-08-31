@@ -178,6 +178,10 @@
   animation: pulse 1.2s infinite ease-in-out;
 }
 
+.details{
+  padding: 0px 25px;
+}
+
 .addressList {
   display: flex;
   flex-direction: row;
@@ -218,4 +222,5 @@
   color: #FFFFFF;
   font-style: normal;
   text-decoration: none;
+  margin: 0px;
 }

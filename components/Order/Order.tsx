@@ -282,10 +282,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
                         }
                       >
                         <span className={css.btnContactSpan}>
-                          {isSubmitting ? "Відправка..." : "Замовити дзвінок"}
-                          {!isSubmitting && (
-                            <PhoneCall className={css.iconPhone} />
-                          )}
+                          {isSubmitting ? "Відправка..." : "Зробити замовлення"}
                         </span>
                       </button>
 

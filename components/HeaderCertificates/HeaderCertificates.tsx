@@ -1,0 +1,28 @@
+
+import Link from "next/link";
+import css from "./HeaderCertificates.module.css"
+import { MdOutlineArrowBackIos } from "react-icons/md";
+
+
+
+
+const HeaderCertificates = ()=>{
+ return (
+    <section className={css.header} id="hero">
+      <div className={css.containerHeader}>
+        <nav className={css.navHeader}>
+              <Link href="/" className={css.navElem}>
+                <MdOutlineArrowBackIos /> <span className={css.btnBack}>Повернутись на головну сторінку</span>
+              </Link>
+        </nav>
+                <Link className={css.linkLogo} href="/">
+          <p className={css.logoTextHeader}>
+            Fire<span className={css.logoTextHeaderSpan}>tech</span>
+          </p>
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+export default HeaderCertificates

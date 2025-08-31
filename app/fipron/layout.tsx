@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     openGraph: {
     title: `FIPRON: автономні системи пожежогасіння - Sticker та Cord`,
     description: `FIPRON Sticker та FIPRON Cord гасять займання на старті: автономно, безпечно для електроніки й людей`,
-    url: "/fipron",
+    url: `${siteUrl}/fipron`,
     siteName: "FIRETECH",
     images: [
       {
