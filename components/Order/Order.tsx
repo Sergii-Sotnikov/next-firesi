@@ -135,7 +135,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
   return (
     <>
       <Toaster position="top-center" />
-      {successful ? (
+      {!successful ? (
         <>
           <p className={css.productName}>Зробити замовлення</p>
 
