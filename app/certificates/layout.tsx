@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import HeaderFipron from "@/components/Fipron/HeaderFipron/HeaderFipron";
-import ClientModalButton from "@/components/Fipron/ClientModalButton/ClientModalButton";
 import HeaderCertificates from "@/components/HeaderCertificates/HeaderCertificates";
+import Footer from "@/components/Footer/Footer";
 
 const siteUrl = "https://firetech.com.ua/";
 const ogImage = "/img/webp/certificates_EXcellent_UA.webp";
-
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -14,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Сертифікати відповідності та декларації відповідності на продукцію FIRETECH: FIPRON Sticker та FIPRON Cord. Документи, що підтверджують якість та безпеку автономних систем пожежогасіння.",
   keywords: [
-"сертифікати пожежогасіння",
+    "сертифікати пожежогасіння",
     "декларація відповідності",
     "сертифікати відповідності",
     "FIRETECH сертифікати",
@@ -25,12 +23,12 @@ export const metadata: Metadata = {
     "якість пожежогасіння",
     "сертифікати безпеки",
     "декларації на продукцію",
-    "сертифікати продукції FIRETECH"
+    "сертифікати продукції FIRETECH",
   ],
   alternates: {
     canonical: "/certificates",
   },
-    openGraph: {
+  openGraph: {
     title: `Сертифікати та декларації відповідності | FIRETECH`,
     description: `Сертифікати відповідності та декларації відповідності на продукцію FIRETECH: FIPRON Sticker та FIPRON Cord. Документи, що підтверджують якість та безпеку автономних систем пожежогасіння.`,
     url: `${siteUrl}/certificates`,
@@ -60,8 +58,6 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 export default function CertificatesLayout({
   children,
 }: {
@@ -70,8 +66,9 @@ export default function CertificatesLayout({
   return (
     <html lang="uk">
       <body>
-        <HeaderCertificates/>
+        <HeaderCertificates />
         <main>{children}</main>
+        <Footer />
         <div id="modal-root" />
       </body>
     </html>
