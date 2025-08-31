@@ -4,14 +4,12 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import type { FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { toast, Toaster } from "react-hot-toast";
-
 import "react-phone-input-2/lib/style.css";
 import { PhoneCall } from "lucide-react";
 import { TbTruckDelivery } from "react-icons/tb";
 import { LiaMapMarkedAltSolid } from "react-icons/lia";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRef, useState } from "react";
-import type { EmailTemplateParams } from "@/src/types/emailService.types";
 
 interface FormCallValues {
   name: string;
@@ -80,16 +78,6 @@ export default function Contact() {
       toast.error("Сталася помилка при надсиланні. Спробуйте пізніше.");
     }
 
-    // const result = await sendEmail(
-    //   emailData as unknown as Record<string, unknown>
-    // );
-
-    // if (result) {
-    //   toast.success("Дякуємо! Ми вам зателефонуємо.");
-    //   actions.resetForm();
-    //   recaptchaRef.current?.reset();
-    //   setRecaptchaToken(null);
-    // }
   };
 
   const recaptchaRef = useRef<ReCAPTCHA>(null);

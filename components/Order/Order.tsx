@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import css from "./Order.module.css";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -26,6 +26,7 @@ interface FormOrderValues {
   name: string;
   phone: string;
   consent: boolean;
+  company?: string;
 }
 
 export default function Order({ closeModal, productId }: OrderProps) {
@@ -39,6 +40,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
     name: "",
     phone: "+380",
     consent: false,
+    company: "",
   };
 
   const CallSchema = Yup.object().shape({
@@ -69,31 +71,34 @@ export default function Order({ closeModal, productId }: OrderProps) {
       return;
     }
     try {
-      const emailData: EmailTemplateParams = {
+      const payload = {
+        token: recaptchaToken,
+        type: "Замовлення вогнегасника на головній сторінці",
         name: values.name,
         phone: values.phone,
-        message: "Відсутній",
-        type: values.id,
-        time: new Date().toLocaleString("uk-UA"),
         product: values.id,
-        "g-recaptcha-response": recaptchaToken,
+        message: "Відсутній",
+        company: values.company,
       };
 
-      const result = await sendEmail(
-        emailData as unknown as Record<string, unknown>
-      );
-      if (result) {
-        toast.success("Ми вам зателефонуємо!");
-        setSuccessful(true);
-        actions.resetForm();
-        recaptchaRef.current?.reset();
-        setRecaptchaToken(null);
-      } else {
-        toast.error(
-          "На жаль, не вдалося відправити Ваш запит. Спробуйте ще раз."
-        );
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || "На жаль, не вдалося відправити Ваш запит.");
       }
+
+      toast.success("Ми вам зателефонуємо!");
+      setSuccessful(true);
+      actions.resetForm();
+      recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
     } catch (error) {
+      console.error(error);
       toast.error("Сталася помилка при відправці. Спробуйте пізніше.");
     } finally {
       actions.setSubmitting(false);
@@ -130,159 +135,182 @@ export default function Order({ closeModal, productId }: OrderProps) {
   return (
     <>
       <Toaster position="top-center" />
-      {successful?(<><p className={css.productName}>Зробити замовлення</p>
+      {successful ? (
+        <>
+          <p className={css.productName}>Зробити замовлення</p>
 
-      <div className={css.callBackForm}>
-        <Formik
-          initialValues={initialcallBackValues}
-          onSubmit={handleSubmit}
-          validationSchema={CallSchema}
-          enableReinitialize
-        >
-          {({ isValid, dirty, isSubmitting, values }) => {
-            const selected = products.find((p) => p.id === values.id);
+          <div className={css.callBackForm}>
+            <Formik
+              initialValues={initialcallBackValues}
+              onSubmit={handleSubmit}
+              validationSchema={CallSchema}
+              enableReinitialize
+            >
+              {({ isValid, dirty, isSubmitting, values }) => {
+                const selected = products.find((p) => p.id === values.id);
 
-            return (
-              <Form className={css.form}>
-                <div className={css.formProduct}>
-                  <label id="productIdLabel" className={css.labelProduct}>
-                    Виберіть товар:
-                  </label>
-
-                  <FormikRadixSelect
-                    name="id"
-                    products={products}
-                    triggerClass={css.selectProduct}
-                    labelId="productIdLabel"
-                  />
-
-                  <ErrorMessage
-                    name="id"
-                    component="span"
-                    className={css.errorProduct}
-                  />
-                </div>
-
-                {selected && (
-                    <div className={css.productPreview}>
-                      <Image
-                        className={css.productImg}
-                        src={selected.image.webp2x}
-                        width={120}
-                        height={204}
-                        alt="Логотип Firesi"
+                return (
+                  <Form className={css.form}>
+                    <div className={css.formProduct}>
+                      <Field
+                        type="text"
+                        name="company"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        aria-hidden="true"
+                        style={{
+                          position: "absolute",
+                          left: "-10000px",
+                          width: 1,
+                          height: 1,
+                          overflow: "hidden",
+                        }}
                       />
-                      <div className={css.productMeta}>
-                        <div className={css.productNameRow}>
-                          <p className={css.productTitle}>
-                            Модель: {selected.id}
-                          </p>
-                        </div>
+                      <label id="productIdLabel" className={css.labelProduct}>
+                        Виберіть товар:
+                      </label>
 
-                        <ul className={css.productDescList}>
-                          {selected.descriptions.map((description, index) => (
-                            <li key={index} className={css.productDescItem}>
-                              <p className={css.descrText}>{description}</p>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      <FormikRadixSelect
+                        name="id"
+                        products={products}
+                        triggerClass={css.selectProduct}
+                        labelId="productIdLabel"
+                      />
+
+                      <ErrorMessage
+                        name="id"
+                        component="span"
+                        className={css.errorProduct}
+                      />
                     </div>
-                  )}
 
-                <div className={css.formName}>
-                  <label className={css.labelName} htmlFor="name">
-                    Ваше імя:
-                    <Field
-                      id="name"
-                      type="text"
-                      name="name"
-                      className={css.inputName}
-                    />
-                  </label>
-                  <ErrorMessage
-                    name="name"
-                    component="span"
-                    className={css.errorName}
-                  />
-                </div>
+                    {selected && (
+                      <div className={css.productPreview}>
+                        <Image
+                          className={css.productImg}
+                          src={selected.image.webp2x}
+                          width={120}
+                          height={204}
+                          alt="Логотип Firesi"
+                        />
+                        <div className={css.productMeta}>
+                          <div className={css.productNameRow}>
+                            <p className={css.productTitle}>
+                              Модель: {selected.id}
+                            </p>
+                          </div>
 
-                <div className={css.formPhone}>
-                  <label className={css.labelPhone} htmlFor="phone">
-                    Ваш телефон:
-                    <Field
-                      id="phone"
-                      type="text"
-                      name="phone"
-                      className={css.inputPhone}
-                      placeholder="+380XXXXXXXXX"
-                      maxLength={13}
-                    />
-                  </label>
-                  <ErrorMessage
-                    name="phone"
-                    component="span"
-                    className={css.errorPhone}
-                  />
-                </div>
+                          <ul className={css.productDescList}>
+                            {selected.descriptions.map((description, index) => (
+                              <li key={index} className={css.productDescItem}>
+                                <p className={css.descrText}>{description}</p>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
 
-                <div className={css.formGroupCheckbox}>
-                  <label className={css.checkboxLabel}>
-                    <Field
-                      type="checkbox"
-                      name="consent"
-                      className={css.checkboxInput}
-                    />
-                    Я погоджуюсь з обробкою моїх персональних даних
-                  </label>
-                  <ErrorMessage
-                    name="consent"
-                    component="span"
-                    className={css.errorConsent}
-                  />
-                </div>
+                    <div className={css.formName}>
+                      <label className={css.labelName} htmlFor="name">
+                        Ваше імя:
+                        <Field
+                          id="name"
+                          type="text"
+                          name="name"
+                          className={css.inputName}
+                        />
+                      </label>
+                      <ErrorMessage
+                        name="name"
+                        component="span"
+                        className={css.errorName}
+                      />
+                    </div>
 
-                {isValid && dirty && (
-                  <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey={myKeyRECAPTCHA || ""}
-                    onChange={(token) => setRecaptchaToken(token)}
-                    onExpired={() => setRecaptchaToken(null)}
-                    onErrored={() => setRecaptchaToken(null)}
-                  />
-                )}
+                    <div className={css.formPhone}>
+                      <label className={css.labelPhone} htmlFor="phone">
+                        Ваш телефон:
+                        <Field
+                          id="phone"
+                          type="text"
+                          name="phone"
+                          className={css.inputPhone}
+                          placeholder="+380XXXXXXXXX"
+                          maxLength={13}
+                        />
+                      </label>
+                      <ErrorMessage
+                        name="phone"
+                        component="span"
+                        className={css.errorPhone}
+                      />
+                    </div>
 
-                <div className={css.buttonGroup}>
-                  <button
-                    className={css.btnContact}
-                    type="submit"
-                    disabled={
-                      isSubmitting || !(isValid && dirty && recaptchaToken)
-                    }
-                  >
-                    <span className={css.btnContactSpan}>
-                      {isSubmitting ? "Відправка..." : "Замовити дзвінок"}
-                      {!isSubmitting && <PhoneCall className={css.iconPhone} />}
-                    </span>
-                  </button>
+                    <div className={css.formGroupCheckbox}>
+                      <label className={css.checkboxLabel}>
+                        <Field
+                          type="checkbox"
+                          name="consent"
+                          className={css.checkboxInput}
+                        />
+                        Я погоджуюсь з обробкою моїх персональних даних
+                      </label>
+                      <ErrorMessage
+                        name="consent"
+                        component="span"
+                        className={css.errorConsent}
+                      />
+                    </div>
 
-                  <button
-                    className={css.btnContactCancel}
-                    type="button"
-                    onClick={closeModal}
-                  >
-                    <span className={css.btnContactSpanCancel}>Закрити</span>
-                  </button>
-                </div>
-              </Form>
-            );
-          }}
-        </Formik>
-      </div></>):(<SuccessfulOrder closeModal={closeModal} setSuccessful={setSuccessful}/>)}
+                    {isValid && dirty && (
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={myKeyRECAPTCHA || ""}
+                        onChange={(token) => setRecaptchaToken(token)}
+                        onExpired={() => setRecaptchaToken(null)}
+                        onErrored={() => setRecaptchaToken(null)}
+                      />
+                    )}
+
+                    <div className={css.buttonGroup}>
+                      <button
+                        className={css.btnContact}
+                        type="submit"
+                        disabled={
+                          isSubmitting || !(isValid && dirty && recaptchaToken)
+                        }
+                      >
+                        <span className={css.btnContactSpan}>
+                          {isSubmitting ? "Відправка..." : "Замовити дзвінок"}
+                          {!isSubmitting && (
+                            <PhoneCall className={css.iconPhone} />
+                          )}
+                        </span>
+                      </button>
+
+                      <button
+                        className={css.btnContactCancel}
+                        type="button"
+                        onClick={closeModal}
+                      >
+                        <span className={css.btnContactSpanCancel}>
+                          Закрити
+                        </span>
+                      </button>
+                    </div>
+                  </Form>
+                );
+              }}
+            </Formik>
+          </div>
+        </>
+      ) : (
+        <SuccessfulOrder
+          closeModal={closeModal}
+          setSuccessful={setSuccessful}
+        />
+      )}
     </>
   );
 }
-
-
-
-
