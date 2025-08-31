@@ -77,7 +77,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
         name: values.name,
         phone: values.phone,
         product: values.id,
-        message: "Відсутній",
+        message: "Відсутнє",
         company: values.company,
       };
 

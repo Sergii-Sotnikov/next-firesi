@@ -55,7 +55,19 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const time = new Date().toISOString();
+    const time = new Intl.DateTimeFormat("uk-UA", {
+      timeZone: "Europe/Kyiv",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    })
+      .format(new Date())
+      .replace(",", "");
+
+      
     const body: Record<string, unknown> = {
       service_id: process.env.EMAILJS_SERVICE_ID,
       template_id: process.env.EMAILJS_TEMPLATE_ID,
