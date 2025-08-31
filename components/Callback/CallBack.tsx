@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "react-phone-input-2/lib/style.css";
@@ -15,6 +15,7 @@ interface FormCallValues {
   name: string;
   phone: string;
   consent: boolean;
+  company?: string;
 }
 
 interface CallBackProps {
@@ -31,6 +32,7 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
     name: "",
     phone: "+380",
     consent: false,
+    company: "",
   };
 
   const CallSchema = Yup.object().shape({
@@ -55,26 +57,36 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
       return;
     }
 
-    const emailData: EmailTemplateParams = {
+    const payload = {
+      token: recaptchaToken,
+      type: "Замовити консультацію сторінка FIPRON",
       name: values.name,
       phone: values.phone,
-      message: "Відсутній",
-      type: productName,
-      time: new Date().toLocaleString("uk-UA"),
-      product: "Відсутній",
-      "g-recaptcha-response": recaptchaToken,
+      product: productName,
+      message: "Відсутнє",
+      company: values.company,
     };
 
-    const result = await sendEmail(
-      emailData as unknown as Record<string, unknown>
-    );
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    if (result) {
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || "Помилка надсилання");
+      }
+
       toast.success("Ми вам зателефонуємо!");
       actions.resetForm();
       recaptchaRef.current?.reset();
       setRecaptchaToken(null);
       closeModal();
+    } catch (err) {
+      console.error(err);
+      toast.error("Сталася помилка при надсиланні. Спробуйте пізніше.");
     }
   };
 
@@ -91,6 +103,21 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
           {({ isValid, dirty }) => (
             <Form className={css.form}>
               <div className={css.formName}>
+                <Field
+                  type="text"
+                  name="company"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    left: "-10000px",
+                    width: 1,
+                    height: 1,
+                    overflow: "hidden",
+                  }}
+                />
+
                 <label className={css.labelName} htmlFor="name">
                   Ваше імя:
                   <Field
