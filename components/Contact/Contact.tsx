@@ -4,20 +4,20 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import type { FormikHelpers } from "formik";
 import * as Yup from "yup";
 import { toast, Toaster } from "react-hot-toast";
-import PhoneInput from "react-phone-input-2";
+
 import "react-phone-input-2/lib/style.css";
 import { PhoneCall } from "lucide-react";
 import { TbTruckDelivery } from "react-icons/tb";
 import { LiaMapMarkedAltSolid } from "react-icons/lia";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRef, useState } from "react";
-import sendEmail from "@/src/services/sendEmail";
 import type { EmailTemplateParams } from "@/src/types/emailService.types";
 
 interface FormCallValues {
   name: string;
   phone: string;
   message: string;
+  company?: string;
 }
 
 const myKeyRECAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
@@ -38,10 +38,6 @@ export default function Contact() {
     phone: Yup.string()
       .matches(/^\+380\d{9}$/, "Номер повинен бути у форматі +380XXXXXXXXX")
       .required("Номер телефону обов'язковий"),
-    consent: Yup.boolean().oneOf(
-      [true],
-      "Ви повинні погодитися з обробкою персональних даних"
-    ),
   });
 
   const handleSubmit = async (
@@ -53,26 +49,47 @@ export default function Contact() {
       return;
     }
 
-    const emailData: EmailTemplateParams = {
+    const payload = {
+      token: recaptchaToken,
+      type: "Замовити дзвінок",
       name: values.name,
       phone: values.phone,
-      message: values.message,
-      type: "Замовити дзвінок",
-      time: new Date().toLocaleString("uk-UA"),
       product: "Відсутній",
-      "g-recaptcha-response": recaptchaToken,
+      message: values.message,
+      company: values.company,
     };
 
-    const result = await sendEmail(
-      emailData as unknown as Record<string, unknown>
-    );
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    if (result) {
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || "Помилка надсилання");
+      }
+
       toast.success("Дякуємо! Ми вам зателефонуємо.");
       actions.resetForm();
       recaptchaRef.current?.reset();
       setRecaptchaToken(null);
+    } catch (err) {
+      console.error(err);
+      toast.error("Сталася помилка при надсиланні. Спробуйте пізніше.");
     }
+
+    // const result = await sendEmail(
+    //   emailData as unknown as Record<string, unknown>
+    // );
+
+    // if (result) {
+    //   toast.success("Дякуємо! Ми вам зателефонуємо.");
+    //   actions.resetForm();
+    //   recaptchaRef.current?.reset();
+    //   setRecaptchaToken(null);
+    // }
   };
 
   const recaptchaRef = useRef<ReCAPTCHA>(null);
@@ -101,8 +118,23 @@ export default function Contact() {
               onSubmit={handleSubmit}
               validationSchema={CallSchema}
             >
-              {({ values, setFieldValue, isValid, dirty }) => (
+              {({ isValid, dirty }) => (
                 <Form className={css.form}>
+                  <input
+                    type="text"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "-10000px",
+                      width: 1,
+                      height: 1,
+                      overflow: "hidden",
+                    }}
+                  />
+
                   <div className={css.formGroup}>
                     <Field
                       id="name"
@@ -119,14 +151,14 @@ export default function Contact() {
                   </div>
 
                   <div className={css.formPhone}>
-                      <Field
-                        id="phone"
-                        type="text"
-                        name="phone"
-                        className={css.inputPhone}
-                        placeholder="+380"
-                        maxLength={13}
-                      />
+                    <Field
+                      id="phone"
+                      type="text"
+                      name="phone"
+                      className={css.inputPhone}
+                      placeholder="+380"
+                      maxLength={13}
+                    />
                     <ErrorMessage
                       name="phone"
                       component="span"
