@@ -1,0 +1,56 @@
+.header {
+  max-width: 325px;
+  height: 65px;
+  background-color: #ffffff1a;
+  backdrop-filter: blur(20px);
+  margin: 0 auto;
+}
+
+.container {
+    height: 100%;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-inter), sans-serif;
+  color: #0a0000;
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 20px;
+  line-height: 1.5;
+  text-shadow:
+    -0.44px -0.44px 0 #ffb53f,
+    0.44px -0.44px 0 #ffb53f,
+    -0.44px 0.44px 0 #ffb53f,
+    0.44px 0.44px 0 #ffb53f;
+    text-decoration: none;
+}
+
+.logoAccent{
+    color: #e00d1d;
+}
+
+.logo::before {
+    content: "";
+    pointer-events: none;
+    z-index: 1;
+    background-image: url(/img/fire.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 27px;
+    height: 37px;
+    position: absolute;
+    top: 6px;
+    left: 11px;
+}
+
+/* на десктопе — СКРЫТЬ */
+@media (min-width: 1440px) {
+  .header {
+    display: none;
+  }
+}
