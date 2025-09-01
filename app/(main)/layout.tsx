@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import { headers } from "next/headers";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import MobilePlaceholder from "@/components/MobilePlaceholder/MobilePlaceholder";
 import {
   Roboto,
   Alumni_Sans_SC,
   Alumni_Sans_Pinstripe,
   Inter,
 } from "next/font/google";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-import MobilePlaceholder from "@/components/MobilePlaceholder/MobilePlaceholder";
+
 
 const RobotoFont = Roboto({
   weight: ["400", "500", "700"],

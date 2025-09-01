@@ -42,7 +42,7 @@ width: 100%;
   border-radius: 6px;
   background: rgba(251, 251, 251, 0.15);
   border: none;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter), sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.5;
@@ -63,7 +63,7 @@ width: 100%;
 }
 
 .inputPhone::placeholder {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.25;
@@ -74,7 +74,7 @@ width: 100%;
 .errorName,
 .errorPhone,
 .errorConsent{
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-inter), sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -87,7 +87,7 @@ width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 1;
@@ -161,6 +161,7 @@ font-family: "Cera Stencil PRO", sans-serif;
   background-color: #e00d1d;
   box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
   border-radius: 7px;
+  text-transform: uppercase;
 }
 
 .btnContactSpanCancel{
