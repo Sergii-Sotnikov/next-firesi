@@ -1,9 +1,12 @@
 
+import Certificates from "@/components/Certificates/Certificates";
 
-const page = () => {
-  return (
-    <div>certificats</div>
-  )
+
+
+export default function Page() {
+   return (
+    <>
+    <Certificates/>
+    </>
+  );
 }
-
-export default page

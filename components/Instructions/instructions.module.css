@@ -1,0 +1,50 @@
+
+.instructions {
+  padding: 91px 100px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 150px;
+}
+
+.heroTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.title,
+.titleSert {
+  color: #fff;
+  margin: 0px 0px 93px 0px;
+  font-family: "Cera Stencil PRO";
+  font-weight: 900;
+  font-style: Black;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.titleSert{
+    margin-top: 71px;
+}
+
+.declarationList,
+.certificateList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 93px;
+  margin-bottom: 93px;
+}
+
+.certificateList {
+  margin-bottom: 0px;
+}

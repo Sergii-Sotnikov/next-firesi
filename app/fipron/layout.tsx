@@ -5,8 +5,8 @@ import ClientModalButton from "@/components/Fipron/ClientModalButton/ClientModal
 import Footer from "@/components/Footer/Footer";
 
 const siteUrl = "https://next-firesi.vercel.app";
+const pagePath = "/fipron";
 const ogImage = "/img/og/fipron.webp";
-
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -14,32 +14,32 @@ export const metadata: Metadata = {
   description:
     "FIPRON Sticker та FIPRON Cord гасять займання на старті: автономно, безпечно для електроніки й людей",
   keywords: [
-  "FIPRON",
-  "FIPRON Sticker",
-  "FIPRON Cord",
-  "автономна система пожежогасіння",
-  "локальне пожежогасіння",
-  "вогнегасний стікер",
-  "вогнегасний шнур",
-  "Novec 1230",
-  "захист електрощитів",
-  "захист розеток",
-  "пожежна безпека",
-  "гасіння без води",
-  "термоактивовані мікрокапсули",
-  "мікрокапсули пожежогасіння",
-  "серверна безпека",
-  "офіс",
-  "квартира",
-  "замовити консультацію"
+    "FIPRON",
+    "FIPRON Sticker",
+    "FIPRON Cord",
+    "автономна система пожежогасіння",
+    "локальне пожежогасіння",
+    "вогнегасний стікер",
+    "вогнегасний шнур",
+    "Novec 1230",
+    "захист електрощитів",
+    "захист розеток",
+    "пожежна безпека",
+    "гасіння без води",
+    "термоактивовані мікрокапсули",
+    "мікрокапсули пожежогасіння",
+    "серверна безпека",
+    "офіс",
+    "квартира",
+    "замовити консультацію",
   ],
   alternates: {
     canonical: "/fipron",
   },
-    openGraph: {
+  openGraph: {
     title: `FIPRON: автономні системи пожежогасіння - Sticker та Cord`,
     description: `FIPRON Sticker та FIPRON Cord гасять займання на старті: автономно, безпечно для електроніки й людей`,
-    url: `${siteUrl}/fipron`,
+    url: `${siteUrl}${pagePath}`,
     siteName: "FIRETECH",
     images: [
       {
@@ -66,8 +66,6 @@ export const metadata: Metadata = {
   },
 };
 
-
-
 export default function FipronLayout({
   children,
 }: {
@@ -77,10 +75,10 @@ export default function FipronLayout({
     <html lang="uk">
       <body>
         <HeaderFipron>
-        <ClientModalButton productName="Замовити" id="1"/>
+          <ClientModalButton productName="Замовити" id="1" />
         </HeaderFipron>
         <main>{children}</main>
-                <Footer />
+        <Footer />
         <div id="modal-root" />
       </body>
     </html>

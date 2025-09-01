@@ -4,6 +4,7 @@ import HeaderCertificates from "@/components/HeaderCertificates/HeaderCertificat
 import Footer from "@/components/Footer/Footer";
 
 const siteUrl = "https://firetech.com.ua/";
+const pagePath = "/certificates";
 const ogImage = "/img/webp/certificates_EXcellent_UA.webp";
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Сертифікати та декларації відповідності | FIRETECH`,
     description: `Сертифікати відповідності та декларації відповідності на продукцію FIRETECH: FIPRON Sticker та FIPRON Cord. Документи, що підтверджують якість та безпеку автономних систем пожежогасіння.`,
-    url: `${siteUrl}/certificates`,
+    url: `${siteUrl}${pagePath}`,
     siteName: "FIRETECH",
     images: [
       {

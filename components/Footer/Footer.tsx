@@ -10,7 +10,12 @@ const Footer = () => {
         <nav className={css.footerNav}>
           <ul className={css.footerNavList}>
             <li className={css.footerNavItem}>
-              <Link href="/video" className={css.footerNavElem}>
+              <Link
+                href="https://www.youtube.com/@firesiCZ/videos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={css.footerNavElem}
+              >
                 Відео
               </Link>
             </li>
