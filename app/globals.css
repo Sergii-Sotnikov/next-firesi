@@ -35,7 +35,7 @@ body { background-color: #0A0000; }
 
 ul { list-style: none; margin: 0; padding: 0; }
 
-main { padding-top: 70px; }
+#main-content { padding-top: 70px; }
 
 html, body {
   margin: 0;
