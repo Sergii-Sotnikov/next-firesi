@@ -83,7 +83,7 @@ export default function Contact() {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   return (
-    <section className={css.contact}>
+    <section className={css.contact} id="contacts">
       <Toaster position="top-center" />
       <div className={css.container}>
         <h3 className={css.title}>контакти</h3>
@@ -192,7 +192,7 @@ export default function Contact() {
             </Formik>
           </div>
         </div>
-        <address className={css.details} id="Contacts">
+        <address className={css.details}>
           <ul className={css.addressList}>
             <li className={css.addressItem}>
               <PhoneCall className={css.iconAddressPhone} size={42} />

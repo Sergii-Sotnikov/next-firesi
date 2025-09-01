@@ -23,7 +23,7 @@ const Header = () => {
               </Link>
             </li>
             <li className={css.navItem}>
-              <Link href="#contacts" className={css.navElem}>
+              <Link href="/#contacts" className={css.navElem}>
                 Контакти
               </Link>
             </li>
