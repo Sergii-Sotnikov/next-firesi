@@ -1,70 +1,64 @@
 @import "normalize.css";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap");
 
-
-
-
+/* Локальні шрифти Cera Stencil */
 @font-face {
-    font-family: 'Cera Stencil PRO';
-    src: local('Cera Stencil PRO Black'), local('Cera-Stencil-PRO-Black'),
-        url('/fonts/CeraStencilPRO-Black/CeraStencilPRO-Black.woff2') format('woff2'),
-        url('/fonts/CeraStencilPRO-Black/CeraStencilPRO-Black.woff') format('woff'),
-        url('/fonts/CeraStencilPRO-Black/CeraStencilPRO-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-  }
-
-  @font-face {
-  font-family: 'Cera Stencil PRO Trial Medium';
-  src: url('/fonts/CeraStencilPRO-Medium/CeraStencilPRO-Medium.woff2') format('woff2'),
-       url('/fonts/CeraStencilPRO-Medium/CeraStencilPRO-Medium.woff2') format('woff'),
-       url('/fonts/CeraStencilPRO-Medium/CeraStencilPRO-Medium.ttf') format('truetype');
-  font-weight: 500;
+  font-family: "Cera Stencil PRO";
+  src:
+    local("Cera Stencil PRO Black"),
+    local("Cera-Stencil-PRO-Black"),
+    url("/fonts/CeraStencilPRO-Black/CeraStencilPRO-Black.woff2") format("woff2"),
+    url("/fonts/CeraStencilPRO-Black/CeraStencilPRO-Black.woff") format("woff"),
+    url("/fonts/CeraStencilPRO-Black/CeraStencilPRO-Black.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
-
-
+@font-face {
+  font-family: "Cera Stencil PRO Trial Medium";
+  src:
+    url("/fonts/CeraStencilPRO-Medium/CeraStencilPRO-Medium.woff2") format("woff2"),
+    url("/fonts/CeraStencilPRO-Medium/CeraStencilPRO-Medium.woff") format("woff"),
+    url("/fonts/CeraStencilPRO-Medium/CeraStencilPRO-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-body{
-  background-color: #0A0000;
-}
+body { background-color: #0A0000; }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+ul { list-style: none; margin: 0; padding: 0; }
 
-main {
-  padding-top: 70px;
-}
+main { padding-top: 70px; }
 
 html, body {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  overflow-x: clip; 
+  overflow-x: clip;
 }
+
 img, video, canvas, svg {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+@media (max-width: 1439.98px) {
+  html, body { max-width: 100%; overflow-x: clip; }
+  *, *::before, *::after { box-sizing: border-box; }
+  img, video, canvas, svg { max-width: 100%; height: auto; display: block; }
 
+  :root { --sbw: calc(100vw - 100%); }
 
+  .full-bleed {
+    width: calc(100vw - var(--sbw));
+    margin-inline: calc(50% - 50vw + var(--sbw) / 2);
+  }
+}

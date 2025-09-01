@@ -77,7 +77,6 @@ export default function Contact() {
       console.error(err);
       toast.error("Сталася помилка при надсиланні. Спробуйте пізніше.");
     }
-
   };
 
   const recaptchaRef = useRef<ReCAPTCHA>(null);
@@ -114,13 +113,7 @@ export default function Contact() {
                     tabIndex={-1}
                     autoComplete="off"
                     aria-hidden="true"
-                    style={{
-                      position: "absolute",
-                      left: "-10000px",
-                      width: 1,
-                      height: 1,
-                      overflow: "hidden",
-                    }}
+                    className={css.visuallyHidden}
                   />
 
                   <div className={css.formGroup}>

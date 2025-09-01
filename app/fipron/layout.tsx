@@ -4,7 +4,7 @@ import HeaderFipron from "@/components/Fipron/HeaderFipron/HeaderFipron";
 import ClientModalButton from "@/components/Fipron/ClientModalButton/ClientModalButton";
 import Footer from "@/components/Footer/Footer";
 
-const siteUrl = "https://next-firesi.vercel.app";
+const siteUrl = "https://firetech.com.ua/";
 const pagePath = "/fipron";
 const ogImage = "/img/og/fipron.webp";
 

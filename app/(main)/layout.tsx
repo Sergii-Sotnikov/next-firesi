@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import { headers } from "next/headers";
 import {
   Roboto,
   Alumni_Sans_SC,
@@ -8,6 +9,7 @@ import {
 } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import MobilePlaceholder from "@/components/MobilePlaceholder/MobilePlaceholder";
 
 const RobotoFont = Roboto({
   weight: ["400", "500", "700"],
@@ -45,7 +47,7 @@ const InterFont = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://next-firesi.vercel.app";
+const siteUrl = "https://firetech.com.ua/";
 const ogImage = "/img/og/extinguisher.webp";
 
 export const metadata: Metadata = {
@@ -97,20 +99,32 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
+  const headersList = await headers();              // ✅ await
+  const ua = headersList.get("user-agent") ?? "";   // ✅ тепер .get існує
+  const isMobileUA = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(ua);
+  const isBot = /Googlebot|Bingbot|facebookexternalhit|Twitterbot|LinkedInBot|TelegramBot|Slackbot/i.test(ua);
+
+  const showMobilePlaceholder = isMobileUA && !isBot;
+
   return (
-    <html lang="uk">
-      <body
-        className={`${RobotoFont.variable} ${AlumniSansSCFont.variable} ${AlumniSansPinstripeFont.variable} ${InterFont.variable}`}
-      >
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-                <div id="modal-root" />
+    <html
+      lang="uk"
+      className={`${RobotoFont.variable} ${AlumniSansSCFont.variable} ${AlumniSansPinstripeFont.variable} ${InterFont.variable}`}
+    >
+      <body>
+        {showMobilePlaceholder ? (
+          <MobilePlaceholder />
+        ) : (
+          <>
+            <Header />
+            <main id="main-content">{children}</main>
+            <Footer />
+            <div id="modal-root" />
+          </>
+        )}
       </body>
     </html>
   );
