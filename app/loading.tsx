@@ -2,7 +2,7 @@
 
 const Loading = () => {
     return(
-        <p>Loading, please wait...</p>
+        <p>Loading, please wafsdfit...</p>
     )
 }
 
