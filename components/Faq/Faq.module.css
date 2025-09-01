@@ -80,5 +80,6 @@
 
 .item[data-state="open"] .content {
   margin-bottom: 17px;
+  margin-top: -17px;
 }
 
