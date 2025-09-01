@@ -29,7 +29,7 @@
 
 .heroTextMain {
   color: #ffffff;
-  font-family:'Roboto', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;
@@ -45,7 +45,7 @@
 
 .heroText {
   color: #ffffff;
-  font-family:'Roboto', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;
@@ -64,7 +64,7 @@
 
 .heroItem {
   color: #ffffff;
-  font-family:'Roboto', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;

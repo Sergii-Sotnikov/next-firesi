@@ -17,7 +17,7 @@
 .cordTitle {
   color: #ffffff;
   text-transform: uppercase;
-  font-family:'Roboto', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 900;
   font-size: 40px;
   line-height: 1;
@@ -35,7 +35,7 @@
 }
 
 .cordText {
-  font-family:'Roboto', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-style: Black;
   font-size: 24px;
@@ -57,7 +57,7 @@
   align-items: center;
 }
 
-.cordImageFipron{
+.cordImageFipron {
   display: block;
 }
 
@@ -66,11 +66,10 @@
   backdrop-filter: blur(15px);
   border-radius: 25px;
   padding: 45px 63px;
-
 }
 
-.productText{
-  font-family:'Roboto', sans-serif;
+.productText {
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-size: 28px;
   line-height: 1.37;
@@ -80,6 +79,6 @@
   margin-bottom: 70px;
 }
 
-.productTextBold{
+.productTextBold {
   font-weight: 800;
 }
