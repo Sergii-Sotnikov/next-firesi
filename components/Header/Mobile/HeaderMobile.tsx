@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import css from "./HeaderMobile.module.css";
 import { IoMdMenu } from "react-icons/io";
+import { AiOutlineCloseSquare } from "react-icons/ai";
 
 export default function HeaderMobile() {
   const [open, setOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function HeaderMobile() {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls="mobile-nav"
-      > <IoMdMenu size={26}/>
+      > {!open ? (<IoMdMenu size={26}/>) : (<AiOutlineCloseSquare size={26}/>)}
         <span />
         <span />
         <span />
