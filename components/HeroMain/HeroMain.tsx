@@ -2,6 +2,7 @@ import css from "./HeroMain.module.css";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
+import { TbTruckDelivery } from "react-icons/tb";
 
 const HeroMain = () => {
   return (
@@ -61,6 +62,8 @@ const HeroMain = () => {
                 <FaArrowRight className={css.btnIcon} size={20} />
               </span>
             </Link>
+            <TbTruckDelivery className={css.customIcon} size={40}/>
+            
           </div>
           <Image
             className={css.pictureHero}
