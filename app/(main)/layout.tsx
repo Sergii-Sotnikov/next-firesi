@@ -109,7 +109,7 @@ export default async function RootLayout({
   // const isBot = /Googlebot|Bingbot|facebookexternalhit|Twitterbot|LinkedInBot|TelegramBot|Slackbot/i.test(ua);
 
   // const showMobilePlaceholder = isMobileUA && !isBot;
-  const showMobilePlaceholder = true;
+  const showMobilePlaceholder = false;
 
   return (
     <html
