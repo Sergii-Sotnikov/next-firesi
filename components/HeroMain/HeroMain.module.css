@@ -218,7 +218,7 @@
   }
 
   .heroMain {
-    max-width: none; /* <-- ключ! */
+    max-width: none;
     width: 100%;
     padding-top: 110px;
     padding-bottom: 0;
