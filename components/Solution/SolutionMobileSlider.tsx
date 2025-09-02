@@ -5,13 +5,13 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Image from "next/image";
 import type { Swiper as SwiperType } from "swiper";
 
-// core styles
+
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-// локальные стили для слайдера
+
 import css from "./SolutionMobileSlider.module.css";
 
 const slides = [
@@ -28,18 +28,15 @@ export default function SolutionMobileSlider() {
 
   return (
     <div className={css.wrap}>
-      {/* Main slider */}
       <Swiper
         modules={[FreeMode, Navigation, Thumbs]}
         className={css.mainSwiper}
         spaceBetween={12}
-        // важный фолбэк: не передавать разрушенный/пустой swiper
         thumbs={{
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
         style={
           {
-            // можно задать бренд-цвет стрелок (через css-переменные)
             "--swiper-navigation-color": "#fff",
             "--swiper-pagination-color": "#fff",
           } as React.CSSProperties
@@ -51,7 +48,7 @@ export default function SolutionMobileSlider() {
               <Image
                 src={s.src}
                 alt={s.alt}
-                width={300}
+                width={288}
                 height={250}
                 priority={i === 0}
                 className={css.img}
@@ -61,10 +58,9 @@ export default function SolutionMobileSlider() {
         ))}
       </Swiper>
 
-      {/* Thumbs slider */}
       <Swiper
         onSwiper={setThumbsSwiper}
-        modules={[FreeMode, Thumbs]} // ✅ Navigation убран
+        modules={[FreeMode, Thumbs]}
         className={css.thumbsSwiper}
         spaceBetween={12}
         slidesPerView={4}
@@ -82,8 +78,8 @@ export default function SolutionMobileSlider() {
               <Image
                 src={s.src}
                 alt={s.alt}
-                width={120}
-                height={90}
+                width={51}
+                height={43}
                 className={css.thumbImg}
               />
             </div>
