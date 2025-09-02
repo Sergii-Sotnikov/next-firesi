@@ -1,5 +1,6 @@
 import css from "./Solution.module.css";
 import Image from "next/image";
+import SolutionMobileSlider from "./SolutionMobileSlider";
 
 export default function Solution() {
   return (
@@ -19,6 +20,9 @@ export default function Solution() {
           критичних ситуаціях. Він забезпечує миттєву реакцію на будь-яку
           пожежну загрозу, дозволяючи діяти швидко та рішуче.
         </p>
+        <div className={css.mobileSwiper}>
+          <SolutionMobileSlider />
+        </div>
         <ul className={css.list}>
           <li className={css.item}>
             <Image
