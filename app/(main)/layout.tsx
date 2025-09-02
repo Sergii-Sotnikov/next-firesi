@@ -103,12 +103,13 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const headersList = await headers();              // ✅ await
-  const ua = headersList.get("user-agent") ?? "";   // ✅ тепер .get існує
-  const isMobileUA = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(ua);
-  const isBot = /Googlebot|Bingbot|facebookexternalhit|Twitterbot|LinkedInBot|TelegramBot|Slackbot/i.test(ua);
+  // const headersList = await headers();              // ✅ await
+  // const ua = headersList.get("user-agent") ?? "";   // ✅ тепер .get існує
+  // const isMobileUA = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(ua);
+  // const isBot = /Googlebot|Bingbot|facebookexternalhit|Twitterbot|LinkedInBot|TelegramBot|Slackbot/i.test(ua);
 
-  const showMobilePlaceholder = isMobileUA && !isBot;
+  // const showMobilePlaceholder = isMobileUA && !isBot;
+  const showMobilePlaceholder = true;
 
   return (
     <html

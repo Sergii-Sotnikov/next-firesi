@@ -33,9 +33,10 @@ export default function SolutionMobileSlider() {
         modules={[FreeMode, Navigation, Thumbs]}
         className={css.mainSwiper}
         spaceBetween={12}
-        navigation
         // важный фолбэк: не передавать разрушенный/пустой swiper
-        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+        thumbs={{
+          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+        }}
         style={
           {
             // можно задать бренд-цвет стрелок (через css-переменные)
@@ -63,7 +64,7 @@ export default function SolutionMobileSlider() {
       {/* Thumbs slider */}
       <Swiper
         onSwiper={setThumbsSwiper}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[FreeMode, Thumbs]} // ✅ Navigation убран
         className={css.thumbsSwiper}
         spaceBetween={12}
         slidesPerView={4}
