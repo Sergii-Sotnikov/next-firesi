@@ -7,7 +7,7 @@ export default function Solution() {
       <div className={css.container}>
         <p className={css.title}>Гасить абсолютно все!</p>
         <p className={css.addtitle}>
-          багато загроз одне рішення вогнегасник FIRESI
+          багато загроз одне рішення вогнегасник - FIRESI
         </p>
         <p className={css.text}>
           Бензин, розчинники, олії, жир, пропан, метан, природний газ,
