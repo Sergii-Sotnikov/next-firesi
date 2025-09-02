@@ -1,8 +1,8 @@
-/* по умолчанию (мобилка) — СКРЫТО */
+
 .header { display: none; }
 
 @media (min-width: 1440px) {
-  /* на десктопе — ПОКАЗАТЬ */
+
   .header {
     display: block;
   position: fixed;

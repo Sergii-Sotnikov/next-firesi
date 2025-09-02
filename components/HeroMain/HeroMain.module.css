@@ -1,45 +1,46 @@
+/* mobile */
 .heroMain {
-  padding-top: 110px;
-  padding-bottom: 0px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  max-width: 320px;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 150px;
+  padding: 0 16px;
 }
 
 .heroMainTitle {
   font-family: var(--font-alumni-sans-sc), sans-serif;
   font-weight: 400;
-  font-size: 48px;
-  line-height: 1.5;
-  letter-spacing: 0.19em;
+  font-size: 26px;
+  line-height: 0.9;
+  letter-spacing: 0.15em;
   text-align: center;
   text-transform: uppercase;
   color: #e00d1d;
-  margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
+  margin-top: 0px;
 }
 
 .heroMainTitleAdd {
   font-family: "Cera Stencil PRO";
   font-weight: 900;
-  font-style: Black;
-  font-size: 40px;
-  line-height: 1;
+  font-style: normal;
+  font-display: swap;
+  font-size: 24px;
   letter-spacing: 0em;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: #ffffff;
 }
 
 .heroMainSecondTitle {
   font-family: var(--font-alumni-pinstripe), sans-serif;
   font-weight: 400;
-  font-size: 160px;
+  font-size: 40px;
   line-height: 1;
-  letter-spacing: 0em;
+  letter-spacing: 0.01em;
   text-align: center;
   text-transform: uppercase;
   background: linear-gradient(
@@ -53,150 +54,361 @@
   background-clip: text;
   color: transparent;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
-.informationHero {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.pictureHeroMobileWrap {
+  width: 288px;
+  margin: 0 auto 32px auto;
 }
 
-.descriptionHero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-width: 380px;
-  margin-top: 26px;
-  margin-bottom: 26px;
-  margin-left: 23px;
+.pictureHeroMobile {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .descriptionHeroAddtext {
-  position: absolute;
-  width: 395px;
-  display: inline-flex;
-  align-items: center;
-  gap: 21px;
-  transform: rotate(270deg);
-  transform-origin: left top;
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 1;
-  letter-spacing: 0;
+  display: none;
+}
+
+.descriptionHeroAddtextMobile {
   color: #ffb53f;
-  top: 544px;
-  left: 1129px;
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  position: relative;
 }
 
-.descriptionHeroAddtextPoint {
-  fill: #ffb53f;
+.descriptionHeroAddtextMobile::after {
+  content: "";
+  z-index: -1;
+  pointer-events: none;
+  background: url(/img/fire_bg.png) center / cover no-repeat;
+  width: 320px;
+  height: 131px;
+  position: absolute;
+  top: -104px;
+  left: -16px;
 }
 
-.pictureHeroLogo{
-    margin-bottom: 41px;
+.pictureHero {
+  display: none;
 }
 
-.pictureHero{
-    border-radius: 35px;
-    z-index: 10;
+.pictureHeroMobile {
+  display: block;
+  margin: 0 auto;
 }
 
 .descriptionHeroText {
+  color: #ffffff;
   font-family: "Cera Stencil PRO";
   font-weight: 900;
   font-style: Black;
-  font-size: 34px;
-  line-height: 1;
-  letter-spacing: 0;
-  color: #ffffff;
-  margin: 0;
-  margin-bottom: 41px;
+  font-size: 22px;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  margin: 0px;
+  margin-bottom: 16px;
 }
 
 .descriptionText {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 1.27;
-  letter-spacing: 0.03em;
-  margin-bottom: 41px;
   color: #ffffff;
-margin: 0;
-  margin-bottom: 41px;
-  z-index: 10;
-}
-
-.descriptionHeroBtn {
-  cursor: pointer;
-  width: 380px;
-  height: 70px;
-  padding: 10px 11px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border: 1.7px solid rgb(255, 255, 255);
-  border-radius: 7px;
-  background-color: transparent;
-  font-family: "Cera Stencil PRO";
+  font-family: var(--font-roboto);
   font-weight: 400;
-  font-style: Black;
-  font-size: 20px;
+  font-style: Bold;
+  font-size: 17px;
   line-height: 1.5;
-  letter-spacing: 0;
-  color: #ffffff;
-  transition: all 300ms ease;
-  z-index: 1;
-  text-decoration: none;
+  letter-spacing: 0.03em;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
+.descriptionTextBold{
+  font-weight: 700;
+}
 
-.descriptionHeroBtn:hover{
+  .descriptionHeroBtn {
+    cursor: pointer;
+    width: 100%;
+    height: 42px;
+    padding: 4px 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 0.8px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    background-color: transparent;
+    font-family: "Cera Stencil PRO";
+    font-weight: 900;
+    font-style: Black;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+    transition: all 300ms ease;
+    z-index: 1;
+    text-decoration: none;
+  }
+
+  .descriptionHeroBtn:hover {
     text-shadow:
-    -1px -1px 0 #000000,
-    1px -1px 0 #000000,
-    -1px 1px 0 #000000,
-    1px 1px 0 #000000;
-}
+      -1px -1px 0 #000000,
+      1px -1px 0 #000000,
+      -1px 1px 0 #000000,
+      1px 1px 0 #000000;
+  }
 
-
-.descriptionHeroBtn:active{
+  .descriptionHeroBtn:active {
     color: #000000;
-        text-shadow:
-    -1px -1px 0 #E00D1D,
-    1px -1px 0 #E00D1D,
-    -1px 1px 0 #E00D1D,
-    1px 1px 0 #E00D1D;
-}
+    text-shadow:
+      -1px -1px 0 #e00d1d,
+      1px -1px 0 #e00d1d,
+      -1px 1px 0 #e00d1d,
+      1px 1px 0 #e00d1d;
+  }
 
+  .btnIcon:hover {
+    color: #ffffff;
+  }
 
-.btnIcon:hover{
-  color: #ffffff;
-}
-
-.btnIcon:active{
+  .btnIcon:active {
     color: #000000;
-        text-shadow:
-    -1px -1px 0 #E00D1D,
-    1px -1px 0 #E00D1D,
-    -1px 1px 0 #E00D1D,
-    1px 1px 0 #E00D1D;
+    text-shadow:
+      -1px -1px 0 #e00d1d,
+      1px -1px 0 #e00d1d,
+      -1px 1px 0 #e00d1d,
+      1px 1px 0 #e00d1d;
+  }
+
+  .descriptionHeroBtnText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    height: 100%;
+    background-color: #e00d1d;
+    box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
+    border-radius: 3px;
+  }
+
+
+/* на десктопе — СКРЫТЬ */
+@media (min-width: 1440px) {
+  .pictureHeroMobileWrap {
+    display: none;
+  }
+  .pictureHero {
+    display: block;
+  }
+
+   .heroMain {
+    max-width: none;          /* <-- ключ! */
+    width: 100%;
+    padding-top: 110px;
+    padding-bottom: 0;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 150px;
+  }
+
+  .heroMainTitle {
+    font-family: var(--font-alumni-sans-sc), sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.5;
+    letter-spacing: 0.19em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e00d1d;
+    margin: 0;
+    margin-bottom: 18px;
+  }
+
+  .heroMainTitleAdd {
+    font-family: "Cera Stencil PRO";
+    font-weight: 900;
+    font-style: Black;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .heroMainSecondTitle {
+    font-family: var(--font-alumni-pinstripe), sans-serif;
+    font-weight: 400;
+    font-size: 160px;
+    line-height: 1;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(
+      180deg,
+      rgb(14, 17, 24),
+      rgb(255, 255, 255),
+      rgb(14, 17, 24)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+
+  .informationHero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .descriptionHero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    margin-left: 23px;
+  }
+
+  .descriptionHeroAddtext {
+    position: absolute;
+    width: 395px;
+    display: inline-flex;
+    align-items: center;
+    gap: 21px;
+    transform: rotate(270deg);
+    transform-origin: left top;
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #ffb53f;
+    top: 544px;
+    left: 1129px;
+  }
+
+  .descriptionHeroAddtextPoint {
+    fill: #ffb53f;
+  }
+
+  .descriptionHeroAddtextMobile {
+    display: none;
+  }
+
+  .pictureHeroLogo {
+    margin-bottom: 41px;
+  }
+
+  .pictureHero {
+    border-radius: 35px;
+    z-index: 10;
+  }
+
+  .descriptionHeroText {
+    font-family: "Cera Stencil PRO";
+    font-weight: 900;
+    font-style: Black;
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 41px;
+  }
+
+  .descriptionText {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.27;
+    letter-spacing: 0.03em;
+    margin-bottom: 41px;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 41px;
+    z-index: 10;
+  }
+
+  .descriptionHeroBtn {
+    cursor: pointer;
+    width: 380px;
+    height: 70px;
+    padding: 10px 11px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1.7px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    background-color: transparent;
+    font-family: "Cera Stencil PRO";
+    font-weight: 400;
+    font-style: Black;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #ffffff;
+    transition: all 300ms ease;
+    z-index: 1;
+    text-decoration: none;
+  }
+
+  .descriptionHeroBtn:hover {
+    text-shadow:
+      -1px -1px 0 #000000,
+      1px -1px 0 #000000,
+      -1px 1px 0 #000000,
+      1px 1px 0 #000000;
+  }
+
+  .descriptionHeroBtn:active {
+    color: #000000;
+    text-shadow:
+      -1px -1px 0 #e00d1d,
+      1px -1px 0 #e00d1d,
+      -1px 1px 0 #e00d1d,
+      1px 1px 0 #e00d1d;
+  }
+
+  .btnIcon:hover {
+    color: #ffffff;
+  }
+
+  .btnIcon:active {
+    color: #000000;
+    text-shadow:
+      -1px -1px 0 #e00d1d,
+      1px -1px 0 #e00d1d,
+      -1px 1px 0 #e00d1d,
+      1px 1px 0 #e00d1d;
+  }
+
+  .descriptionHeroBtnText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: #e00d1d;
+    box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
+    border-radius: 7px;
+  }
 }
-
-.descriptionHeroBtnText {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  height: 100%;
-  background-color: #e00d1d;
-  box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
-  border-radius: 7px;
-}
-
-
-

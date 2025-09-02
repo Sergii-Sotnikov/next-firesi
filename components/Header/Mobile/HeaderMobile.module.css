@@ -1,5 +1,5 @@
 .header {
-  max-width: 325px;
+  max-width: 320px;
   height: 65px;
   background-color: #ffffff1a;
   backdrop-filter: blur(20px);
@@ -85,20 +85,20 @@
 }
 
 .navLink:hover,
-.navLink:active {
+.navLink:active,
+.navItem:focus {
   color: #e00d1d;
 }
 
 .menu {
-  position: absolute;            /* ВАЖНО: меню под шапкой */
-  z-index: 50;                   /* поверх контента страницы */
+  position: absolute;
+  z-index: 50;
   top: 100%;
   left: 0;
   right: 0;
   padding: 8px 0 8px 18px;
-  transform: translateY(-100%);  /* спрятано вверх */
+  transform: translateY(-100%);
   transition: transform 0.4s ease;
-  overflow: hidden;              /* всё лишнее обрежется */
 }
 
 .navList {
@@ -111,6 +111,9 @@
 
 .menuOpen {
   transform: translateY(0);
+    overflow: hidden;
+  border-top: solid 1px #fff;
+  background-color: #0a0000;
 }
 
 .menu::after {
@@ -122,10 +125,10 @@
     height: 134px;
     position: absolute;
     top: 0px;
-    left: 5px;
+    left: 0px;
 }
 
-/* на десктопе — СКРЫТЬ */
+
 @media (min-width: 1440px) {
   .header {
     display: none;

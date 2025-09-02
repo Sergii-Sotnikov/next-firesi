@@ -34,14 +34,26 @@ const HeroMain = () => {
               height={157}
               alt="Логотип Firesi"
             />
+            <p className={css.descriptionHeroAddtextMobile}>
+              Сертифіковано в Україні
+            </p>
+            <div className={css.pictureHeroMobileWrap}>
+              <Image
+                className={css.pictureHeroMobile}
+                src="/img/extinguisher_mobile@2x.png"
+                width={320}
+                height={121}
+                alt="Вогнегасник FIPRON"
+              />
+            </div>
             <p className={css.descriptionHeroText}>
               Зупиніть будь яку пожежу за лічені секунди.
             </p>
             <p className={css.descriptionText}>
-              FIRESI - це ваша миттєва реакція на небезпеку. Гасить будь-яку
-              пожежу- від палаючого телефону до олії на сковорідці, не залишаючи
-              бруду. Збережіть свій дім. Захистіть найдорожчих. Створено в
-              Європі.
+              <span className={css.descriptionTextBold}>FIRESI</span> - це ваша
+              миттєва реакція на небезпеку. Гасить будь-яку пожежу - від
+              палаючого телефону до олії на сковорідці, не залишаючи бруду.
+              Збережіть свій дім. Захистіть найдорожчих. Створено в Європі.
             </p>
             <Link href="#order" className={css.descriptionHeroBtn}>
               <span className={css.descriptionHeroBtnText}>

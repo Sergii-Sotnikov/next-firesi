@@ -7,7 +7,7 @@ import { AiOutlineCloseSquare } from "react-icons/ai";
 import { LuDock } from "react-icons/lu";
 import { LuHousePlug } from "react-icons/lu";
 import { LuFireExtinguisher } from "react-icons/lu";
-import Image from "next/image";
+
 
 export default function HeaderMobile() {
   const [open, setOpen] = useState(false);

@@ -50,12 +50,15 @@ img, video, canvas, svg {
   display: block;
 }
 
+
+
 @media (max-width: 1439.98px) {
   html, body { max-width: 100%; overflow-x: clip; }
   *, *::before, *::after { box-sizing: border-box; }
   img, video, canvas, svg { max-width: 100%; height: auto; display: block; }
 
   :root { --sbw: calc(100vw - 100%); }
+  #main-content { padding-top: 0px; }
 
   .full-bleed {
     width: calc(100vw - var(--sbw));
