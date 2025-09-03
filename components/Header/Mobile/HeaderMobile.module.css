@@ -1,14 +1,16 @@
 .header {
-  max-width: 320px;
+
   height: 65px;
   background-color: #ffffff1a;
   backdrop-filter: blur(20px);
-  margin: 0 auto;
+  
   position: relative;
 }
 
 .container {
   height: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   padding: 0 16px;
   display: flex;
   flex-direction: row;
@@ -29,6 +31,7 @@
     -0.44px 0.44px 0 #ffb53f,
     0.44px 0.44px 0 #ffb53f;
   text-decoration: none;
+  position: relative;
 }
 
 .logoAccent {
@@ -45,8 +48,9 @@
   width: 27px;
   height: 37px;
   position: absolute;
-  top: 6px;
-  left: 11px;
+    top: -9px;
+    left: -27px;
+
 }
 
 .burger {
