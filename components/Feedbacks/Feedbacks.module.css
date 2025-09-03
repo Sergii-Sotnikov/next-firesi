@@ -1,4 +1,9 @@
+.feedbacks{
+display: none;
+}
+@media (min-width: 1440px) {
 .feedbacks {
+  display: block;
   padding-top: 62px;
   padding-bottom: 50px;
   position: relative;
@@ -182,3 +187,6 @@
   left: 50%;
   transform: translateX(-50%);
 }
+}
+
+
