@@ -67,6 +67,7 @@
   .solution {
     padding-top: 60px;
     padding-bottom: 61px;
+    max-width: 100%;
   }
 
   .container {

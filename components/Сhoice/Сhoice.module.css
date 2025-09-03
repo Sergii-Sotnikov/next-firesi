@@ -1,7 +1,206 @@
+.mySwiper :global(.swiper-pagination) {
+  position: relative;
+  margin-top: 25px;
+}
+
+.mySwiper :global(.swiper-pagination-bullet) {
+  background: transparent;
+  border: 1.5px solid #fff;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mySwiper :global(.swiper-pagination-bullet-active) {
+  background-color: #fff;
+  border-color: #fff;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+.productList{
+  display: none;
+}
+
+.choice{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+  width: 320px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.title {
+  font-family: "Cera Stencil PRO";
+  font-weight: 900;
+  font-style: Black;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0px;
+  margin-bottom: 75px;
+  position: relative;
+}
+
+.title::after {
+    content: "";
+    z-index: 0;
+    pointer-events: none;
+    background: url(/img/fire_bg@2x.png) center / cover no-repeat;
+    width: 320px;
+    height: 134px;
+    position: absolute;
+    top: -10px;
+    left: -16px;
+}
+
+.productItem {
+  width: 288px;
+  padding: 13px 4px 15px 4px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  box-shadow: 0px 0.56px 1.68px rgba(0,0,0,0.1);
+  color: #fff;
+  display: flex;
+  flex-direction: column; 
+}
+
+.productTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e00d1d;
+  margin: 0px;
+  margin-bottom: 8px;
+}
+
+.productName {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  color: #ffffff;
+  margin: 0px;
+  margin-bottom: 8px;
+}
+
+.productNameLogo {
+  color: #e00d1d;
+  margin-right: 10px;
+}
+
+.classes {
+  margin-bottom: 8px;
+}
+
+.classText {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin: 0px;
+}
+
+.imageChoiseMobile{
+  display: block;
+  margin: 0 auto;  
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.productDescription {
+  width: 100%;
+  padding: 0;
+}
+
+.descriptionName {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #ffffff;
+  margin: 0px;
+}
+
+.descriptionNameAdd{
+  font-weight: 700;
+}
+
+.descriptionList{
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.descriptionItemText{
+  margin: 0px;
+}
+
+.textPrice {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.textPriceExchange{
+  font-family: var(--font-roboto), sans-serif;
+font-weight: 200;
+font-size: 16px;
+line-height: 1;
+text-align: center;
+color: #A599AB;
+margin-top: 8px;
+margin-bottom: 8px;
+}
+
+
+@media (min-width: 1440px) {
+
+  .choiceMobileSwiper{
+    display: none;
+  }
+  .title::after{
+    display: none;
+  }
 .choice {
   padding-top: 45px;
   padding-bottom: 62px;
   scroll-margin-top: 75px;
+  min-width: 100%;
 }
 
 .container {
@@ -167,5 +366,6 @@ color: #A599AB;
 margin-bottom: 0px;
 margin-top: 22px;
 }
+  }
 
 

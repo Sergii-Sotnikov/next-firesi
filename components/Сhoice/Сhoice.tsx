@@ -1,12 +1,15 @@
 import ButtonOrderProduct from "../ButtonOrderProduct/ButtonOrderProduct";
+import ChoiceMobileSlider from "./ChoiceMobileSlider";
 import css from "./Сhoice.module.css";
 
 export default function Choice() {
-
   return (
     <section className={css.choice} id="order">
       <div className={css.container}>
         <h3 className={css.title}>Вибери свого надійного захисника</h3>
+        <div className={css.choiceMobileSwiper}>
+          <ChoiceMobileSlider />
+        </div>
         <ul className={css.productList}>
           <li className={css.productItem}>
             <p className={css.productTitle}>вогнегасник</p>
@@ -91,7 +94,7 @@ export default function Choice() {
             <p className={css.textPriceExchange}>
               розрахунок в гривнях по курсу НБУ
             </p>
-            <ButtonOrderProduct productId="FRSE-FS"/>
+            <ButtonOrderProduct productId="FRSE-FS" />
           </li>
 
           <li className={css.productItem}>
@@ -178,7 +181,7 @@ export default function Choice() {
             <p className={css.textPriceExchange}>
               розрахунок в гривнях по курсу НБУ
             </p>
-            <ButtonOrderProduct productId="FRSE-F2"/>
+            <ButtonOrderProduct productId="FRSE-F2" />
           </li>
 
           <li className={css.productItem}>
@@ -265,7 +268,7 @@ export default function Choice() {
             <p className={css.textPriceExchange}>
               розрахунок в гривнях по курсу НБУ
             </p>
-            <ButtonOrderProduct productId="FRSE-F6"/>
+            <ButtonOrderProduct productId="FRSE-F6" />
           </li>
         </ul>
       </div>

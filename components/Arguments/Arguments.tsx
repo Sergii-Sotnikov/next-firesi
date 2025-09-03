@@ -1,5 +1,6 @@
 import css from "./Arguments.module.css";
 import Image from "next/image";
+import ArgumentsMobileSlider from "./ArgumentsMobileSlider";
 
 export default function Arguments() {
   return (
@@ -13,6 +14,9 @@ export default function Arguments() {
       />
       <div className={css.container}>
         <h3 className={css.title}>чому варто обрати саме Firesi ?</h3>
+                <div className={css.argumentsMobileSwiper}>
+          <ArgumentsMobileSlider/>
+        </div>
         <ul className={css.list}>
           <li className={css.item}>
             <p className={css.number}>1</p>
