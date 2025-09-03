@@ -54,7 +54,7 @@
 
 .title::after {
     content: "";
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
     background: url(/img/fire_bg@2x.png) center / cover no-repeat;
     width: 320px;
