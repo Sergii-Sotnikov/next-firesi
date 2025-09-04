@@ -1,30 +1,25 @@
-/* ===== Mobile-first (резина 320→420) ===== */
 .advantages {
   width: 100%;
   margin: 0 auto;
   position: relative;
   padding-bottom: 30px;
-
-  /* общий мобильный отступ */
   --gutter: clamp(12px, 4vw, 20px);
 }
 
 .containerAdvantages {
   width: 100%;
-  max-width: 420px;          /* ограничиваем контейнер на мобилке */
+  max-width: 420px;
   margin: 0 auto;
   padding: 0 var(--gutter);
-  position: relative;        /* чтобы абсолютный заголовок якорился внутри */
 }
 
 .advantagesTitle {
   font-family: var(--font-alumni-pinstripe), sans-serif;
   font-weight: 400;
   font-size: clamp(36px, 10vw, 56px);
-  line-height: 2;            /* как у тебя было, можно уменьшить до 1.6 */
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
-
   background: linear-gradient(
     180deg,
     #0e1118 0%,
@@ -36,45 +31,40 @@
   background-clip: text;
   color: transparent;
   margin: 0;
-  text-wrap: balance;        /* аккуратный перенос строк, если поддерживается */
+  text-wrap: balance;
 }
 
-.advantagesTitleText {
+.wrapperMobile{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 12px;
+}
 
-  width: 100%;
-  position: absolute;
-  /* было top: 57px; сделаем плавным и зависящим от ширины */
-  top: clamp(40px, 14vw, 70px);
-  left: 0;
-
+.advantagesTitleText {
   font-family: var(--font-inter), sans-serif;
   font-weight: 700;
   font-size: clamp(20px, 7vw, 28px);
   line-height: 1;
-  letter-spacing: 0;
-  text-align: center;
   color: #ffffff;
+  text-align: center;
 }
 
 .pictureHero {
-  margin-left: 8px;
-  width: clamp(90px, 28vw, 120px);
-  height: auto;              /* вместо фиксированной высоты */
-  display: inline-block;
+  height: auto;
+  width: 98px;
 }
 
 /* ===== Desktop 1440+ ===== */
 @media (min-width: 1440px) {
   .advantages {
     max-width: none;
+    padding-top: 55px;
+    padding-bottom: 30px;
   }
 
   .containerAdvantages {
-    position: relative;
     width: 100%;
     max-width: 1440px;
     padding: 0 140px;
@@ -85,7 +75,7 @@
     font-family: var(--font-alumni-pinstripe), sans-serif;
     font-weight: 400;
     font-size: 150px;
-    line-height: 1.56;
+    line-height: 1;
     letter-spacing: 0;
     text-align: center;
     text-transform: uppercase;
@@ -102,22 +92,19 @@
     margin: 0;
   }
 
+  .wrapperMobile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
   .advantagesTitleText {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    position: absolute;
-    top: 145px;
-    left: 8px;
-
     font-family: var(--font-inter), sans-serif;
     font-weight: 700;
     font-size: 110px;
     line-height: 1.5;
-    letter-spacing: 0;
     text-align: center;
     color: #ffffff;
   }
