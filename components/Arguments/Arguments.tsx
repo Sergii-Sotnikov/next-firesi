@@ -5,7 +5,7 @@ import ArgumentsMobileSlider from "./ArgumentsMobileSlider";
 export default function Arguments() {
   return (
     <section className={css.arguments}>
-                          <Image
+      <Image
         className={css.fireImage}
         src="/img/webp/fire_bg@2x.webp"
         width={1440}
@@ -14,8 +14,8 @@ export default function Arguments() {
       />
       <div className={css.container}>
         <h3 className={css.title}>чому варто обрати саме Firesi ?</h3>
-                <div className={css.argumentsMobileSwiper}>
-          <ArgumentsMobileSlider/>
+        <div className={css.argumentsMobileSwiper}>
+          <ArgumentsMobileSlider />
         </div>
         <ul className={css.list}>
           <li className={css.item}>
@@ -82,7 +82,8 @@ export default function Arguments() {
             <p className={css.number}>5</p>
             <p className={css.itemTitle}>6 років гарантіі!</p>
             <p className={css.text}>
-              Не потребує обслуговування і перевірок 6 років + !  Він чекає свого часу ! 
+              Не потребує обслуговування і перевірок 6 років + ! Він чекає свого
+              часу !
             </p>
           </li>
 
@@ -90,7 +91,8 @@ export default function Arguments() {
             <p className={css.number}>6</p>
             <p className={css.itemTitle}>Працює в любу погоду!</p>
             <p className={css.text}>
-              Працює від -15°C до +50°C. Йому байдуже на мороз чи спеку! Ідеально для машини!
+              Працює від -15°C до +50°C. Йому байдуже на мороз чи спеку!
+              Ідеально для машини!
             </p>
           </li>
         </ul>

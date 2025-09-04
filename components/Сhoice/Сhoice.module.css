@@ -165,6 +165,9 @@
   .title::after{
     display: none;
   }
+  .titleAdd{
+    display: none;
+  }
 .choice {
   padding-top: 45px;
   padding-bottom: 62px;

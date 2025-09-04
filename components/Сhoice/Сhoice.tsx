@@ -6,7 +6,11 @@ export default function Choice() {
   return (
     <section className={css.choice} id="order">
       <div className={css.container}>
-        <h3 className={css.title}>Вибери свого надійного захисника</h3>
+        <h3 className={css.title}>
+          Вибери свого <br className={css.titleAdd} />
+          надійного <br className={css.titleAdd} />
+          захисника
+        </h3>
         <div className={css.choiceMobileSwiper}>
           <ChoiceMobileSlider />
         </div>
