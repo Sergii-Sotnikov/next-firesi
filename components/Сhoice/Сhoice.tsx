@@ -7,9 +7,7 @@ export default function Choice() {
     <section className={css.choice} id="order">
       <div className={css.container}>
         <h3 className={css.title}>
-          Вибери свого <br className={css.titleAdd} />
-          надійного <br className={css.titleAdd} />
-          захисника
+          Вибери свого<br className={css.titleAdd}/> надійного<br className={css.titleAdd}/> захисника
         </h3>
         <div className={css.choiceMobileSwiper}>
           <ChoiceMobileSlider />
