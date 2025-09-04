@@ -3,15 +3,18 @@
 }
 
 .footer {
-  padding-top: 16px;
-
+  padding: 16px 0;
+  width: 100%;
+  margin: 0 auto;
+  --gutter: clamp(12px, 4vw, 20px);
 }
 
-
 .container {
-  width: 320px;
+  width: 100%;
+  max-width: 420px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 var(--gutter);
+  box-sizing: border-box;
 }
 
 .footerNavList {
@@ -21,23 +24,28 @@
   padding-top: 8px;
   align-items: center;
   justify-content: center;
-    position: relative;
-    overflow: hidden;
-      height: 129px;
+  position: relative;
+  overflow: hidden;
+  height: 129px;
+  margin: 0;
+  padding-left: 0;
+}
+
+.footerNavItem {
+  list-style: none;
 }
 
 .footerNavList::after {
-    content: "";
-    z-index: -1;
-    pointer-events: none;
-    background: url(/img/fire_bg@2x.png) center / cover no-repeat;
-    width: 320px;
-    height: 129px;
-    position: absolute;
-    top: 0px;
-    left: -16px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--gutter));
+  width: calc(100% + var(--gutter) * 2);
+  height: 129px;
+  background: url(/img/fire_bg@2x.png) center / cover no-repeat;
+  z-index: -1;
+  pointer-events: none;
 }
-
 
 .footerNavElemMobile {
   text-decoration: none;
@@ -45,12 +53,13 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
-  letter-spacing: -0em;
+  letter-spacing: 0;
   color: #ffffff;
 }
 
 @media (min-width: 1440px) {
-  .footerNavList::after{
+
+  .footerNavList::after {
     display: none;
   }
   .display {
@@ -90,6 +99,12 @@
     font-size: 24px;
     line-height: 1;
     color: #ffffff;
+  }
+
+    .wrapperSoc {
+    display: flex;
+    flex-direction: row;
+    gap: 51px;
   }
 
   .footerSocItem {
