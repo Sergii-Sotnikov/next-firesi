@@ -101,21 +101,21 @@
 
 .recaptchaWrap {
   width: 100%;
-  max-width: 304px;
-  height: 78px;
-  margin: 0 auto;
-  overflow: hidden;
+  margin: 8px auto 0;
+  display: flex;
+  justify-content: center;   /* центрируем */
+  align-items: center;
+  overflow: visible;
 }
+
+/* НЕ задаём 338px! Даем нативный размер и при необходимости скейлим */
 .recaptchaWrap > div {
-  transform: none;
-  transform-origin: left top;
-  width: 304px;
-  height: 78px;
+  width: 304px;              /* натив */
+  height: 78px;              /* натив */
+  max-width: 100%;
+  transform-origin: top center;
 }
-@media (max-width: 360px) {
-  .recaptchaWrap { max-width: 288px; height: calc(78px * 0.9474); }
-  .recaptchaWrap > div { transform: scale(0.9474); }
-}
+
 
 .btnContact {
   cursor: pointer;
