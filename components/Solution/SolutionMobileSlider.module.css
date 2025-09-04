@@ -1,58 +1,46 @@
 .wrap {
-  /* мобилка — показываем, десктоп спрячем */
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 clamp(12px, 4vw, 20px);
+  box-sizing: border-box;
 }
 
-.mainSwiper {
+.mainSwiper,
+.thumbsSwiper {
   width: 100%;
-  max-width: 320px;
   margin: 0 auto;
 }
 
-.slide { }
+.thumbsSwiper {
+  margin-top: 12px;
+}
 
 .card {
   overflow: hidden;
   border-radius: 6px;
 }
 
-.img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* миниатюры */
-.thumbsSwiper {
-  width: 100%;
-  max-width: 320px;
-  margin: 12px auto 0;
-}
-
-.thumbSlide { }
-
-.thumbCard {
-  overflow: hidden;
-  border-radius: 6px;
-  opacity: 0.6;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
+.img,
 .thumbImg {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* активный thumbnail */
+.thumbCard {
+  overflow: hidden;
+  border-radius: 6px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
 :global(.swiper-slide-thumb-active) .thumbCard {
   opacity: 1;
   border-color: #ffffff;
   transform: translateY(-2px);
 }
 
-/* скрыть весь блок на десктопе, т.к. там сетка */
 @media (min-width: 1440px) {
-  .wrap {
-    display: none;
-  }
+  .wrap { display: none; }
 }

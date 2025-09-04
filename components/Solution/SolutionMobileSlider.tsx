@@ -5,19 +5,17 @@ import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import Image from "next/image";
 import type { Swiper as SwiperType } from "swiper";
 
-
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-
 import css from "./SolutionMobileSlider.module.css";
 
 const slides = [
+  { src: "/img/webp/fire_electrical_panel@2x.webp", alt: "Електрощит" },
   { src: "/img/webp/fire_equipment@2x.webp", alt: "Пальне й розчинники" },
   { src: "/img/webp/fire_kitchen@2x.webp", alt: "Кухня та олія" },
-  { src: "/img/webp/fire_electrical_panel@2x.webp", alt: "Електрощит" },
   { src: "/img/webp/fire_computer@2x.webp", alt: "Комп’ютер/ноутбук" },
   { src: "/img/webp/fire_scooter@2x.webp", alt: "Електросамокат" },
   { src: "/img/webp/fire_car@2x.webp", alt: "Авто" },
@@ -42,12 +40,12 @@ export default function SolutionMobileSlider() {
           } as React.CSSProperties
         }
       >
-        {slides.map((s, i) => (
+        {slides.map((slide, i) => (
           <SwiperSlide key={i} className={css.slide}>
             <div className={css.card}>
               <Image
-                src={s.src}
-                alt={s.alt}
+                src={slide.src}
+                alt={slide.alt}
                 width={288}
                 height={250}
                 priority={i === 0}
@@ -72,12 +70,12 @@ export default function SolutionMobileSlider() {
           768: { slidesPerView: 6, spaceBetween: 12 },
         }}
       >
-        {slides.map((s, i) => (
+        {slides.map((slide, i) => (
           <SwiperSlide key={i} className={css.thumbSlide}>
             <div className={css.thumbCard}>
               <Image
-                src={s.src}
-                alt={s.alt}
+                src={slide.src}
+                alt={slide.alt}
                 width={51}
                 height={43}
                 className={css.thumbImg}
