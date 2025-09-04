@@ -16,6 +16,7 @@
   margin: 0 auto;
   border-radius: 6px;
   overflow: hidden;
+  background-color: #0a0000;
 }
 
 .videoWrapper iframe {
