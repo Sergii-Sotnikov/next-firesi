@@ -10,6 +10,9 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { LiaMapMarkedAltSolid } from "react-icons/lia";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRef, useState } from "react";
+import Link from "next/link";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
 
 interface FormCallValues {
   name: string;
@@ -149,6 +152,7 @@ export default function Contact() {
 
                   <div className={css.formGroup}>
                     <Field
+                      as="textarea"
                       id="message"
                       name="message"
                       className={css.inputMessage}
@@ -161,13 +165,13 @@ export default function Contact() {
                     />
                   </div>
                   {isValid && dirty && (
-                    <ReCAPTCHA
-                      ref={recaptchaRef}
-                      sitekey={myKeyRECAPTCHA || ""}
-                      onChange={(token) => {
-                        setRecaptchaToken(token);
-                      }}
-                    />
+                    <div className={css.recaptchaWrap}>
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={myKeyRECAPTCHA || ""}
+                        onChange={(token) => setRecaptchaToken(token)}
+                      />
+                    </div>
                   )}
 
                   <button
@@ -198,7 +202,7 @@ export default function Contact() {
                 <use href="/icons/sprite.svg#icon-email"></use>
               </svg>
               <a href="mailto:firesi@gmail.com" className={css.addressMail}>
-                Firesi@gmail.com
+                stopfirelviv@gmail.com
               </a>
             </li>
             <li className={css.addressItem}>
@@ -214,6 +218,73 @@ export default function Contact() {
                 21 Zhovkivska Street, Malekhiv. <br />
                 Lviv, Ukraine.
               </p>
+            </li>
+          </ul>
+
+          <ul className={css.addressListMobile}>
+            <li className={css.addressItem}>
+              <TbTruckDelivery className={css.iconAddressDelivery} size={42} />
+              <p className={css.addressDeliveryText}>доставка Meest, SAT</p>
+            </li>
+
+            <li className={css.addressItem}>
+              <LiaMapMarkedAltSolid
+                className={css.iconAddressLocation}
+                size={42}
+              />
+              <p className={css.addressLocationText}>
+                21 Zhovkivska Street,
+                <br />
+                Malekhiv, Lviv, Ukraine.
+              </p>
+            </li>
+            <li className={css.addressItem}>
+              <PhoneCall className={css.iconAddressPhone} size={42} />
+              <a href="tel:+380989136599" className={css.addressPhone}>
+                +380989136599
+              </a>
+            </li>
+            <li className={css.addressItem}>
+              <svg className={css.iconEmail} width={42} height={42}>
+                <use href="/icons/sprite.svg#icon-email"></use>
+              </svg>
+              <a href="mailto:firesi@gmail.com" className={css.addressMail}>
+                stopfirelviv@gmail.com
+              </a>
+            </li>
+            <li>
+              <ul className={css.navList}>
+                <li className={css.navItem}>
+                  <Link
+                    href="https://www.facebook.com/profile.php?id=61577673877070"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={css.socItem}
+                  >
+                    <FaFacebookF size={28} />
+                  </Link>
+                </li>
+                <li className={css.navItem}>
+                  <Link
+                    href="https://www.instagram.com/stop_fire_lviv?utm_source=ig_web_button_share_sheet&igsh=MWtwYmVvaDJieTI3dA%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={css.socItem}
+                  >
+                    <FaInstagram size={28} />
+                  </Link>
+                </li>
+                <li className={css.navItem}>
+                  <Link
+                    href="https://www.tiktok.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={css.socItem}
+                  >
+                    <AiFillTikTok size={28} />
+                  </Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </address>

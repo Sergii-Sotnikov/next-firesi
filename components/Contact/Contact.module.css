@@ -1,57 +1,44 @@
+.addressList {
+  display: none;
+}
+
 .contact {
-  padding-top: 60px;
-  padding-bottom: 0px;
+  padding-top: 24px;
+  padding-bottom: 16px;
 }
 
 .container {
-  width: 1140px;
+  width: 320px;
   margin: 0 auto;
-  height: 712px;
-  padding-top: 60px;
-  padding-bottom: 45px;
-  border-radius: 25px;
-  background: rgba(255, 255, 255, 0.1);
-  min-width: 712px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0px;
+  padding: 0 16px;
 }
 
 .title {
   font-family: "Cera Stencil PRO";
   font-weight: 900;
   font-style: Black;
-  font-size: 48px;
+  font-size: 24px;
   line-height: 1;
   letter-spacing: 0;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   margin-top: 0px;
 }
-
-.information {
-  padding-left: 25.5px;
-  padding-right: 25.5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
 .mapWrapper iframe {
+  max-width: 288px;
+  max-height: 200px;
   border-radius: 8px;
-  display: block; /* на всяк випадок */
+  display: block;
+  margin-bottom: 32px;
 }
 
-.contactForm {
-  width: 454px;
+.visuallyHidden {
+  display: none;
 }
 
 .form {
-  width: 454px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -62,20 +49,24 @@
 .inputPhone,
 .inputMessage {
   width: 100%;
-  height: 74px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 25px;
-  padding-bottom: 31px;
-  border-radius: 6px;
+  height: 42px;
+  padding: 10px 16px;
+  border-radius: 8px;
   background: rgba(251, 251, 251, 0.15);
   border: none;
   font-family: var(--font-inter), sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1;
   letter-spacing: 0;
   color: #ffffff;
+}
+
+.inputMessage {
+  height: 80px;
+  vertical-align: top;
+  overflow: hidden;
+  resize: none;
 }
 
 .inputName::placeholder,
@@ -84,25 +75,10 @@
   font-family: var(--font-roboto), sans-serif;
   font-weight: 500;
   font-style: Medium;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.25;
   letter-spacing: 0;
   color: #615e5b;
-}
-
-.inputName{
-  position: relative;
-}
-
-.inputName::after{
-    content: "|";
-    position: absolute;
-  width: 40px;
-  height: 54px;
-  position: absolute;
-  top: -6px;
-  left: -41px;
-  z-index: 1;
 }
 
 .errorName,
@@ -116,22 +92,34 @@
   margin-top: 5px;
 }
 
+.recaptchaWrap {
+  width: 288px;
+  overflow: hidden;
+  height: calc(78px * 0.9474);
+}
+
+.recaptchaWrap > div {
+  transform: scale(0.9474);
+  transform-origin: left top;
+  width: 304px;
+  height: 78px;
+}
 
 .btnContact {
   cursor: pointer;
   width: 100%;
-  height: 70px;
-  padding: 10px 11px;
+  height: 39px;
+  padding: 4;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 1.7px solid rgb(255, 255, 255);
-  border-radius: 7px;
+  border: 0.8px solid rgb(255, 255, 255);
+  border-radius: 4px;
   background-color: transparent;
   font-family: "Cera Stencil PRO";
   font-weight: 900;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0;
   color: #ffffff;
@@ -155,7 +143,29 @@
   height: 100%;
   background-color: #e00d1d;
   box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
-  border-radius: 7px;
+  border-radius: 4px;
+}
+
+.btnContact:hover {
+  text-shadow:
+    -0.6px -0.6px 0 #000000,
+    0.6px -0.6px 0 #000000,
+    -0.6px 0.6px 0 #000000,
+    0.6px 0.6px 0 #000000;
+}
+
+.btnContact:active {
+  color: #000000;
+  text-shadow:
+    -0.6px -0.6px 0 #e00d1d,
+    0.6px -0.6px 0 #e00d1d,
+    -0.6px 0.6px 0 #e00d1d,
+    0.6px 0.6px 0 #e00d1d;
+}
+
+.iconPhone {
+  width: 18px;
+  height: 18px;
 }
 
 @keyframes pulse {
@@ -177,19 +187,15 @@
   animation: pulse 1.2s infinite ease-in-out;
 }
 
-.details{
-  padding: 0px 25px;
+.contactForm {
+  margin-bottom: 61px;
 }
 
-.addressList {
+.addressListMobile {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  gap: 25px;
-  margin-top: auto;
-  margin-bottom: 0px;
+  gap: 32px;
 }
 
 .addressItem {
@@ -197,42 +203,322 @@
   flex-direction: row;
   align-items: center;
   gap: 9px;
+  color: #ffffff;
+  font-style: normal;
+  font-family: var(--font-roboto);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1;
 }
 
-.iconEmail {
-  fill: #e00d1d;
+.addressPhone,
+.addressMail {
+  text-decoration: none;
+  color: #ffffff;
+  font-style: normal;
+  font-family: var(--font-roboto);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .iconAddressPhone,
 .iconAddressDelivery,
 .iconAddressLocation {
   color: #e00d1d;
+  width: 25px;
+  height: 25px;
 }
 
-.addressPhone,
-.addressMail,
-.addressDeliveryText,
-.addressLocationText {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: 0;
-  color: #FFFFFF;
-  font-style: normal;
-  text-decoration: none;
-  margin: 0px;
+.iconAddressPhone {
+  width: 20px;
+  height: 20px;
 }
 
-.visuallyHidden {
-  position: absolute !important;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden; white-space: nowrap;
-  border: 0; clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+.iconEmail {
+  fill: #e00d1d;
+  width: 18px;
+  height: 18px;
+}
+
+.navList{
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+}
+
+.socItem{
+  color: #ffffff;
+}
+.socItem:hover,
+.socItem:active{
+  color: #e00d1d;
 }
 
 
+@media (min-width: 1440px) {
+  .addressListMobile,
+  .navList {
+    display: none;
+  }
+  .contact {
+    padding-top: 60px;
+    padding-bottom: 0px;
+  }
 
+  .container {
+    width: 1140px;
+    margin: 0 auto;
+    height: 712px;
+    padding-top: 60px;
+    padding-bottom: 45px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    min-width: 712px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0px;
+  }
 
+  .title {
+    font-family: "Cera Stencil PRO";
+    font-weight: 900;
+    font-style: Black;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+
+  .information {
+    padding-left: 25.5px;
+    padding-right: 25.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .mapWrapper iframe {
+    border-radius: 8px;
+    display: block;
+  }
+
+  .contactForm {
+    width: 454px;
+  }
+
+  .form {
+    width: 454px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  .inputName,
+  .inputPhone,
+  .inputMessage {
+    width: 100%;
+    height: 74px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 31px;
+    border-radius: 6px;
+    background: rgba(251, 251, 251, 0.15);
+    border: none;
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #ffffff;
+  }
+
+  .inputName::placeholder,
+  .inputPhone::placeholder,
+  .inputMessage::placeholder {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    color: #615e5b;
+  }
+
+  .inputName {
+    position: relative;
+  }
+
+  .inputName::after {
+    content: "|";
+    position: absolute;
+    width: 40px;
+    height: 54px;
+    position: absolute;
+    top: -6px;
+    left: -41px;
+    z-index: 1;
+  }
+
+  .errorName,
+  .errorPhone {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #e00d1d;
+    margin-top: 5px;
+  }
+
+  .btnContact {
+    cursor: pointer;
+    width: 100%;
+    height: 70px;
+    padding: 10px 11px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1.7px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    background-color: transparent;
+    font-family: "Cera Stencil PRO";
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #ffffff;
+    transition: all 300ms ease;
+    z-index: 1;
+    text-transform: uppercase;
+  }
+
+  .btnContact:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btnContactSpan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: #e00d1d;
+    box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
+    border-radius: 7px;
+  }
+
+  .iconPhone {
+    width: 22px;
+    height: 22px;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .iconPhone {
+    animation: pulse 1.2s infinite ease-in-out;
+  }
+
+  .btnContact:hover {
+    text-shadow:
+      -1px -1px 0 #000000,
+      1px -1px 0 #000000,
+      -1px 1px 0 #000000,
+      1px 1px 0 #000000;
+  }
+
+  .btnContact:active {
+    color: #000000;
+    text-shadow:
+      -1px -1px 0 #e00d1d,
+      1px -1px 0 #e00d1d,
+      -1px 1px 0 #e00d1d,
+      1px 1px 0 #e00d1d;
+  }
+
+  .details {
+    padding: 0px 25px;
+  }
+
+  .addressList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    gap: 25px;
+    margin-top: auto;
+    margin-bottom: 0px;
+  }
+
+  .addressItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .iconEmail {
+    fill: #e00d1d;
+  }
+
+  .iconAddressPhone,
+  .iconAddressDelivery,
+  .iconAddressLocation {
+    color: #e00d1d;
+  }
+
+  .addressPhone,
+  .addressMail,
+  .addressDeliveryText,
+  .addressLocationText {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #ffffff;
+    font-style: normal;
+    text-decoration: none;
+    margin: 0px;
+  }
+
+  .visuallyHidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+  }
+}

@@ -14,21 +14,22 @@ const Footer = () => {
                 href="https://www.youtube.com/@firesiCZ/videos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={css.footerNavElem}
+                className={`${css.footerNavElem} ${css.footerNavElemMobile}`}
               >
                 Відео
               </Link>
             </li>
             <li className={css.footerNavItem}>
-              <Link href="/instructions" className={css.footerNavElem}>
+              <Link href="/instructions" className={`${css.footerNavElem} ${css.footerNavElemMobile}`}>
                 Інструкція з використання
               </Link>
             </li>
             <li className={css.footerNavItem}>
-              <Link href="#header" className={css.footerNavElem}>
+              <Link href="#header" className={`${css.footerNavElem} ${css.footerNavElemMobile}`}>
                 Повернутись на початок
               </Link>
             </li>
+            <div className={css.wrapperSoc}>
             <li className={css.footerNavItem}>
               <Link
                 href="https://www.facebook.com/profile.php?id=61577673877070"
@@ -59,6 +60,7 @@ const Footer = () => {
                 <AiFillTikTok size={32} />
               </Link>
             </li>
+            </div>
           </ul>
         </nav>
       </div>

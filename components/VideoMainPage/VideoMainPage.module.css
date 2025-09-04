@@ -6,14 +6,16 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 150px;
+  padding: 0 16px;
 }
 
 .videoWrapper {
   width: 100%;
-  max-width: 288px;
+  max-width: 288px;   
   aspect-ratio: 16/9;
   margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .videoWrapper iframe {
