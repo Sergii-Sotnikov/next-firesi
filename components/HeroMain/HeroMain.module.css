@@ -1,16 +1,14 @@
-/* ===== Mobile-first (320–420px тянется плавно) ===== */
+
 .heroMain {
   width: 100%;
   margin: 0 auto;
   padding-top: 40px;
-
-  /* общий мобильный отступ контейнера */
   --gutter: clamp(12px, 4vw, 20px);
 }
 
 .container {
   width: 100%;
-  max-width: 420px;        /* резина до 420px */
+  max-width: 420px;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -54,12 +52,8 @@
   margin: 0 0 10px 0;
 }
 
-.informationHero {
-  /* на мобилке — блочный поток */
-}
-
 .descriptionHeroAddtext {
-  display: none; /* показываем только на десктопе */
+  display: none;
 }
 
 .pictureHeroMobileWrap {
@@ -98,8 +92,8 @@
 }
 
 .pictureHero {
-  display: none; /* десктопная картинка скрыта на мобилке */
-  border-radius: 0; /* сброс на всякий */
+  display: none; 
+  border-radius: 0;
 }
 
 .descriptionHeroText {
@@ -201,7 +195,7 @@
 /* ===== Desktop 1440+ ===== */
 @media (min-width: 1440px) {
   .pictureHeroMobileWrap { display: none; }
-  .customIcon { display: none; }
+  .customIcon,.mobileBr { display: none; }
   .pictureHero { display: block; }
 
   .heroMain {
@@ -238,6 +232,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
+    max-width: 155px;
   }
 
   .heroMainSecondTitle {

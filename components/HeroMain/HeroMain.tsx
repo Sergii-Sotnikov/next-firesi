@@ -12,7 +12,7 @@ const HeroMain = () => {
           іноваційна технологія
           <br />
           <span className={css.heroMainTitleAdd}>
-            прорив у світі пожежогасіння
+            прорив у світі <br className={css.mobileBr} /> пожежогасіння
           </span>
         </h1>
         <h2 className={css.heroMainSecondTitle}>в 7 разів потужніший</h2>
