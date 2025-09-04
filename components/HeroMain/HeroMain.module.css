@@ -16,7 +16,7 @@
 .heroMainTitle {
   font-family: var(--font-alumni-sans-sc), sans-serif;
   font-weight: 400;
-  font-size: clamp(22px, 6.4vw, 30px);
+  font-size: clamp(28px, 6.4vw, 36px);
   line-height: 0.9;
   letter-spacing: 0.15em;
   text-align: center;
