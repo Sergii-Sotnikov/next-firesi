@@ -16,7 +16,7 @@
 .title {
   font-family: var(--font-alumni-sans-sc), sans-serif;
   font-weight: 400;
-  font-size: clamp(24px, 6.4vw, 32px);
+ font-size: clamp(28px, 6.4vw, 36px);
   line-height: 1.3;
   letter-spacing: 0.1em;
   text-align: center;
