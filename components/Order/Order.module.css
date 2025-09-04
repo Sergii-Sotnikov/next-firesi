@@ -1,6 +1,7 @@
 .callBackForm {
-  width: 948px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -10,22 +11,21 @@
   text-align: center;
   font-family: var(--font-roboto), sans-serif;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 20px;
   line-height: 1;
-  letter-spacing: 0.19em;
-  margin-bottom: 50px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
 }
-
 .form {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 16px;
 }
 
 .formProduct {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .labelName,
@@ -34,7 +34,7 @@
 .optionText {
   font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 14px;
   line-height: 1;
   letter-spacing: 0;
   color: #ffffff;
@@ -42,23 +42,26 @@
 }
 
 .selectProduct {
-  height: 74px;
-  border-radius: 6px;
+  width: 100% !important;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 56px;
+  border-radius: 4px;
   background: rgba(251, 251, 251, 0.15);
   font-family: var(--font-roboto), sans-serif;
   color: #fff;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1;
-  letter-spacing: 0;
   border: 1px solid transparent;
-  padding: 0 40px 0 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 9px 4px px 14px;
   transition: border-color 0.2s ease;
   outline: none;
 }
+
 .selectProduct:focus,
 .selectProduct:focus-visible {
   border-color: #fff;
@@ -72,165 +75,288 @@
 .productPreview {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 4px;
   align-items: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.productImg {
+  width: auto;
+  height: 180px;
 }
 
 .productTitle {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 2px 0px;
+  padding-left: 15px;
   color: #fff;
   font-family: var(--font-roboto), sans-serif;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 12px;
   line-height: 1;
+}
+
+.productDescList {
+  list-style: disc;
+  list-style-position: outside; /* можно inside, если нужно */
+  padding-left: 10px;
+  margin: 0;
+}
+
+.productDescItem {
+  list-style-type: disc; /* на случай глобального reset-а */
+  display: list-item; /* если где-то сделали display:flex */
+}
+
+.productDescItem::marker {
+  color: #fff;               /* или #fff */
+  font-size: 10px;
 }
 
 .descrText {
   margin: 0px;
   color: #fff;
   font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 300;
+  font-size: 10px;
   line-height: 1.4;
 }
 
-.title {
-  margin-right: 25px;
-}
+@media (min-width: 1440px) {
+  .callBackForm {
+    width: 948px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 
-.inputName,
-.inputPhone {
-  width: 100%;
-  height: 74px;
-  padding: 23px 35px;
-  border-radius: 6px;
-  background: rgba(251, 251, 251, 0.15);
-  border: 1px solid transparent;
-  font-family: var(--font-inter), sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.5;
-  color: #ffffff;
-  margin-top: 16px;
-  box-sizing: border-box;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
+  .productName {
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0.19em;
+    margin-bottom: 50px;
+  }
 
-.inputName:focus,
-.inputPhone:focus,
-.inputName:focus-visible,
-.inputPhone:focus-visible {
-  border-color: #ffffff;
-}
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 
-.inputPhone::placeholder {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.25;
-  letter-spacing: 0;
-  color: #615e5b;
-}
+  .formProduct {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-.errorName,
-.errorPhone,
-.errorConsent {
-  font-family: var(--font-inter), sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0;
-  color: #e00d1d;
-}
+  .labelName,
+  .labelProduct,
+  .labelPhone,
+  .optionText {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #ffffff;
+    width: 100%;
+  }
 
-.checkboxLabel {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: 0;
-  color: #ffffff;
-}
+  .selectProduct {
+    height: 74px;
+    border-radius: 6px;
+    background: rgba(251, 251, 251, 0.15);
+    font-family: var(--font-roboto), sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0;
+    border: 1px solid transparent;
+    padding: 0 40px 0 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: border-color 0.2s ease;
+    outline: none;
+  }
 
-.checkboxInput {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 24px;
-  height: 24px;
-  margin-right: 32px;
-  border: 1px solid #ffffff;
-  background-color: #111111;
-  cursor: pointer;
-  border-radius: 4px;
-  display: grid;
-  place-content: center;
-}
+  .selectProduct:focus,
+  .selectProduct:focus-visible {
+    border-color: #fff;
+  }
 
-.checkboxInput:checked::before {
-  content: "✓";
-  color: #ffffff;
-  font-size: 18px;
-}
+  .selectProduct[data-state="open"] svg {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+  }
 
-.buttonGroup {
-  display: flex;
-  flex-direction: row;
-  gap: 27px;
-}
+  .productPreview {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
 
-.btnContact,
-.btnContactCancel {
-  cursor: pointer;
-  width: 532px;
-  height: 80px;
-  padding: 10px 11px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border: 1.7px solid rgb(255, 255, 255);
-  border-radius: 7px;
-  background-color: transparent;
-  font-family: "Cera Stencil PRO", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.5;
-  letter-spacing: 0;
-  color: #ffffff;
-  transition: all 300ms ease;
-  z-index: 1;
-}
+  .productTitle {
+    margin: 0px 0px 10px 0px;
+    color: #fff;
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+  }
 
-.btnContact:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
+  .descrText {
+    margin: 0px;
+    color: #fff;
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.4;
+  }
 
-.btnContactSpan,
-.btnContactSpanCancel {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  height: 100%;
-  background-color: #e00d1d;
-  box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
-  border-radius: 7px;
-  text-transform: uppercase;
-}
+  .title {
+    margin-right: 25px;
+  }
 
-.btnContactSpanCancel {
-  background-color: #8e8c95;
-}
+  .inputName,
+  .inputPhone {
+    width: 100%;
+    height: 74px;
+    padding: 23px 35px;
+    border-radius: 6px;
+    background: rgba(251, 251, 251, 0.15);
+    border: 1px solid transparent;
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-top: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
 
-.btnContactCancel {
-  width: 389px;
-}
+  .inputName:focus,
+  .inputPhone:focus,
+  .inputName:focus-visible,
+  .inputPhone:focus-visible {
+    border-color: #ffffff;
+  }
 
+  .inputPhone::placeholder {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    color: #615e5b;
+  }
+
+  .errorName,
+  .errorPhone,
+  .errorConsent {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #e00d1d;
+  }
+
+  .checkboxLabel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #ffffff;
+  }
+
+  .checkboxInput {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    margin-right: 32px;
+    border: 1px solid #ffffff;
+    background-color: #111111;
+    cursor: pointer;
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+  }
+
+  .checkboxInput:checked::before {
+    content: "✓";
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 27px;
+  }
+
+  .btnContact,
+  .btnContactCancel {
+    cursor: pointer;
+    width: 532px;
+    height: 80px;
+    padding: 10px 11px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1.7px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    background-color: transparent;
+    font-family: "Cera Stencil PRO", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #ffffff;
+    transition: all 300ms ease;
+    z-index: 1;
+  }
+
+  .btnContact:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btnContactSpan,
+  .btnContactSpanCancel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: #e00d1d;
+    box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
+    border-radius: 7px;
+    text-transform: uppercase;
+  }
+
+  .btnContactSpanCancel {
+    background-color: #8e8c95;
+  }
+
+  .btnContactCancel {
+    width: 389px;
+  }
+}
