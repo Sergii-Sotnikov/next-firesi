@@ -45,6 +45,7 @@ const HeroMain = () => {
                 width={320}
                 height={121}
                 alt="Вогнегасник FIPRON"
+                sizes="(max-width: 1440px) 100vw, 562px" // подсказывает браузеру реальную ширину
               />
             </div>
             <p className={css.descriptionHeroText}>
@@ -62,8 +63,7 @@ const HeroMain = () => {
                 <FaArrowRight className={css.btnIcon} size={20} />
               </span>
             </Link>
-            <TbTruckDelivery className={css.customIcon} size={40}/>
-            
+            <TbTruckDelivery className={css.customIcon} size={40} />
           </div>
           <Image
             className={css.pictureHero}

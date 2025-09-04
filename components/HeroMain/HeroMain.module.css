@@ -1,33 +1,37 @@
-/* mobile */
+/* ===== Mobile-first (320–420px тянется плавно) ===== */
 .heroMain {
+  width: 100%;
   margin: 0 auto;
   padding-top: 40px;
-  max-width: 320px;
+
+  /* общий мобильный отступ контейнера */
+  --gutter: clamp(12px, 4vw, 20px);
 }
 
 .container {
-  padding: 0 16px;
+  width: 100%;
+  max-width: 420px;        /* резина до 420px */
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
 
 .heroMainTitle {
   font-family: var(--font-alumni-sans-sc), sans-serif;
   font-weight: 400;
-  font-size: 26px;
+  font-size: clamp(22px, 6.4vw, 30px);
   line-height: 0.9;
   letter-spacing: 0.15em;
   text-align: center;
   text-transform: uppercase;
   color: #e00d1d;
-  margin-bottom: 8px;
-  margin-top: 0px;
+  margin: 0 0 8px 0;
 }
 
 .heroMainTitleAdd {
   font-family: "Cera Stencil PRO";
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
-  font-size: 24px;
+  font-size: clamp(20px, 6vw, 28px);
   letter-spacing: 0em;
   text-align: center;
   text-transform: lowercase;
@@ -37,38 +41,37 @@
 .heroMainSecondTitle {
   font-family: var(--font-alumni-pinstripe), sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: clamp(36px, 10vw, 56px);
   line-height: 1;
   letter-spacing: 0.01em;
   text-align: center;
   text-transform: uppercase;
-  background: linear-gradient(
-    180deg,
-    rgb(14, 17, 24),
-    rgb(255, 255, 255),
-    rgb(14, 17, 24)
-  );
+  background: linear-gradient(180deg, rgb(14, 17, 24), rgb(255, 255, 255), rgb(14, 17, 24));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
+}
+
+.informationHero {
+  /* на мобилке — блочный поток */
+}
+
+.descriptionHeroAddtext {
+  display: none; /* показываем только на десктопе */
 }
 
 .pictureHeroMobileWrap {
-  width: 288px;
-  margin: 0 auto 32px auto;
+  width: 100%;
+  margin: 0 auto 32px;
 }
 
 .pictureHeroMobile {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.descriptionHeroAddtext {
-  display: none;
+  margin: 0 auto;
 }
 
 .descriptionHeroAddtextMobile {
@@ -78,30 +81,25 @@
   font-size: 18px;
   line-height: 1;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 8px;
+  margin: 20px 0 8px;
   position: relative;
 }
 
 .descriptionHeroAddtextMobile::after {
   content: "";
+  position: absolute;
   z-index: -1;
   pointer-events: none;
   background: url(/img/fire_bg.png) center / cover no-repeat;
-  width: 320px;
+  width: calc(100% + var(--gutter) * 2);
   height: 131px;
-  position: absolute;
   top: -104px;
-  left: -16px;
+  left: calc(var(--gutter) * -1);
 }
 
 .pictureHero {
-  display: none;
-}
-
-.pictureHeroMobile {
-  display: block;
-  margin: 0 auto;
+  display: none; /* десктопная картинка скрыта на мобилке */
+  border-radius: 0; /* сброс на всякий */
 }
 
 .descriptionHeroText {
@@ -112,8 +110,7 @@
   font-size: 22px;
   line-height: 1.45;
   letter-spacing: -0.02em;
-  margin: 0px;
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
 }
 
 .descriptionText {
@@ -124,8 +121,7 @@
   font-size: 17px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  margin: 0;
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
 }
 
 .descriptionTextBold {
@@ -135,42 +131,41 @@
 .descriptionHeroBtn {
   cursor: pointer;
   width: 100%;
-  height: 42px;
-  padding: 4px 4px;
+  height: clamp(42px, 11vw, 50px);
+  padding: 4px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 0.8px solid rgb(255, 255, 255);
+  border: 0.8px solid #ffffff;
   border-radius: 3px;
   background-color: transparent;
   font-family: "Cera Stencil PRO";
   font-weight: 900;
   font-style: Black;
-  font-size: 18px;
+  font-size: clamp(16px, 4.5vw, 18px);
   line-height: 1.5;
   color: #ffffff;
   transition: all 300ms ease;
-  z-index: 1;
   text-decoration: none;
+  z-index: 1;
   margin-bottom: 50px;
 }
 
 .descriptionHeroBtn:hover {
   text-shadow:
     -1px -1px 0 #000000,
-    1px -1px 0 #000000,
-    -1px 1px 0 #000000,
-    1px 1px 0 #000000;
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     1px  1px 0 #000000;
 }
 
 .descriptionHeroBtn:active {
   color: #000000;
   text-shadow:
     -1px -1px 0 #e00d1d,
-    1px -1px 0 #e00d1d,
-    -1px 1px 0 #e00d1d,
-    1px 1px 0 #e00d1d;
+     1px -1px 0 #e00d1d,
+    -1px  1px 0 #e00d1d,
+     1px  1px 0 #e00d1d;
 }
 
 .btnIcon:hover {
@@ -181,14 +176,13 @@
   color: #000000;
   text-shadow:
     -1px -1px 0 #e00d1d,
-    1px -1px 0 #e00d1d,
-    -1px 1px 0 #e00d1d,
-    1px 1px 0 #e00d1d;
+     1px -1px 0 #e00d1d,
+    -1px  1px 0 #e00d1d,
+     1px  1px 0 #e00d1d;
 }
 
 .descriptionHeroBtnText {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 4px;
@@ -204,18 +198,11 @@
   margin-left: auto;
 }
 
-/* на десктопе — СКРЫТЬ */
+/* ===== Desktop 1440+ ===== */
 @media (min-width: 1440px) {
-  .pictureHeroMobileWrap {
-    display: none;
-  }
-
-  .customIcon{
-    display: none;
-  }
-  .pictureHero {
-    display: block;
-  }
+  .pictureHeroMobileWrap { display: none; }
+  .customIcon { display: none; }
+  .pictureHero { display: block; }
 
   .heroMain {
     max-width: none;
@@ -231,7 +218,6 @@
   }
 
   .heroMainTitle {
-    font-family: var(--font-alumni-sans-sc), sans-serif;
     font-weight: 400;
     font-size: 48px;
     line-height: 1.5;
@@ -239,8 +225,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #e00d1d;
-    margin: 0;
-    margin-bottom: 18px;
+    margin: 0 0 18px 0;
   }
 
   .heroMainTitleAdd {
@@ -249,7 +234,7 @@
     font-style: Black;
     font-size: 40px;
     line-height: 1;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
@@ -260,21 +245,15 @@
     font-weight: 400;
     font-size: 160px;
     line-height: 1;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: center;
     text-transform: uppercase;
-    background: linear-gradient(
-      180deg,
-      rgb(14, 17, 24),
-      rgb(255, 255, 255),
-      rgb(14, 17, 24)
-    );
+    background: linear-gradient(180deg, rgb(14, 17, 24), rgb(255, 255, 255), rgb(14, 17, 24));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    margin: 0;
-    margin-bottom: 60px;
+    margin: 0 0 60px 0;
   }
 
   .informationHero {
@@ -288,8 +267,7 @@
     display: flex;
     flex-direction: column;
     max-width: 380px;
-    margin-top: 26px;
-    margin-bottom: 26px;
+    margin: 26px 0;
     margin-left: 23px;
   }
 
@@ -311,17 +289,11 @@
     left: 1129px;
   }
 
-  .descriptionHeroAddtextPoint {
-    fill: #ffb53f;
-  }
+  .descriptionHeroAddtextPoint { fill: #ffb53f; }
 
-  .descriptionHeroAddtextMobile {
-    display: none;
-  }
+  .descriptionHeroAddtextMobile { display: none; }
 
-  .pictureHeroLogo {
-    margin-bottom: 41px;
-  }
+  .pictureHeroLogo { margin-bottom: 41px; }
 
   .pictureHero {
     border-radius: 35px;
@@ -336,8 +308,7 @@
     line-height: 1;
     letter-spacing: 0;
     color: #ffffff;
-    margin: 0;
-    margin-bottom: 41px;
+    margin: 0 0 41px 0;
   }
 
   .descriptionText {
@@ -346,23 +317,19 @@
     font-size: 22px;
     line-height: 1.27;
     letter-spacing: 0.03em;
-    margin-bottom: 41px;
     color: #ffffff;
-    margin: 0;
-    margin-bottom: 41px;
+    margin: 0 0 41px 0;
     z-index: 10;
   }
 
   .descriptionHeroBtn {
-    cursor: pointer;
     width: 380px;
     height: 70px;
     padding: 10px 11px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1.7px solid rgb(255, 255, 255);
+    border: 1.7px solid #ffffff;
     border-radius: 7px;
     background-color: transparent;
     font-family: "Cera Stencil PRO";
@@ -373,48 +340,12 @@
     letter-spacing: 0;
     color: #ffffff;
     transition: all 300ms ease;
-    z-index: 1;
     text-decoration: none;
-  }
-
-  .descriptionHeroBtn:hover {
-    text-shadow:
-      -1px -1px 0 #000000,
-      1px -1px 0 #000000,
-      -1px 1px 0 #000000,
-      1px 1px 0 #000000;
-  }
-
-  .descriptionHeroBtn:active {
-    color: #000000;
-    text-shadow:
-      -1px -1px 0 #e00d1d,
-      1px -1px 0 #e00d1d,
-      -1px 1px 0 #e00d1d,
-      1px 1px 0 #e00d1d;
-  }
-
-  .btnIcon:hover {
-    color: #ffffff;
-  }
-
-  .btnIcon:active {
-    color: #000000;
-    text-shadow:
-      -1px -1px 0 #e00d1d,
-      1px -1px 0 #e00d1d,
-      -1px 1px 0 #e00d1d,
-      1px 1px 0 #e00d1d;
+    z-index: 1;
   }
 
   .descriptionHeroBtnText {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     gap: 8px;
-    width: 100%;
-    height: 100%;
     background-color: #e00d1d;
     box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
     border-radius: 7px;
