@@ -27,7 +27,7 @@ export default function Faq() {
   return (
     <section className={css.faq}>
       <div className={css.container}>
-        <h2 className={css.title}>Є питання? Ми тут, щоб допомогти!</h2>
+        <h2 className={css.title}>Є питання? Ми тут,<br className={css.titleAdd}/> щоб допомогти!</h2>
 
         <Accordion.Root
           type="multiple"
