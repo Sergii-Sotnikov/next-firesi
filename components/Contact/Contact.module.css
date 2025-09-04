@@ -1,16 +1,18 @@
-.addressList {
-  display: none;
-}
+.addressList { display: none; }
 
 .contact {
-  padding-top: 24px;
-  padding-bottom: 16px;
+  padding: 24px 0 16px;
+  width: 100%;
+  margin: 0 auto;
+  --gutter: clamp(12px, 4vw, 20px);
 }
 
 .container {
-  width: 320px;
+  width: 100%;
+  max-width: 420px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 var(--gutter);
+  box-sizing: border-box;
 }
 
 .title {
@@ -23,20 +25,25 @@
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 32px;
-  margin-top: 0px;
-}
-.mapWrapper iframe {
-  max-width: 288px;
-  max-height: 200px;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 32px;
+  margin: 0 0 32px 0;
 }
 
-.visuallyHidden {
-  display: none;
+.mapWrapper {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 32px;
 }
+.mapWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.visuallyHidden { display: none; }
 
 .form {
   display: flex;
@@ -93,28 +100,32 @@
 }
 
 .recaptchaWrap {
-  width: 288px;
+  width: 100%;
+  max-width: 304px;
+  height: 78px;
+  margin: 0 auto;
   overflow: hidden;
-  height: calc(78px * 0.9474);
 }
-
 .recaptchaWrap > div {
-  transform: scale(0.9474);
+  transform: none;
   transform-origin: left top;
   width: 304px;
   height: 78px;
+}
+@media (max-width: 360px) {
+  .recaptchaWrap { max-width: 288px; height: calc(78px * 0.9474); }
+  .recaptchaWrap > div { transform: scale(0.9474); }
 }
 
 .btnContact {
   cursor: pointer;
   width: 100%;
   height: 39px;
-  padding: 4;
+  padding: 4px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 0.8px solid rgb(255, 255, 255);
+  border: 0.8px solid #fff;
   border-radius: 4px;
   background-color: transparent;
   font-family: "Cera Stencil PRO";
@@ -127,15 +138,10 @@
   z-index: 1;
   text-transform: uppercase;
 }
-
-.btnContact:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
+.btnContact:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .btnContactSpan {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -148,48 +154,29 @@
 
 .btnContact:hover {
   text-shadow:
-    -0.6px -0.6px 0 #000000,
-    0.6px -0.6px 0 #000000,
-    -0.6px 0.6px 0 #000000,
-    0.6px 0.6px 0 #000000;
+    -0.6px -0.6px 0 #000,
+     0.6px -0.6px 0 #000,
+    -0.6px  0.6px 0 #000,
+     0.6px  0.6px 0 #000;
 }
-
 .btnContact:active {
-  color: #000000;
+  color: #000;
   text-shadow:
     -0.6px -0.6px 0 #e00d1d,
-    0.6px -0.6px 0 #e00d1d,
-    -0.6px 0.6px 0 #e00d1d,
-    0.6px 0.6px 0 #e00d1d;
+     0.6px -0.6px 0 #e00d1d,
+    -0.6px  0.6px 0 #e00d1d,
+     0.6px  0.6px 0 #e00d1d;
 }
 
-.iconPhone {
-  width: 18px;
-  height: 18px;
-}
-
+.iconPhone { width: 18px; height: 18px; }
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+  0% { transform: scale(1);   opacity: 1; }
+  50%{ transform: scale(1.2); opacity: 0.7; }
+  100%{transform: scale(1);   opacity: 1; }
 }
+.iconPhone { animation: pulse 1.2s infinite ease-in-out; }
 
-.iconPhone {
-  animation: pulse 1.2s infinite ease-in-out;
-}
-
-.contactForm {
-  margin-bottom: 61px;
-}
+.contactForm { margin-bottom: 61px; }
 
 .addressListMobile {
   display: flex;
@@ -200,7 +187,6 @@
 
 .addressItem {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 9px;
   color: #ffffff;
@@ -229,53 +215,41 @@
   width: 25px;
   height: 25px;
 }
+.iconAddressPhone { width: 20px; height: 20px; }
+.iconEmail { fill: #e00d1d; width: 18px; height: 18px; }
 
-.iconAddressPhone {
-  width: 20px;
-  height: 20px;
-}
-
-.iconEmail {
-  fill: #e00d1d;
-  width: 18px;
-  height: 18px;
-}
-
-.navList{
+.navList {
   display: flex;
   flex-direction: row;
   gap: 25px;
   align-items: center;
 }
-
-.socItem{
-  color: #ffffff;
-}
+.socItem { color: #ffffff; }
 .socItem:hover,
-.socItem:active{
-  color: #e00d1d;
-}
-
+.socItem:active { color: #e00d1d; }
 
 @media (min-width: 1440px) {
   .addressListMobile,
   .navList {
     display: none;
   }
+
   .contact {
+    width: 100%;
     padding-top: 60px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 
   .container {
-    width: 1140px;
+    width: 100%;
+    max-width: 1140px;
     margin: 0 auto;
+    padding: 0px 0px;
     height: 712px;
     padding-top: 60px;
     padding-bottom: 45px;
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.1);
-    min-width: 712px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -305,9 +279,17 @@
     align-items: flex-start;
   }
 
+  .mapWrapper {
+    /* выбери комфортную ширину карты */
+    max-width: 575px;              /* можно 720/800, как нужно */
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+  }
+
+  /* на всякий случай уберём возможные max-* из мобильного */
   .mapWrapper iframe {
-    border-radius: 8px;
-    display: block;
+    max-width: none;
+    max-height: none;
   }
 
   .contactForm {
