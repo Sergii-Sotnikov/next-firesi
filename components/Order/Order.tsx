@@ -4,18 +4,14 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "react-phone-input-2/lib/style.css";
 import ReCAPTCHA from "react-google-recaptcha";
-import { PhoneCall } from "lucide-react";
 import { useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import type { FormikHelpers } from "formik";
-import sendEmail from "@/src/services/sendEmail";
-import type { EmailTemplateParams } from "@/src/types/emailService.types";
 import { products } from "@/src/data/products";
 import { useField } from "formik";
 import { CustomSelect } from "../CustomSelect/CustomSelect";
 import Image from "next/image";
 import SuccessfulOrder from "../SuccessfulOrder/SuccessfulOrder";
-import { title } from "process";
 
 interface OrderProps {
   closeModal: () => void;
@@ -26,6 +22,7 @@ interface FormOrderValues {
   id: string;
   name: string;
   phone: string;
+  message?: string;
   consent: boolean;
   company?: string;
 }
@@ -40,6 +37,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
     id: productId,
     name: "",
     phone: "+380",
+    message: "",
     consent: false,
     company: "",
   };
@@ -56,6 +54,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
     phone: Yup.string()
       .matches(/^\+380\d{9}$/, "Номер повинен бути у форматі +380XXXXXXXXX")
       .required("Номер телефону обов'язковий"),
+    message: Yup.string().trim().max(250, "Максимум 250 символів"),
     consent: Yup.boolean().oneOf(
       [true],
       "Ви повинні погодитися з обробкою персональних даних"
@@ -78,7 +77,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
         name: values.name,
         phone: values.phone,
         product: values.id,
-        message: "Відсутнє",
+        message: values.message?.trim() || "Відсутнє",
         company: values.company,
       };
 
@@ -113,7 +112,13 @@ export default function Order({ closeModal, productId }: OrderProps) {
     labelId,
   }: {
     name: string;
-    products: { id: string; title: string; titleMobile:string; capacity:string; priceEUR: number }[];
+    products: {
+      id: string;
+      title: string;
+      titleMobile: string;
+      capacity: string;
+      priceEUR: number;
+    }[];
     triggerClass?: string;
     labelId?: string;
   }) {
@@ -168,7 +173,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
                         }}
                       />
                       <label id="productIdLabel" className={css.labelProduct}>
-                        Виберіть товар:
+                        Оберіть товар:
                       </label>
 
                       <FormikRadixSelect
@@ -252,6 +257,26 @@ export default function Order({ closeModal, productId }: OrderProps) {
                         name="phone"
                         component="span"
                         className={css.errorPhone}
+                      />
+                    </div>
+
+                    <div className={css.formMessage}>
+                      <label className={css.labelMessage} htmlFor="message">
+                        Коментар до замовлення
+                        <Field
+                          as="textarea"
+                          id="message"
+                          name="message"
+                          className={css.inputMessage}
+                          placeholder="Напишіть бажання або деталі"
+                          rows={4}
+                          maxLength={250}
+                        />
+                      </label>
+                      <ErrorMessage
+                        name="message"
+                        component="span"
+                        className={css.errorMessage}
                       />
                     </div>
 

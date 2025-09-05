@@ -28,17 +28,45 @@
   gap: 10px;
 }
 
+.formName,
+.formPhone,
+.formMessage{
+    display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .labelName,
 .labelProduct,
 .labelPhone,
-.optionText {
+.labelMessage {
   font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.5;
   letter-spacing: 0;
   color: #ffffff;
   width: 100%;
+}
+
+.labelMessage {
+  width: 100%;
+  vertical-align: top;
+  overflow: hidden;
+  resize: none;
+}
+
+.labelName::placeholder,
+.labelProduct::placeholder,
+.labelPhone::placeholder,
+.labelMessage::placeholder {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #615e5b;
 }
 
 .selectProduct {
@@ -83,8 +111,8 @@
 }
 
 .productImgMobile {
-  width: auto;
   height: 180px;
+  width: auto;
 }
 
 .productImg{
@@ -103,18 +131,18 @@
 
 .productDescList {
   list-style: disc;
-  list-style-position: outside; /* можно inside, если нужно */
+  list-style-position: outside; 
   padding-left: 10px;
   margin: 0;
 }
 
 .productDescItem {
-  list-style-type: disc; /* на случай глобального reset-а */
-  display: list-item; /* если где-то сделали display:flex */
+  list-style-type: disc;
+  display: list-item; 
 }
 
 .productDescItem::marker {
-  color: #fff;               /* или #fff */
+  color: #fff;
   font-size: 10px;
 }
 
@@ -127,6 +155,65 @@
   line-height: 1.4;
 }
 
+.formName,
+.formPhone,
+.formMessage{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.labelName,
+.labelProduct,
+.labelPhone,
+.labelMessage {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: #ffffff;
+  width: 100%;
+}
+
+.inputName,
+.inputPhone,
+.inputMessage {
+    width: 100%;
+    height: 30px;
+    padding: 0px 14px;
+    border-radius: 4px;
+    background: rgba(251, 251, 251, 0.15);
+    border: 1px solid transparent;
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 12px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ПОМИЛКИ */
+.errorMessage,
+.errorName,
+.errorPhone,
+.errorProduct,
+.errorConsent {
+  color: #e00d1d;
+  font-size: 12px;
+  line-height: 1.2;
+}
 @media (min-width: 1440px) {
 
   .productImgMobile{
