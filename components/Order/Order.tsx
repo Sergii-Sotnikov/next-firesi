@@ -15,6 +15,7 @@ import { useField } from "formik";
 import { CustomSelect } from "../CustomSelect/CustomSelect";
 import Image from "next/image";
 import SuccessfulOrder from "../SuccessfulOrder/SuccessfulOrder";
+import { title } from "process";
 
 interface OrderProps {
   closeModal: () => void;
@@ -112,7 +113,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
     labelId,
   }: {
     name: string;
-    products: { id: string; title: string; priceEUR: number }[];
+    products: { id: string; title: string; titleMobile:string; capacity:string; priceEUR: number }[];
     triggerClass?: string;
     labelId?: string;
   }) {
@@ -189,6 +190,13 @@ export default function Order({ closeModal, productId }: OrderProps) {
                         <Image
                           className={css.productImg}
                           src={selected.image.webp2x}
+                          width={120}
+                          height={204}
+                          alt="Логотип Firesi"
+                        />
+                        <Image
+                          className={css.productImgMobile}
+                          src={selected.imageMobile.webp2x}
                           width={120}
                           height={204}
                           alt="Логотип Firesi"
