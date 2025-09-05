@@ -55,7 +55,7 @@
 
 @media (min-width: 1440px) {
  .trigger .triggerValue {
-    display: flex !important;   /* переплюнуть любые глобальные правила */
+    display: flex !important;
   }
 .row{
   display: block;
