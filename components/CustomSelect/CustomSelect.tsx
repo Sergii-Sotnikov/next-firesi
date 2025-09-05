@@ -67,7 +67,7 @@ export function CustomSelect({
                     <span className={css.price}>вартістю {p.priceEUR} EUR</span>
                   </span>
 
-                  {/* mobile — ПОЛНЫЙ вид (с capacity) в выпадающем списке */}
+                  {/* mobile */}
                   <span className={css.rowMobile}>
                     <span className={css.title}>
                       {p.titleMobile}
