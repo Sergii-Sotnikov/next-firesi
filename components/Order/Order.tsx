@@ -300,6 +300,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
                       <ReCAPTCHA
                         ref={recaptchaRef}
                         sitekey={myKeyRECAPTCHA || ""}
+                        theme="dark"
                         onChange={(token) => setRecaptchaToken(token)}
                         onExpired={() => setRecaptchaToken(null)}
                         onErrored={() => setRecaptchaToken(null)}

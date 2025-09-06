@@ -168,6 +168,7 @@ export default function Contact() {
                     <div className={css.recaptchaWrap}>
                       <ReCAPTCHA
                         ref={recaptchaRef}
+                        theme="dark"
                         sitekey={myKeyRECAPTCHA || ""}
                         onChange={(token) => setRecaptchaToken(token)}
                       />
