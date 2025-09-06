@@ -20,11 +20,10 @@ export async function POST(req: NextRequest) {
 
     if (
       isEmpty(name) ||
-      (isEmpty(phone) && isEmpty(email)) ||
-      isEmpty(message)
+      (isEmpty(phone) && isEmpty(email))
     ) {
       return NextResponse.json(
-        { error: "name, phone OR email, and message are required" },
+        { error: "name, phone OR email are required" },
         { status: 400 }
       );
     }

@@ -17,7 +17,7 @@ import { AiFillTikTok } from "react-icons/ai";
 interface FormCallValues {
   name: string;
   phone: string;
-  message: string;
+  message?: string;
   company?: string;
 }
 
