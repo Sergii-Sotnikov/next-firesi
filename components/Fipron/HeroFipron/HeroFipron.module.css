@@ -1,4 +1,96 @@
 .hero {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: clamp(40px, 9vw, 50px);
+  padding-bottom: clamp(13px, 5vw, 20px);
+  --gutter: clamp(12px, 4vw, 20px);
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  box-sizing: border-box;
+}
+
+.heroImage { display: none; }
+
+.heroImageMobile {
+  display: block;
+  width: clamp(82px, 22vw, 100px); 
+  height: auto;
+  max-width: 100%;
+}
+
+.heroTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(11px, 4vw, 16px);
+}
+
+.heroTitleText {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Cera Stencil PRO";
+  font-weight: 900;
+  font-style: Black;
+  font-size: clamp(24px, 6.2vw, 28px);
+  line-height: 1;
+}
+
+.heroTextMain {
+  color: #ffffff;
+  font-family: var(--font-roboto), sans-serif;
+  font-size: clamp(16px, 4.6vw, 18px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: clamp(17px, 5.5vw, 24px);
+}
+
+.fipronLogo {
+  width: clamp(244px, 64vw, 300px);
+  display: block;
+  margin: 0 auto clamp(18px, 6vw, 24px);
+}
+
+.heroList {
+  list-style-type: disc;
+  padding-left: clamp(15px, 5vw, 20px);
+}
+
+.heroText,
+.heroItem {
+  color: #ffffff;
+  font-family: var(--font-roboto), sans-serif;
+  font-size: clamp(16px, 4.6vw, 18px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.heroList li::marker {
+  font-size: clamp(14px, 4.2vw, 16px);
+}
+
+
+@media (min-width: 1440px) {
+
+  .heroImageMobile{
+    display: none;
+  }
+.heroImage{
+display: block;
+}
+  .heroTitleTextAdd{
+    display: none;
+  }
+  .hero {
+    display: block;
   padding: 80px 0 60px 0;
 }
 
@@ -70,3 +162,8 @@
   line-height: 1.5;
   letter-spacing: 0.03em;
 }
+}
+
+
+
+

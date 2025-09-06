@@ -8,12 +8,21 @@ const HeaderFipron = () => {
         <div className={css.heroTitle}>
           <Image
             src="/img/attention@2x.png"
+            className={css.heroImage}
             alt="Увага"
             width={225}
             height={225}
-          ></Image>
+          />
+          <Image
+            src="/img/attention_mobile@2x.png"
+            className={css.heroImageMobile}
+            alt="Увага"
+            width={82}
+            height={82}
+          />
           <h1 className={css.heroTitleText}>
-            зупинись на мить!
+            Зупинись на <br className={css.heroTitleTextAdd} />
+            мить!
             <br />
             прочитай!
           </h1>
@@ -22,8 +31,9 @@ const HeaderFipron = () => {
           До 80% пожеж у побуті та на підприємствах виникає через проблеми в
           електропроводці: коротке замикання, перегрів, перевантаження мережі.
           Це підтверджують офіційні дані ДСНС України та Європейської асоціації
-          з протипожежної безпеки (European Fire Safety Alliance).<br /> Але тепер є
-          рішення, яке спрацьовує ще до того, як пожежа встигне розгорітися.
+          з протипожежної безпеки (European Fire Safety Alliance).
+          <br /> Але тепер є рішення, яке спрацьовує ще до того, як пожежа
+          встигне розгорітися.
         </p>
         <Image
           className={css.fipronLogo}
@@ -48,10 +58,18 @@ const HeaderFipron = () => {
             активується точково при досягненні критичної температури (без
             сторонніх втручань),
           </li>
-          <li className={css.heroItem}>не провокує корозію, не залишає слідів після спрацювання,</li>
-          <li className={css.heroItem}>є абсолютно безпечним для електроніки, людей та тварин.</li>
+          <li className={css.heroItem}>
+            не провокує корозію, не залишає слідів після спрацювання,
+          </li>
+          <li className={css.heroItem}>
+            є абсолютно безпечним для електроніки, людей та тварин.
+          </li>
         </ul>
-        <p className={css.heroText}><span className={css.heroTextBolt}>Системи FIPRON</span> забезпечують миттєве локальне гасіння пожежі в момент її зародження, зберігаючи не лише обладнання, а й безперервність критичних процесів.</p>
+        <p className={css.heroText}>
+          <span className={css.heroTextBolt}>Системи FIPRON</span> забезпечують
+          миттєве локальне гасіння пожежі в момент її зародження, зберігаючи не
+          лише обладнання, а й безперервність критичних процесів.
+        </p>
       </div>
     </section>
   );
