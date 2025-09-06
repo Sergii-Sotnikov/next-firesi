@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "../globals.css";
 import HeaderCertificates from "@/components/HeaderCertificates/HeaderCertificates";
 import Footer from "@/components/Footer/Footer";
+import { headers } from "next/headers";
+import MobilePlaceholder from "@/components/MobilePlaceholder/MobilePlaceholder";
 
 const siteUrl = "https://firetech.com.ua/";
 const pagePath = "/certificates";
@@ -59,18 +61,34 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CertificatesLayout({
+export default async function CertificatesLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const headersList = await headers();
+  const ua = headersList.get("user-agent") ?? "";
+  const isMobileUA =
+    /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(ua);
+  const isBot =
+    /Googlebot|Bingbot|facebookexternalhit|Twitterbot|LinkedInBot|TelegramBot|Slackbot/i.test(
+      ua
+    );
+
+  const showMobilePlaceholder = isMobileUA && !isBot;
   return (
     <html lang="uk">
       <body>
-        <HeaderCertificates />
-        <main>{children}</main>
-        <Footer />
-        <div id="modal-root" />
+        {showMobilePlaceholder ? (
+          <MobilePlaceholder />
+        ) : (
+          <>
+            <HeaderCertificates />
+            <main>{children}</main>
+            <Footer />
+            <div id="modal-root" />
+          </>
+        )}
       </body>
     </html>
   );
