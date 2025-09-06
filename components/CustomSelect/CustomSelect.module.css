@@ -116,6 +116,8 @@
     width: 180px;
     text-align: left;
     white-space: nowrap;
+    font-size: 24px;
+    font-weight: 400;
   }
 
   @supports selector(:has(*)) {

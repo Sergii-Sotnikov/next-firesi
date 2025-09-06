@@ -30,8 +30,8 @@
 
 .formName,
 .formPhone,
-.formMessage{
-    display: flex;
+.formMessage {
+  display: flex;
   flex-direction: column;
   gap: 16px;
 }
@@ -115,7 +115,7 @@
   width: auto;
 }
 
-.productImg{
+.productImg {
   display: none;
 }
 
@@ -131,14 +131,14 @@
 
 .productDescList {
   list-style: disc;
-  list-style-position: outside; 
+  list-style-position: outside;
   padding-left: 10px;
   margin: 0;
 }
 
 .productDescItem {
   list-style-type: disc;
-  display: list-item; 
+  display: list-item;
 }
 
 .productDescItem::marker {
@@ -157,7 +157,7 @@
 
 .formName,
 .formPhone,
-.formMessage{
+.formMessage {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -178,33 +178,152 @@
 .inputName,
 .inputPhone,
 .inputMessage {
-    width: 100%;
-    height: 30px;
-    padding: 0px 14px;
-    border-radius: 4px;
-    background: rgba(251, 251, 251, 0.15);
-    border: 1px solid transparent;
-    font-family: var(--font-inter), sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #ffffff;
-    margin-top: 12px;
-    box-sizing: border-box;
-    outline: none;
-    transition: border-color 0.2s ease;
+  width: 100%;
+  height: 30px;
+  padding: 0px 14px;
+  border-radius: 4px;
+  background: rgba(251, 251, 251, 0.15);
+  border: 1px solid transparent;
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 12px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.inputName:hover,
+.inputName:active,
+.inputPhone:hover,
+.inputPhone:active,
+.inputMessage:hover,
+.inputMessage:active {
+  border-color: #fff;
+}
+
+.inputMessage {
+  height: 71px;
+  resize: none;
+}
+
+.checkboxLabel {
+  padding: 5px 85px 5px 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  color: #fff;
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #fff;
+    position: relative;
+}
+
+.checkboxInput:checked {
+  background-color: transparent;
+  border-color: #fff;
 }
 
 
+  .checkboxInput {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 0.5px solid #ffffff;
+    background-color: #111111;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+  }
+
+  .checkboxInput:checked::before {
+    content: "✓";
+    color: #ffffff;
+    font-size: 10px;
+  }
 
 
 
 
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .btnContact,
+  .btnContactCancel {
+    cursor: pointer;
+    width: 100%;
+    height: 39px;
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 0.8px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    background-color: transparent;
+    font-family: "Cera Stencil PRO", sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #ffffff;
+    transition: all 300ms ease;
+    z-index: 1;
+  }
+
+  .btnContact:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btnContactSpan,
+  .btnContactSpanCancel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: #e00d1d;
+    box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
+    border-radius: 7px;
+    text-transform: uppercase;
+  }
+
+  .btnContactSpanCancel {
+    background-color: #8e8c95;
+  }
 
 
+.btnContact:hover,
+.btnContactCancel:hover {
+  text-shadow:
+    -0.6px -0.6px 0 #000,
+     0.6px -0.6px 0 #000,
+    -0.6px  0.6px 0 #000,
+     0.6px  0.6px 0 #000;
+}
 
 
+.btnContact:active{
+  color: #000;
+  text-shadow:
+    -0.6px -0.6px 0 #e00d1d,
+     0.6px -0.6px 0 #e00d1d,
+    -0.6px  0.6px 0 #e00d1d,
+     0.6px  0.6px 0 #e00d1d;
+}
 
-/* ПОМИЛКИ */
+
 .errorMessage,
 .errorName,
 .errorPhone,
@@ -215,12 +334,11 @@
   line-height: 1.2;
 }
 @media (min-width: 1440px) {
-
-  .productImgMobile{
-display: none;
+  .productImgMobile {
+    display: none;
   }
 
-  .productImg{
+  .productImg {
     display: block;
   }
 
@@ -460,4 +578,24 @@ display: none;
   .btnContactCancel {
     width: 389px;
   }
+
+
+  .btnContact:hover,
+  .btnContactCancel:hover {
+  text-shadow:
+    -1px 1px 0 #000,
+     1px 1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+
+.btnContact:active {
+  color: #000;
+  text-shadow:
+    -1px -1px 0 #e00d1d,
+     1px -1px 0 #e00d1d,
+    -1px  1px 0 #e00d1d,
+     1px  1px 0 #e00d1d;
+}
 }

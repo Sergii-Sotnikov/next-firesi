@@ -315,7 +315,7 @@ export default function Order({ closeModal, productId }: OrderProps) {
                         }
                       >
                         <span className={css.btnContactSpan}>
-                          {isSubmitting ? "Відправка..." : "Зробити замовлення"}
+                          {isSubmitting ? "Відправка..." : "Надіслати замовлення"}
                         </span>
                       </button>
 
