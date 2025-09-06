@@ -220,7 +220,6 @@
   font-size: 12px;
   line-height: 1.2;
   color: #fff;
-
 }
 
 .checkboxInput:checked {
@@ -228,107 +227,101 @@
   border-color: #fff;
 }
 
-  .checkboxInput {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 16px;
-    height: 16px;
-    flex: 0 0 16px;
-    border: 0.5px solid #ffffff;
-    background-color: #111111;
-    cursor: pointer;
-    display: grid;
-    place-content: center;
-        position: relative;
-  }
+.checkboxInput {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  border: 0.5px solid #ffffff;
+  background-color: #111111;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
 
-  .checkboxInput:checked::before {
-    content: "✓";
-    color: #ffffff;
-    position: absolute;
-    top: 2px;
-    left: 3px;
-    font-size: 10px;
-        width: 16px;
-    height: 16px;
-  }
-
-
-
+.checkboxInput:checked::before {
+  content: "✓";
+  color: #ffffff;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+}
 
 .buttonGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-  .btnContact,
-  .btnContactCancel {
-    cursor: pointer;
-    width: 100%;
-    height: 39px;
-    padding: 4px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border: 0.8px solid rgb(255, 255, 255);
-    border-radius: 7px;
-    background-color: transparent;
-    font-family: "Cera Stencil PRO", sans-serif;
-    font-weight: 900;
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0;
-    color: #ffffff;
-    transition: all 300ms ease;
-    z-index: 1;
-  }
+.btnContact,
+.btnContactCancel {
+  cursor: pointer;
+  width: 100%;
+  height: 39px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 0.8px solid rgb(255, 255, 255);
+  border-radius: 7px;
+  background-color: transparent;
+  font-family: "Cera Stencil PRO", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #ffffff;
+  transition: all 300ms ease;
+  z-index: 1;
+}
 
-  .btnContact:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+.btnContact:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
-  .btnContactSpan,
-  .btnContactSpanCancel {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    height: 100%;
-    background-color: #e00d1d;
-    box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
-    border-radius: 7px;
-    text-transform: uppercase;
-  }
+.btnContactSpan,
+.btnContactSpanCancel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: #e00d1d;
+  box-shadow: 0.85px 0.85px 2.56px 0px #ffffff;
+  border-radius: 7px;
+  text-transform: uppercase;
+}
 
-  .btnContactSpanCancel {
-    background-color: #8e8c95;
-  }
-
+.btnContactSpanCancel {
+  background-color: #8e8c95;
+}
 
 .btnContact:hover,
 .btnContactCancel:hover {
   text-shadow:
     -0.6px -0.6px 0 #000,
-     0.6px -0.6px 0 #000,
-    -0.6px  0.6px 0 #000,
-     0.6px  0.6px 0 #000;
+    0.6px -0.6px 0 #000,
+    -0.6px 0.6px 0 #000,
+    0.6px 0.6px 0 #000;
 }
 
-
-.btnContact:active{
+.btnContact:active {
   color: #000;
   text-shadow:
     -0.6px -0.6px 0 #e00d1d,
-     0.6px -0.6px 0 #e00d1d,
-    -0.6px  0.6px 0 #e00d1d,
-     0.6px  0.6px 0 #e00d1d;
+    0.6px -0.6px 0 #e00d1d,
+    -0.6px 0.6px 0 #e00d1d,
+    0.6px 0.6px 0 #e00d1d;
 }
-
 
 .errorMessage,
 .errorName,
@@ -450,7 +443,8 @@
   }
 
   .inputName,
-  .inputPhone {
+  .inputPhone,
+  .inputMessage {
     width: 100%;
     height: 74px;
     padding: 23px 35px;
@@ -466,6 +460,10 @@
     box-sizing: border-box;
     outline: none;
     transition: border-color 0.2s ease;
+  }
+
+  .inputMessage{
+    height: 174px;
   }
 
   .inputName:focus,
@@ -506,6 +504,7 @@
     line-height: 1;
     letter-spacing: 0;
     color: #ffffff;
+    padding-left: 0px;
   }
 
   .checkboxInput {
@@ -513,6 +512,7 @@
     -webkit-appearance: none;
     width: 24px;
     height: 24px;
+    flex: 0 0 24px;
     margin-right: 32px;
     border: 1px solid #ffffff;
     background-color: #111111;
@@ -520,12 +520,19 @@
     border-radius: 4px;
     display: grid;
     place-content: center;
+    position: relative;
   }
 
   .checkboxInput:checked::before {
     content: "✓";
     color: #ffffff;
     font-size: 18px;
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
   }
 
   .buttonGroup {
@@ -585,23 +592,21 @@
     width: 389px;
   }
 
-
   .btnContact:hover,
   .btnContactCancel:hover {
-  text-shadow:
-    -1px 1px 0 #000,
-     1px 1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
-}
+    text-shadow:
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
 
-
-.btnContact:active {
-  color: #000;
-  text-shadow:
-    -1px -1px 0 #e00d1d,
-     1px -1px 0 #e00d1d,
-    -1px  1px 0 #e00d1d,
-     1px  1px 0 #e00d1d;
-}
+  .btnContact:active {
+    color: #000;
+    text-shadow:
+      -1px -1px 0 #e00d1d,
+      1px -1px 0 #e00d1d,
+      -1px 1px 0 #e00d1d,
+      1px 1px 0 #e00d1d;
+  }
 }
