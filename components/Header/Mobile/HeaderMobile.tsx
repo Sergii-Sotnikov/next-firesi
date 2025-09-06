@@ -30,9 +30,9 @@ export default function HeaderMobile() {
       {open && (
         <nav id="mobile-nav" className={`${css.menu} ${open ? css.menuOpen : ""}`}>
           <ul className={css.navList}>
-            <li className={css.navItem}><Link className={css.navLink} href="/fipron" onClick={() => setOpen(false)}><LuFireExtinguisher className={css.navIcon} size={24}/> Firesi</Link></li>
-            <li className={css.navItem}><Link className={css.navLink} href="/certificates" onClick={() => setOpen(false)}><LuHousePlug className={css.navIcon} size={24}/> Fipron</Link></li>
-            <li className={css.navItem}><Link className={css.navLink} href="/#contacts" onClick={() => setOpen(false)}><LuDock className={css.navIcon} size={24}/> Сертифікати</Link></li>
+            <li className={css.navItem}><Link className={css.navLink} href="/" onClick={() => setOpen(false)}><LuFireExtinguisher className={css.navIcon} size={24}/> Firesi</Link></li>
+            <li className={css.navItem}><Link className={css.navLink} href="/fipron" onClick={() => setOpen(false)}><LuHousePlug className={css.navIcon} size={24}/> Fipron</Link></li>
+            <li className={css.navItem}><Link className={css.navLink} href="/certificates" onClick={() => setOpen(false)}><LuDock className={css.navIcon} size={24}/> Сертифікати</Link></li>
           </ul>
         </nav>
       )}
