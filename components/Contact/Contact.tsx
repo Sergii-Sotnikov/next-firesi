@@ -108,7 +108,7 @@ export default function Contact() {
               onSubmit={handleSubmit}
               validationSchema={CallSchema}
             >
-              {({ isValid, dirty }) => (
+              {({ isValid, dirty , isSubmitting }) => (
                 <Form className={css.form}>
                   <input
                     type="text"
@@ -180,7 +180,7 @@ export default function Contact() {
                     disabled={!(isValid && dirty && recaptchaToken)}
                   >
                     <span className={css.btnContactSpan}>
-                      замовити дзвінок
+                      {isSubmitting ? "Відправка..." : "замовити дзвінок"}
                       <PhoneCall className={css.iconPhone} />
                     </span>
                   </button>
