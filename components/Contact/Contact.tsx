@@ -181,7 +181,7 @@ export default function Contact() {
                   >
                     <span className={css.btnContactSpan}>
                       {isSubmitting ? "Відправка..." : "замовити дзвінок"}
-                      <PhoneCall className={css.iconPhone} />
+                      {isSubmitting ? "": <PhoneCall className={css.iconPhone} />}
                     </span>
                   </button>
                 </Form>
