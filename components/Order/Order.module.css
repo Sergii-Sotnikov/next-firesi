@@ -233,6 +233,7 @@
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
+    flex: 0 0 16px;
     border: 0.5px solid #ffffff;
     background-color: #111111;
     cursor: pointer;
