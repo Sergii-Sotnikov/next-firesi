@@ -10,6 +10,7 @@
   max-width: 420px;
   margin: 0 auto;
   padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .mountingTitle {
@@ -43,39 +44,35 @@
 }
 
 @media (min-width: 1440px) {
-.mounting {
-      width: 100%;
-  padding: 60px 0;
-}
+  .mounting {
+    width: 100%;
+    padding: 60px 0;
+  }
 
-.container {
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 150px;
-  min-width: 100%;
-}
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 150px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
 
-.mountingTitle {
-  color: #ffffff;
-  text-transform: uppercase;
-font-family: "Cera Stencil PRO", sans-serif;
-  font-weight: 900;
-  font-style: Black;
-  font-size: 40px;
-  line-height: 1;
-  text-align: center;
-  margin-bottom: 80px;
-  margin-top: 0px;
-}
+  .mountingTitle {
+    font-size: 40px;
+    line-height: 1;
+    margin: 0 0 80px;
+  }
 
-.videoWrapper {
-  width: 1140px;
-  height: 645px;
-  margin: 0 auto;
-  border-radius: 40px;
-  border: 1px solid #ffffff;
-  overflow: hidden;
-}
+  .videoWrapper {
+    width: 100%;
+    max-width: 1140px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 40px;
+    border: 1px solid #ffffff;
+    overflow: hidden;
+  }
 }
 
 

@@ -1,13 +1,14 @@
 .cord {
   padding-top: 40px;
   padding-bottom: 30px;
-  max-width: 420px;
+width: 100%;
   margin: 0 auto;
 }
 
 .container {
   margin: 0 auto;
-  min-width: 100%;
+    max-width: 420px;
+    width: 100%;
   padding: 0 16px;
 }
 
@@ -85,7 +86,7 @@
 }
 
 .productTextBold {
-  color: #E00D1D;
+  color: #e00d1d;
   font-weight: 900;
   font-size: clamp(14px, 4vw, 16px);
 }
@@ -95,99 +96,99 @@
   font-size: clamp(14px, 4vw, 16px);
 }
 
-
-@media (min-width: 1440px){
-  .cordImageFipron{
+@media (min-width: 1440px) {
+  .cordImageFipron {
     display: block;
   }
-  .cordImageFipronMobile{
+  .cordImageFipronMobile {
     display: none;
   }
+  
   .cord {
-  width: 100%;
-  padding: 60px 0;
-}
+    padding: 60px 0;
+  }
 
-.container {
-  margin: 0 auto;
-  max-width: 1440px;
-  min-width: 100%;
-  padding: 0 150px;
-}
+  .container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 150px;
+  }
 
-.cordWrapper {
-  padding: 40px;
-  border: 1px solid #ffffff;
-  border-radius: 25px;
-}
+  .cordWrapper {
+    padding: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+  }
 
-.cordTitle {
-  color: #ffffff;
-  text-transform: uppercase;
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 900;
-  font-size: 40px;
-  line-height: 1;
-  letter-spacing: 0.03em;
-  text-align: center;
-  margin-bottom: 80px;
-  margin-top: 0;
-}
+  .cordTitle {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 0;
+  }
 
-.cordImage {
-  display: block;
-  margin: 0 auto;
-  border-radius: 25px;
-  margin-bottom: 80px;
-}
+  .cordImage {
+    display: block;
+    margin: 0 auto;
+    border-radius: 25px;
+    margin-bottom: 80px;
+    max-width: 1060px;
+  }
 
-.cordText {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-style: Black;
-  font-size: 24px;
-  line-height: 1.37;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-}
+  .cordText {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-style: Black;
+    font-size: 24px;
+    line-height: 1.37;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+  }
 
-.cordTextBold {
-  font-weight: 700;
-  margin-bottom: 0;
-}
+  .cordTextBold {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
 
-.cordInfo {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-  margin-bottom: 80px;
-  align-items: center;
-}
+  .cordInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 80px;
+    align-items: center;
+  }
 
-.cordImageFipron {
-  display: block;
-}
+  .cordImageFipron {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 
-.product {
-  background-color: #ffffff1a;
-  backdrop-filter: blur(15px);
-  border-radius: 25px;
-  padding: 45px 63px;
-}
+  .product {
+    background-color: #ffffff1a;
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 45px 63px;
+  }
 
-.productText {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 1.37;
-  letter-spacing: 0.03em;
-  color: #ffffff;
-  margin: 0;
-  margin-bottom: 70px;
-}
+  .productText {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.37;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 70px;
+  }
 
-.productTextBold {
-  font-weight: 800;
-}
-
+  .productTextBold {
+    font-weight: 800;
+  }
 }
