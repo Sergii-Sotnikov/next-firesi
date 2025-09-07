@@ -8,7 +8,7 @@
   font-family: var(--font-roboto), sans-serif;
   font-weight: 700;
   font-style: Bold;
-  font-size: 20px;
+  font-size: clamp(20px, 5.2vw, 22px);
   line-height: 1;
   letter-spacing: 0.1em;
   text-align: center;
@@ -41,7 +41,7 @@
   color: #ffffff;
   font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: clamp(14px, 4.6vw, 16px);
   line-height: 1;
 }
 
@@ -81,7 +81,7 @@
   font-family: var(--font-roboto), sans-serif;
   font-weight: 400;
   font-style: Medium;
-  font-size: 14px;
+  font-size: clamp(14px, 4.6vw, 16px);
   line-height: 1;
   letter-spacing: 0;
   color: #615e5b;
@@ -104,7 +104,7 @@
   color: #fff;
   font-family: var(--font-roboto);
   font-weight: 400;
-  font-size: 12px;
+  font-size: clamp(12px, 4.6vw, 14px);
   line-height: 1.2;
   color: #fff;
 }
@@ -134,14 +134,14 @@
   position: absolute;
   top: 2px;
   left: 3px;
-  font-size: 10px;
+  font-size: clamp(10px, 3.4vw, 12px);
   width: 16px;
   height: 16px;
 }
 
 .recaptchaRow {
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .buttonGroup {
@@ -165,7 +165,7 @@
   background-color: transparent;
   font-family: "Cera Stencil PRO", sans-serif;
   font-weight: 900;
-  font-size: 14px;
+  font-size: clamp(14px, 4.6vw, 16px);
   line-height: 1.5;
   letter-spacing: 0;
   color: #ffffff;
@@ -241,7 +241,8 @@
   }
 
   .labelName,
-  .labelPhone {
+  .labelPhone,
+  .inputMessage {
     font-family: var(--font-roboto), sans-serif;
     font-weight: 400;
     font-size: 24px;
@@ -252,7 +253,8 @@
   }
 
   .inputName,
-  .inputPhone {
+  .inputPhone,
+  .inputMessage {
     width: 100%;
     height: 74px;
     padding: 23px 35px;
@@ -268,14 +270,20 @@
     margin-top: 16px;
     box-sizing: border-box;
   }
+
+  .inputMessage {
+    height: 174px;
+  }
   .inputName:focus,
-  .inputPhone:focus {
+  .inputPhone:focus,
+  .inputMessage {
     outline: none;
     border: 1px solid rgba(251, 251, 251, 0.15);
   }
 
   .inputName:focus-visible,
-  .inputPhone:focus-visible {
+  .inputPhone:focus-visible,
+  .inputMessage {
     border-color: #ffffff;
   }
 
@@ -310,6 +318,7 @@
     line-height: 1;
     letter-spacing: 0;
     color: #ffffff;
+    padding-left: 0px;
   }
 
   .checkboxInput {
@@ -317,6 +326,7 @@
     -webkit-appearance: none;
     width: 24px;
     height: 24px;
+    flex: 0 0 24px;
     margin-right: 32px;
     border: 1px solid #ffffff;
     background-color: #111111;
@@ -324,12 +334,31 @@
     border-radius: 4px;
     display: grid;
     place-content: center;
+    position: relative;
   }
 
   .checkboxInput:checked::before {
     content: "✓";
     color: #ffffff;
     font-size: 18px;
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+    .recaptchaRow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8px 0 24px;
+  }
+
+  .recaptchaRow > div {
+    transform: none !important;
+    transform-origin: center;
   }
 
   .buttonGroup {
