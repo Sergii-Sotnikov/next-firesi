@@ -1,24 +1,24 @@
 .hero {
   width: 100%;
   margin: 0 auto;
-  padding-top: clamp(40px, 9vw, 50px);
-  padding-bottom: clamp(13px, 5vw, 20px);
-  --gutter: clamp(12px, 4vw, 20px);
+  padding-top: 40px;
+  padding-bottom: 13px;
 }
 
 .container {
   width: 100%;
   max-width: 420px;
   margin: 0 auto;
-  padding: 0 var(--gutter);
-  box-sizing: border-box;
+  padding: 0 16px;
 }
 
-.heroImage { display: none; }
+.heroImage {
+  display: none;
+}
 
 .heroImageMobile {
   display: block;
-  width: clamp(82px, 22vw, 100px); 
+  width: clamp(82px, 22vw, 100px);
   height: auto;
   max-width: 100%;
 }
@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: clamp(11px, 4vw, 16px);
+  margin-bottom: 17px;
 }
 
 .heroTitleText {
@@ -48,18 +48,18 @@
   line-height: 1.3;
   letter-spacing: 0.03em;
   margin-top: 0;
-  margin-bottom: clamp(17px, 5.5vw, 24px);
+  margin-bottom: 24px;
 }
 
 .fipronLogo {
   width: clamp(244px, 64vw, 300px);
   display: block;
-  margin: 0 auto clamp(18px, 6vw, 24px);
+  margin: 0 auto 24px;
 }
 
 .heroList {
   list-style-type: disc;
-  padding-left: clamp(15px, 5vw, 20px);
+  padding-left: 20px;
 }
 
 .heroText,
@@ -77,93 +77,87 @@
   font-size: clamp(14px, 4.2vw, 16px);
 }
 
-
 @media (min-width: 1440px) {
-
-  .heroImageMobile{
+  .heroImageMobile {
     display: none;
   }
-.heroImage{
-display: block;
-}
-  .heroTitleTextAdd{
+  .heroImage {
+    display: block;
+  }
+  .heroTitleTextAdd {
     display: none;
   }
   .hero {
     display: block;
-  padding: 80px 0 60px 0;
+    padding: 80px 0 60px 0;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 150px;
+  }
+
+  .heroTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .heroTitleText {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Cera Stencil PRO";
+    font-weight: 900;
+    font-style: Black;
+    font-size: 48px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+  }
+
+  .heroTextMain {
+    color: #ffffff;
+    font-family: var(--font-roboto), sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    margin-top: 0px;
+    margin-bottom: 80px;
+  }
+
+  .fipronLogo {
+    display: block;
+    margin: 0 auto 80px;
+  }
+
+  .heroText {
+    color: #ffffff;
+    font-family: var(--font-roboto), sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    margin: 0;
+  }
+
+  .heroTextBolt {
+    font-weight: 700;
+  }
+
+  .heroList {
+    list-style-type: disc;
+    padding-left: 35px;
+  }
+
+  .heroItem {
+    color: #ffffff;
+    font-family: var(--font-roboto), sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+  }
 }
-
-.container {
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 150px;
-}
-
-.heroTitle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.heroTitleText {
-  color: #ffffff;
-  text-transform: uppercase;
-  font-family: 'Cera Stencil PRO';
-  font-weight: 900;
-  font-style: Black;
-  font-size: 48px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-}
-
-.heroTextMain {
-  color: #ffffff;
-  font-family: var(--font-roboto), sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  margin-top: 0px;
-  margin-bottom: 80px;
-}
-
-.fipronLogo {
-  display: block;
-  margin: 0 auto 80px;
-}
-
-.heroText {
-  color: #ffffff;
-  font-family: var(--font-roboto), sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  margin: 0;
-}
-
-.heroTextBolt {
-  font-weight: 700;
-}
-
-.heroList {
-  list-style-type: disc;
-  padding-left: 35px;
-}
-
-.heroItem {
-  color: #ffffff;
-  font-family: var(--font-roboto), sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-}
-}
-
-
-
-
