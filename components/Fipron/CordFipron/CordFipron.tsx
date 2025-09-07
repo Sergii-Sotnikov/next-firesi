@@ -1,5 +1,6 @@
 import css from "./CordFipron.module.css";
 import Image from "next/image";
+import { price } from "@/src/data/products";
 
 interface Props {
   children?: React.ReactNode;
@@ -10,7 +11,7 @@ const CordFipron = ({ children }: Props) => {
     <section className={css.cord}>
       <div className={css.container}>
         <div className={css.cordWrapper}>
-          <h2 className={css.cordTitle}>«FIPRON STICKER»</h2>
+          <h2 className={css.cordTitle}>«FIPRON CORD»</h2>
 
           <Image
             className={css.cordImage}
@@ -37,8 +38,8 @@ const CordFipron = ({ children }: Props) => {
                 alt="Логотип FIPRON"
               />
               <p className={css.cordText}>
-                <span className={css.cordTextBold}>«FIPRON STICKER»</span> -
-                нове покоління вогнезахисних виробів. Це шнур з композитного
+                <span className={css.cordTextBold}>«FIPRON CORD»</span> - нове
+                покоління вогнезахисних виробів. Це шнур з композитного
                 матеріалу, що представляє собою хімічну суміш мікрокапсул з
                 нагрівальною речовиною. Під впливом вогню в будь-якій точці
                 корду відбувається ініціювання нагрівальної речовини з
@@ -50,25 +51,32 @@ const CordFipron = ({ children }: Props) => {
                 <br />
                 👉 Термін експлуатації 5 років
               </p>
+              <Image
+                className={css.cordImageFipronMobile}
+                src="/img/fipron_cord_add@2x.jpg"
+                width={635}
+                height={740}
+                alt="FIPRON Cord"
+              />
             </div>
           </div>
           <div className={css.product}>
             <p className={css.productText}>
               Один погонний метр{" "}
               <span className={css.productTextBold}>FIPRON™ Cord</span>{" "}
-              забезпечує ефективний <br/> 
+              забезпечує ефективний <br />
               захист об’єму до 300 літрів.
               <br />
-              <span className={css.productTextBold}>
-                Вартість 1 м.п. - 23 100 грн.
+              <span className={css.productTextBoldAdd}>
+                Вартість 1 м.п. - {price["FIPRON™ Cord"]} грн.
               </span>
               <br />
               Шнур легко нарізається на необхідну довжину відповідно до
               специфіки електрощитових або розподільчих боксів, що забезпечує
               гнучкість монтажу та економне використання матеріалу.
             </p>
-            {children}
           </div>
+          {children}
         </div>
       </div>
     </section>

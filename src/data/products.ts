@@ -4,6 +4,7 @@ export const price = {
   "FRSE-F6": 300,
   "FIPRON™ Стікер P": 600,
   "FIPRON™ Стікер P (в листах)": 1100,
+  "FIPRON™ Cord": "23 100",
 } as const;
 
 export type ProductId = keyof typeof price;
