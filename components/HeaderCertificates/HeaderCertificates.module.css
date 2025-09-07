@@ -1,4 +1,9 @@
-.header {
+.HeaderCertificates{
+  display: none;
+}
+
+@media (min-width: 1440px){
+  .HeaderCertificates {
   position: fixed;
   top: 0;
   left: 50%;
@@ -101,3 +106,5 @@
 .btnBack{
   margin-left: 16px;
 }
+}
+

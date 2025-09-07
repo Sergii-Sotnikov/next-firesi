@@ -1,4 +1,55 @@
 .certificates {
+  padding-top: 36px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+  padding: 0 16px;
+}
+
+.title,
+.titleSert {
+  color: #fff;
+  margin: 0px 0px 21px 0px;
+  font-family: "Cera Stencil PRO";
+  font-weight: 900;
+  font-style: Black;
+  font-size: clamp(16px, 4.29vw, 18px);
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.titleSert{
+    margin-top: 21px;
+}
+
+.declarationList,
+.certificateList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
+  margin-bottom: 21px;
+}
+
+.certificateList {
+  margin-bottom: 0px;
+}
+
+.declarationImage{
+  width: 288px;
+  height: 391px;
+}
+
+@media (min-width: 1440px) {
+.certificates {
   padding: 175px 100px;
 }
 
@@ -47,3 +98,5 @@
 .certificateList {
   margin-bottom: 0px;
 }
+
+  }

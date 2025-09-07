@@ -2,13 +2,15 @@
 import Link from "next/link";
 import css from "./HeaderCertificates.module.css"
 import { MdOutlineArrowBackIos } from "react-icons/md";
+import HeaderMobile from "@/components/Header/Mobile/HeaderMobile";
 
 
 
 
 const HeaderCertificates = ()=>{
  return (
-    <section className={css.header} id="hero">
+    <>
+    <section className={css.HeaderCertificates} id="hero">
       <div className={css.containerHeader}>
         <nav className={css.navHeader}>
               <Link href="/" className={css.navElem}>
@@ -22,6 +24,8 @@ const HeaderCertificates = ()=>{
         </Link>
       </div>
     </section>
+    <HeaderMobile />
+    </>
   );
 }
 
