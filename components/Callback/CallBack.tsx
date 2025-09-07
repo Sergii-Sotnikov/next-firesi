@@ -190,14 +190,17 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
               </div>
 
               {isValid && dirty && (
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey={myKeyRECAPTCHA || ""}
-                  theme="dark"
-                  onChange={(token) => setRecaptchaToken(token)}
-                  onExpired={() => setRecaptchaToken(null)}
-                  onErrored={() => setRecaptchaToken(null)}
-                />
+                <div className={css.recaptchaRow}>
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={myKeyRECAPTCHA || ""}
+                    theme="dark"
+                    size="normal"
+                    onChange={(t) => setRecaptchaToken(t)}
+                    onExpired={() => setRecaptchaToken(null)}
+                    onErrored={() => setRecaptchaToken(null)}
+                  />
+                </div>
               )}
               <div className={css.buttonGroup}>
                 <button
