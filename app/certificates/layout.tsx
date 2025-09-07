@@ -2,8 +2,19 @@ import type { Metadata } from "next";
 import "../globals.css";
 import HeaderCertificates from "@/components/HeaderCertificates/HeaderCertificates";
 import Footer from "@/components/Footer/Footer";
-import { headers } from "next/headers";
 import MobilePlaceholder from "@/components/MobilePlaceholder/MobilePlaceholder";
+import {
+  Roboto,
+} from "next/font/google";
+
+const RobotoFont = Roboto({
+  weight: ["400", "500", "700"],
+  variable: "--font-roboto",
+  subsets: ["latin", "cyrillic"],
+  fallback: ["system-ui", "Arial", "sans-serif"],
+  adjustFontFallback: false,
+  display: "swap",
+});
 
 const siteUrl = "https://firetech.com.ua/";
 const pagePath = "/certificates";
@@ -66,29 +77,16 @@ export default async function CertificatesLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const headersList = await headers();
-  const ua = headersList.get("user-agent") ?? "";
-  const isMobileUA =
-    /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(ua);
-  const isBot =
-    /Googlebot|Bingbot|facebookexternalhit|Twitterbot|LinkedInBot|TelegramBot|Slackbot/i.test(
-      ua
-    );
 
-  const showMobilePlaceholder = isMobileUA && !isBot;
   return (
-    <html lang="uk">
+    <html lang="uk"
+    className={`${RobotoFont.variable}`}
+    >
       <body>
-        {showMobilePlaceholder ? (
-          <MobilePlaceholder />
-        ) : (
-          <>
             <HeaderCertificates />
             <main>{children}</main>
             <Footer />
             <div id="modal-root" />
-          </>
-        )}
       </body>
     </html>
   );

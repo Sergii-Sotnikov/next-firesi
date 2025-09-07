@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import { headers } from "next/headers";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import MobilePlaceholder from "@/components/MobilePlaceholder/MobilePlaceholder";
@@ -10,7 +9,6 @@ import {
   Alumni_Sans_Pinstripe,
   Inter,
 } from "next/font/google";
-
 
 const RobotoFont = Roboto({
   weight: ["400", "500", "700"],
@@ -70,7 +68,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-    openGraph: {
+  openGraph: {
     title: `FIRETECH - інноваційне рішення для пожежогасіння`,
     description: `FIRESI - універсальні вогнегасники нового покоління. Гасить літій-іонні батареї, електрообладнання під напругою та всі класи пожеж без бруду і шкоди. Сертифіковано в Україні. Захистіть свій дім та бізнес вже сьогодні!`,
     url: "/",
@@ -103,32 +101,16 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  // const headersList = await headers();
-  // const ua = headersList.get("user-agent") ?? "";
-  // const isMobileUA = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(ua);
-  // const isBot = /Googlebot|Bingbot|facebookexternalhit|Twitterbot|LinkedInBot|TelegramBot|Slackbot/i.test(ua);
-
-  // const showMobilePlaceholder = isMobileUA && !isBot;
-  const showMobilePlaceholder = false;
-
-
-
   return (
     <html
       lang="uk"
       className={`${RobotoFont.variable} ${AlumniSansSCFont.variable} ${AlumniSansPinstripeFont.variable} ${InterFont.variable}`}
     >
       <body>
-        {showMobilePlaceholder ? (
-          <MobilePlaceholder />
-        ) : (
-          <>
-            <Header />
-            <main id="main-content">{children}</main>
-            <Footer />
-            <div id="modal-root" />
-          </>
-        )}
+        <Header />
+        <main id="main-content">{children}</main>
+        <Footer />
+        <div id="modal-root" />
       </body>
     </html>
   );
