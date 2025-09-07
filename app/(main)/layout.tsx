@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import MobilePlaceholder from "@/components/MobilePlaceholder/MobilePlaceholder";
+
 import {
   Roboto,
   Alumni_Sans_SC,

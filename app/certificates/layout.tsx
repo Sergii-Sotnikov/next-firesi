@@ -5,11 +5,21 @@ import Footer from "@/components/Footer/Footer";
 import MobilePlaceholder from "@/components/MobilePlaceholder/MobilePlaceholder";
 import {
   Roboto,
+  Inter
 } from "next/font/google";
 
 const RobotoFont = Roboto({
   weight: ["400", "500", "700"],
   variable: "--font-roboto",
+  subsets: ["latin", "cyrillic"],
+  fallback: ["system-ui", "Arial", "sans-serif"],
+  adjustFontFallback: false,
+  display: "swap",
+});
+
+const InterFont = Inter({
+  weight: ["400", "500", "700"],
+  variable: "--font-inter",
   subsets: ["latin", "cyrillic"],
   fallback: ["system-ui", "Arial", "sans-serif"],
   adjustFontFallback: false,
@@ -80,7 +90,7 @@ export default async function CertificatesLayout({
 
   return (
     <html lang="uk"
-    className={`${RobotoFont.variable}`}
+    className={`${RobotoFont.variable} ${InterFont.variable}`}
     >
       <body>
             <HeaderCertificates />
