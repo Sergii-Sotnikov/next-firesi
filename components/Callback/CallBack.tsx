@@ -103,7 +103,7 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
           onSubmit={handleSubmit}
           validationSchema={CallSchema}
         >
-          {({ isValid, dirty }) => (
+          {({ isValid, dirty, isSubmitting }) => (
             <Form className={css.form}>
               <Field
                 type="text"
@@ -212,7 +212,8 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
                   disabled={!(isValid && dirty && recaptchaToken)}
                 >
                   <span className={css.btnContactSpan}>
-                    Замовити консультацію
+                    {isSubmitting ? "Відправка..." : "Замовити консультацію"}
+                    
                   </span>
                 </button>
                 <button
