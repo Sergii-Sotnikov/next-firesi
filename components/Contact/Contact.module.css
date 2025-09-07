@@ -103,7 +103,7 @@
   width: 100%;
   margin: 8px auto 0;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   overflow: visible;
 }

@@ -14,8 +14,8 @@ const SuccessfulOrder = ({
   return (
     <>
       <div className={css.mainDiv}>
-        <p className={css.title}>✅ Ваше замовлення прийнято!</p>
-        <p className={css.mainText}>Дякуємо, що дбаєте про безпеку з</p>
+        <p className={css.title}>✅ Ваше замовлення<br className={css.titleMob} /> прийнято!</p>
+        <p className={css.mainText}>Дякуємо, що дбаєте<br className={css.titleMob} /> про безпеку з</p>
         <div className={css.fire}>
           <p className={css.logoTextHeader}>
             Fire<span className={css.logoTextHeaderSpan}>si</span>
@@ -23,6 +23,7 @@ const SuccessfulOrder = ({
         </div>
         <p className={css.mainAdd}>
           Ми отримали ваше замовлення і вже працюємо над ним. <br />
+          <br className={css.titleMob} />
           Очікуйте дзвінка або повідомлення від нашого менеджера.
         </p>
       </div>
