@@ -8,11 +8,11 @@ import { Toaster, toast } from "react-hot-toast";
 import css from "./CallBack.module.css";
 import type { FormikHelpers } from "formik";
 
-
 interface FormCallValues {
   name: string;
   phone: string;
   consent: boolean;
+  message?: string;
   company?: string;
 }
 
@@ -30,6 +30,7 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
     name: "",
     phone: "+380",
     consent: false,
+    message: "",
     company: "",
   };
 
@@ -40,6 +41,7 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
     phone: Yup.string()
       .matches(/^\+380\d{9}$/, "Номер повинен бути у форматі +380XXXXXXXXX")
       .required("Номер телефону обов'язковий"),
+    message: Yup.string().trim().max(250, "Максимум 250 символів"),
     consent: Yup.boolean().oneOf(
       [true],
       "Ви повинні погодитися з обробкою персональних даних"
@@ -61,7 +63,7 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
       name: values.name,
       phone: values.phone,
       product: productName,
-      message: "Відсутнє",
+      message: values.message?.trim() || "Відсутнє",
       company: values.company,
     };
 
@@ -100,22 +102,22 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
         >
           {({ isValid, dirty }) => (
             <Form className={css.form}>
-              <div className={css.formName}>
-                <Field
-                  type="text"
-                  name="company"
-                  tabIndex={-1}
-                  autoComplete="off"
-                  aria-hidden="true"
-                  style={{
-                    position: "absolute",
-                    left: "-10000px",
-                    width: 1,
-                    height: 1,
-                    overflow: "hidden",
-                  }}
-                />
+              <Field
+                type="text"
+                name="company"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  left: "-10000px",
+                  width: 1,
+                  height: 1,
+                  overflow: "hidden",
+                }}
+              />
 
+              <div className={css.formName}>
                 <label className={css.labelName} htmlFor="name">
                   Ваше імя:
                   <Field
@@ -151,6 +153,26 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
                 />
               </div>
 
+              <div className={css.formMessage}>
+                <label className={css.labelMessage} htmlFor="message">
+                  Коментар до замовлення
+                  <Field
+                    as="textarea"
+                    id="message"
+                    name="message"
+                    className={css.inputMessage}
+                    placeholder="Напишіть бажання або деталі"
+                    rows={4}
+                    maxLength={250}
+                  />
+                </label>
+                <ErrorMessage
+                  name="message"
+                  component="span"
+                  className={css.errorMessage}
+                />
+              </div>
+
               <div className={css.formGroupCheckbox}>
                 <label className={css.checkboxLabel}>
                   <Field
@@ -171,7 +193,10 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
                 <ReCAPTCHA
                   ref={recaptchaRef}
                   sitekey={myKeyRECAPTCHA || ""}
+                  theme="dark"
                   onChange={(token) => setRecaptchaToken(token)}
+                  onExpired={() => setRecaptchaToken(null)}
+                  onErrored={() => setRecaptchaToken(null)}
                 />
               )}
               <div className={css.buttonGroup}>
