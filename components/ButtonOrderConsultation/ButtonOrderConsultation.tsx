@@ -19,7 +19,10 @@ const ButtonOrderConsultation = ({ children, openModal }: Props) => {
       type="button"
       onClick={openModal}
     >
-      <span className={css.btnOrderConsultationSpan}>{children} <FaArrowRight className={css.btnIcon} size={20}/></span>
+      <div className={css.btnDiv}>
+        <p className={css.textBtn}>{children}</p>
+        <FaArrowRight className={css.btnIcon} size={24}/>
+      </div>
     </button>
   );
 };

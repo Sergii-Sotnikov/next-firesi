@@ -1,4 +1,144 @@
-.sticker {
+  .sticker {
+  padding: 40px 0;
+    width: 100%;
+  margin: 0 auto;
+  --gutter: clamp(12px, 4vw, 20px);
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  box-sizing: border-box;
+}
+
+.stickerWrapper{
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #ffffff;
+  border-radius: 4px;
+  padding: 16px 4px;
+}
+
+.stickerTitle {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Cera Stencil PRO";
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+.stickerImage{
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.stickerImageLogo{
+  width: 140px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.stickerText {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-style: Black;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+
+.stickerTextBold{
+  font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.stickerImageAdd{
+    width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.product {
+  background-color: #ffffff1a;
+  backdrop-filter: blur(15px);
+  border-radius: 4px;
+  padding: 16px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.productTitle {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin: 0
+}
+
+
+.productItem {
+  width: 100%;
+  background-color: #ffffff1a;
+  border-radius: 4px;
+  padding: 8px;
+  text-align: left;
+}
+
+.productList{
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+
+.productName,
+.productValue {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.productNameRed {
+  color: #e00d1d;
+}
+
+
+.productDescription {
+  font-family: var(--font-roboto), sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: 0em;
+  color: #ffffffcc;
+  margin: 0;
+}
+
+
+@media (min-width: 1440px) {
+  .sticker {
   padding: 60px 0;
 }
 
@@ -130,3 +270,6 @@
   margin: 0;
   margin-left: 8px;
 }
+}
+
+

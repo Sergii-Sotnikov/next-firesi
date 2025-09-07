@@ -1,5 +1,6 @@
 import css from "./StickerFipron.module.css";
 import Image from "next/image";
+import { price } from "@/src/data/products";
 
 interface Props {
   children?: React.ReactNode;
@@ -57,12 +58,12 @@ const StickerFipron = ({children}:Props) => {
               <li className={css.productItem}>
               <p className={css.productName}>1. <span className={css.productNameRed}>FIPRON™</span> Стікер P:</p>
               <p className={css.productDescription}> Об’єм гасіння: <span className={css.productValue}>0,2 літра</span></p>
-              <p className={css.productDescription}> Ціна: <span className={css.productValue}>600 грн / шт</span></p>
+              <p className={css.productDescription}> Ціна: <span className={css.productValue}>{price["FIPRON™ Стікер P"]} грн / шт</span></p>
               </li>
                             <li className={css.productItem}>
               <p className={css.productName}>2. <span className={css.productNameRed}>FIPRON™</span> Стікер P (в листах):</p>
               <p className={css.productDescription}> Об’єм гасіння: <span className={css.productValue}>15 літрів</span></p>
-              <p className={css.productDescription}> Ціна: <span className={css.productValue}>1100 грн / шт</span></p>
+              <p className={css.productDescription}> Ціна: <span className={css.productValue}>{price["FIPRON™ Стікер P (в листах)"]} грн / шт</span></p>
               </li>
             </ul>
             {children}

@@ -46,6 +46,7 @@
 
 @media (min-width: 1440px) {
   .works {
+    width: 100%;
   padding: 60px 0;
 }
 
@@ -53,6 +54,7 @@
   margin: 0 auto;
   max-width: 1440px;
   padding: 0 150px;
+  min-width: 100%;
 }
 
 .worksTitle {
@@ -69,7 +71,7 @@ font-family: "Cera Stencil PRO", sans-serif;
 }
 
 .videoWrapper {
-  width: 1140px;
+  min-width: 1140px;
   height: 645px;
   margin: 0 auto;
   border-radius: 40px;
