@@ -8,6 +8,7 @@ import { Toaster, toast } from "react-hot-toast";
 import css from "./CallBack.module.css";
 import type { FormikHelpers } from "formik";
 
+
 interface FormCallValues {
   name: string;
   phone: string;
@@ -24,6 +25,7 @@ interface CallBackProps {
 export default function Callback({ closeModal, productName }: CallBackProps) {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+    const [successful, setSuccessful] = useState<boolean>(false);
   const myKeyRECAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
   const initialcallBackValues: FormCallValues = {
@@ -80,6 +82,7 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
       }
 
       toast.success("Ми вам зателефонуємо!");
+      setSuccessful(true);
       actions.resetForm();
       recaptchaRef.current?.reset();
       setRecaptchaToken(null);
