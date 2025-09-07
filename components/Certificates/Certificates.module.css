@@ -43,19 +43,17 @@
   margin-bottom: 0px;
 }
 
-.declarationImage{
-  width: 288px;
-  height: 391px;
-}
 
 @media (min-width: 1440px) {
 .certificates {
+  width: 100%;
   padding: 175px 100px;
 }
 
 .container {
+  width: 100%;
+  max-width: 1140px;
   margin: 0 auto;
-  max-width: 1440px;
   padding: 0 150px;
 }
 

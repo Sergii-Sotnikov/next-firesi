@@ -4,6 +4,7 @@
 
 @media (min-width: 1440px){
   .HeaderCertificates {
+    display: block;
   position: fixed;
   top: 0;
   left: 50%;
