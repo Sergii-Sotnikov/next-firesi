@@ -1,5 +1,8 @@
 import Image from "next/image";
 import css from "./HeroFipron.module.css";
+import attentionDesktop from "@/public/img/attention@2x.png";
+import attentionMobile from "@/public/img/attention_mobile@2x.png";
+import fipronLogo from "@/public/img/fipron.png";
 
 const HeaderFipron = () => {
   return (
@@ -7,18 +10,16 @@ const HeaderFipron = () => {
       <div className={css.container}>
         <div className={css.heroTitle}>
           <Image
-            src="/img/attention@2x.png"
+            src={attentionDesktop}
             className={css.heroImage}
             alt="Увага"
-            width={225}
-            height={225}
+            placeholder="blur"
           />
           <Image
-            src="/img/attention_mobile@2x.png"
+            src={attentionMobile}
             className={css.heroImageMobile}
             alt="Увага"
-            width={82}
-            height={82}
+            placeholder="blur"
           />
           <h1 className={css.heroTitleText}>
             Зупинись на <br className={css.heroTitleTextAdd} />
@@ -35,13 +36,13 @@ const HeaderFipron = () => {
           <br /> Але тепер є рішення, яке спрацьовує ще до того, як пожежа
           встигне розгорітися.
         </p>
-        <Image
+           <Image
           className={css.fipronLogo}
-          src="/img/fipron.png"
-          alt="Fipron logo"
-          width={643}
-          height={161}
-        ></Image>
+          src={fipronLogo}
+          alt="FIPRON logo"
+          placeholder="blur"
+          priority
+        />
         <p className={css.heroText}>
           Це сучасне рішення для захисту електричних та технічних об’єктів від
           загорянь — працює повністю автономно, не потребує підключення до
