@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import css from "./HeaderMobile.module.css";
 import { IoMdMenu } from "react-icons/io";
@@ -15,6 +15,11 @@ export default function HeaderMobile() {
   const pathname = usePathname();
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(href + "/");
+  
+  useEffect(() => {
+  const img = new Image();
+  img.src = "/img/fire_backgraund_mobile.png";
+}, []);
 
   return (
     <section className={css.header} id="hero">
