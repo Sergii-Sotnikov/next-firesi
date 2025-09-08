@@ -12,6 +12,7 @@ const ArgumentsMobileSlider = () => {
     <Swiper
       className={css.mySwiper}
       modules={[Pagination, A11y, Keyboard]}
+      autoHeight
       pagination={{ clickable: true }}
       keyboard={{ enabled: true }}
       spaceBetween={120}

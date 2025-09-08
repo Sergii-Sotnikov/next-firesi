@@ -17,10 +17,19 @@
 .list { display: none; }
 .fireImage { display: none; }
 
-.mySwiper :global(.swiper-pagination) {
-  position: relative;
-  margin-top: 15px;
+.mySwiper { height: auto; }
+
+.mySwiper :global(.swiper-slide) {
+  height: auto !important;
 }
+
+.mySwiper :global(.swiper-pagination) {
+  position: static;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
 .mySwiper :global(.swiper-pagination-bullet) {
   background: transparent;
   border: 1.5px solid #fff;
