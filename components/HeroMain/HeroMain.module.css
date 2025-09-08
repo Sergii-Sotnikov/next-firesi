@@ -2,7 +2,7 @@
 .heroMain {
   width: 100%;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 105px;
   --gutter: clamp(12px, 4vw, 20px);
 }
 
