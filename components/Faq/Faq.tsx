@@ -27,7 +27,10 @@ export default function Faq() {
   return (
     <section className={css.faq}>
       <div className={css.container}>
-        <h2 className={css.title}>Є питання? Ми тут,<br className={css.titleAdd}/> щоб допомогти!</h2>
+        <h2 className={css.title}>
+          Є питання? Ми тут,
+          <br className={css.titleAdd} /> щоб допомогти!
+        </h2>
 
         <Accordion.Root
           type="multiple"
@@ -150,8 +153,7 @@ export default function Faq() {
             <Accordion.Content className={css.content}>
               <p className={css.faqText}>
                 Firesi – це нове покоління! ГАСИТЬ ОБСАЛЮТНО ВСЕ -рідини, гази,
-                олії, навіть палаючі акумулятори - те з цим не може справитись
-                жодний інший вогнегасник! Це не просто іновація у світі
+                олії, навіть палаючі акумулятори - це не просто іновація у світі
                 пожежогасіння, це ваш особистий герой, який завжди напоготові.
               </p>
             </Accordion.Content>
