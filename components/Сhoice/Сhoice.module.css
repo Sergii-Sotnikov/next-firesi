@@ -15,7 +15,7 @@
 
 .mySwiper :global(.swiper-pagination) {
   position: relative;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 .mySwiper :global(.swiper-pagination-bullet) {
   background: transparent;
@@ -173,7 +173,29 @@
   margin: 8px 0;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1440px) {.choicePagination {
+  display: flex;
+  justify-content: center; /* или left/right как нужно */
+  align-items: center;
+  margin-top: 20px; /* ваш отступ */
+}
+
+/* Сами буллеты – это классы, которые генерит Swiper (глобальные) */
+.choicePagination :global(.swiper-pagination-bullet) {
+  background: transparent;
+  border: 1.5px solid #fff;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.choicePagination :global(.swiper-pagination-bullet-active) {
+  background-color: #fff;
+  border-color: #fff;
+  transform: scale(1.05);
+}
   .choiceMobileSwiper {
     display: none;
   }
