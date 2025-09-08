@@ -13,6 +13,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
+import { contacts } from "@/src/data/contacts";
 
 interface FormCallValues {
   name: string;
@@ -195,7 +196,7 @@ export default function Contact() {
             <li className={css.addressItem}>
               <PhoneCall className={css.iconAddressPhone} size={42} />
               <a href="tel:+380989136599" className={css.addressPhone}>
-                +380989136599
+                {contacts.phone}
               </a>
             </li>
             <li className={css.addressItem}>
@@ -203,12 +204,12 @@ export default function Contact() {
                 <use href="/icons/sprite.svg#icon-email"></use>
               </svg>
               <a href="mailto:firesi@gmail.com" className={css.addressMail}>
-                stopfirelviv@gmail.com
+                {contacts.email}
               </a>
             </li>
             <li className={css.addressItem}>
               <TbTruckDelivery className={css.iconAddressDelivery} size={42} />
-              <p className={css.addressDeliveryText}>доставка Meest, SAT</p>
+              <p className={css.addressDeliveryText}>доставка {contacts.delivery}</p>
             </li>
             <li className={css.addressItem}>
               <LiaMapMarkedAltSolid
@@ -216,8 +217,8 @@ export default function Contact() {
                 size={42}
               />
               <p className={css.addressLocationText}>
-                21 Zhovkivska Street, Malekhiv. <br />
-                Lviv, Ukraine.
+                {contacts.address}. <br />
+                {contacts.city}, {contacts.country}.
               </p>
             </li>
           </ul>
@@ -225,7 +226,7 @@ export default function Contact() {
           <ul className={css.addressListMobile}>
             <li className={css.addressItem}>
               <TbTruckDelivery className={css.iconAddressDelivery} size={42} />
-              <p className={css.addressDeliveryText}>доставка Meest, SAT</p>
+              <p className={css.addressDeliveryText}>доставка {contacts.delivery}</p>
             </li>
 
             <li className={css.addressItem}>
@@ -234,15 +235,14 @@ export default function Contact() {
                 size={42}
               />
               <p className={css.addressLocationText}>
-                21 Zhovkivska Street,
-                <br />
-                Malekhiv, Lviv, Ukraine.
+                {contacts.address}. <br />
+                {contacts.city}, {contacts.country}.
               </p>
             </li>
             <li className={css.addressItem}>
               <PhoneCall className={css.iconAddressPhone} size={42} />
               <a href="tel:+380989136599" className={css.addressPhone}>
-                +380989136599
+                {contacts.phone}
               </a>
             </li>
             <li className={css.addressItem}>
@@ -250,7 +250,7 @@ export default function Contact() {
                 <use href="/icons/sprite.svg#icon-email"></use>
               </svg>
               <a href="mailto:firesi@gmail.com" className={css.addressMail}>
-                stopfirelviv@gmail.com
+                {contacts.email}
               </a>
             </li>
             <li>
