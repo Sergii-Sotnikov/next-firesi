@@ -1,0 +1,34 @@
+.contactMobile {
+  padding: 24px 0 8px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+  padding: 0 16px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.socItem {
+  color: #ffffff;
+}
+.socItem:hover,
+.socItem:active {
+  color: #e00d1d;
+}
+
+@media (min-width: 1440px) {
+    .contactMobile{
+        display: none;
+    }
+}
