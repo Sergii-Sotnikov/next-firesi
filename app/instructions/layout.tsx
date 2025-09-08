@@ -6,6 +6,7 @@ import {
   Roboto,
   Inter
 } from "next/font/google";
+import ContactMobile from "@/components/ContactMobile/ContactMobile";
 
 const RobotoFont = Roboto({
   weight: ["400", "500", "700"],
@@ -93,6 +94,7 @@ export default function ІnstructionsLayout({
       <body>
         <HeaderCertificates />
         <main>{children}</main>
+        <ContactMobile/>
         <Footer />
         <div id="modal-root" />
       </body>

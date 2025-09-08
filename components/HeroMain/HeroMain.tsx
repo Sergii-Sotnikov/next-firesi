@@ -63,7 +63,6 @@ const HeroMain = () => {
                 <FaArrowRight className={css.btnIcon} size={20} />
               </span>
             </Link>
-            <TbTruckDelivery className={css.customIcon} size={40} />
           </div>
           <Image
             className={css.pictureHero}
