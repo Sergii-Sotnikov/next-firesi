@@ -11,12 +11,12 @@ const Fipron = () => {
     <>
       <HeroFipron />
       <WorksFipron />
-      <StickerFipron>
-        <ClientModalButton productName="Замовити консультацію і розрахунок FIPRON Sticker " />
-      </StickerFipron>
       <CordFipron>
         <ClientModalButton productName="Замовити консультацію і розрахунок FIPRON Cord " />
       </CordFipron>
+            <StickerFipron>
+        <ClientModalButton productName="Замовити консультацію і розрахунок FIPRON Sticker " />
+      </StickerFipron>
       <Mounting />
       <Contact />
     </>
