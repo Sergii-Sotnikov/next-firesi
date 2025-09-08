@@ -15,8 +15,8 @@
   display: flex;
   align-items: center;
   justify-content:flex-start;
-  gap: 12px;
-  padding: 4px 17px;
+  gap: 2px;
+  padding: 4px 67px 4px 17px;
   background-color: #e00d1d;
   border-radius: 4px;
   border: 0.5px solid #fff;
@@ -38,8 +38,8 @@
 }
 
 .btnIcon {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   display: block;
   color: #fff;
   filter: drop-shadow(1.14px 1.14px 2.29px #00000080);
