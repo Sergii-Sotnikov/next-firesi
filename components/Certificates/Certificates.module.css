@@ -25,6 +25,9 @@
   text-transform: uppercase;
 }
 
+.title{
+  padding-top: 32px;
+}
 .titleSert{
     margin-top: 21px;
 }

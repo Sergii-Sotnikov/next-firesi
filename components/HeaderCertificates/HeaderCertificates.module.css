@@ -1,17 +1,20 @@
 .HeaderCertificates {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
   width: 100%;
   margin: 0 auto;
-  width: 420px;
-  padding: 0px;
+  max-width: 420px;
   height: 32px;
-  background:
-    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  background-color: #ffffff1a;
+  backdrop-filter: blur(20px);
 }
 
 .containerHeader {
   margin: 0 auto;
-  min-width: 100%;
+  width: 100%;  
   min-height: 100%;
   padding: 0 16px;
   box-sizing: border-box;
@@ -25,11 +28,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 2px;
   padding: 0;
   font-family: var(--font-roboto);
-  font-size: 12px;
-  font-weight: 600;
+  font-size: clamp(12px, 3.33vw, 14px);
+  font-weight: 400;
   line-height: 1;
   text-decoration: none;
   color: #ffffff;
@@ -70,13 +73,17 @@
   height: 26px;
   position: absolute;
   top: -8px;
-  left: -19px;
+  left: -16px;
   background-image: url("/img/fire.gif");
   background-size: cover;
   background-repeat: no-repeat;
   pointer-events: none;
   z-index: 1;
 }
+
+  .logoTextHeaderSpan {
+    color: #e00d1d;
+  }
 
 @media (min-width: 1440px) {
   .HeaderCertificates {

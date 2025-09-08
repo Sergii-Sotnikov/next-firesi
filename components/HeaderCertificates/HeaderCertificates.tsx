@@ -24,7 +24,6 @@ const HeaderCertificates = ()=>{
         </Link>
       </div>
     </section>
-    {/* <HeaderMobile /> */}
     </>
   );
 }
