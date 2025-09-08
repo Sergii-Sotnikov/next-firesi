@@ -190,10 +190,12 @@ width: 100%;
 
   .productTextBold {
     font-weight: 800;
+    font-size: 28px;
   }
 
   .productTextBoldAdd {
   font-weight: 900;
   font-size: 28px;
 }
+
 }
