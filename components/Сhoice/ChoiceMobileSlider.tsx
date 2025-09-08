@@ -3,12 +3,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, A11y, Keyboard } from "swiper/modules";
 import css from "./Сhoice.module.css";
 import Image from "next/image";
-import {price} from "@/src/data/products"
+import { price } from "@/src/data/products";
 
-// core styles
 import "swiper/css";
 import "swiper/css/pagination";
 import ButtonOrderProduct from "../ButtonOrderProduct/ButtonOrderProduct";
+
+import frseFs from "@/public/img/FRSE-FS_mobile.png";
+import frseF2 from "@/public/img/FRSE-F2_mobile.png";
+import frseF6 from "@/public/img/FRSE-F6_mobile.png";
 
 const ChoiceMobileSlider = () => {
   return (
@@ -49,10 +52,10 @@ const ChoiceMobileSlider = () => {
           </div>
           <Image
             className={css.imageChoiseMobile}
-            src="/img/FRSE-FS_mobile.png"
+            src={frseFs}
             alt="Вогнегасник FRSE-FS"
-            width={272}
-            height={280}
+            priority
+            placeholder="blur"
           />
           <div className={css.product}>
             <div className={css.productDescription}>
@@ -122,7 +125,9 @@ const ChoiceMobileSlider = () => {
             </p>
             <p className={css.classText}>C — гази (пропан, метан, бутан)</p>
             <p className={css.classText}>D — метали (магній, натрій, титан)*</p>
-            <p className={css.classText}>E — електрообладнання під напругою до 1000В</p>
+            <p className={css.classText}>
+              E — електрообладнання під напругою до 1000В
+            </p>
             <p className={css.classText}>
               F — кухонні жири й масла, може загасити до 100 літрів рослинної
               олії.
@@ -130,10 +135,9 @@ const ChoiceMobileSlider = () => {
           </div>
           <Image
             className={css.imageChoiseMobile}
-            src="/img/FRSE-F2_mobile.png"
+            src={frseF2}
             alt="Вогнегасник FRSE-F2"
-            width={272}
-            height={280}
+            placeholder="blur"
           />
           <div className={css.product}>
             <div className={css.productDescription}>
@@ -187,7 +191,6 @@ const ChoiceMobileSlider = () => {
         </div>
       </SwiperSlide>
 
-
       <SwiperSlide aria-label="Продукт 3">
         <div className={css.productItem}>
           <p className={css.productTitle}>вогнегасник</p>
@@ -212,10 +215,9 @@ const ChoiceMobileSlider = () => {
           </div>
           <Image
             className={css.imageChoiseMobile}
-            src="/img/FRSE-F6_mobile.png"
+            src={frseF6}
             alt="Вогнегасник FRSE-F6"
-            width={272}
-            height={280}
+            placeholder="blur"
           />
           <div className={css.product}>
             <div className={css.productDescription}>

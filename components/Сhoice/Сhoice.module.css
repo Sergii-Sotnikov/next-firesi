@@ -127,8 +127,8 @@
 .imageChoiseMobile {
   display: block;
   margin: 0 auto 8px;
+    width: 272px;
   height: auto;
-  width: auto;
 }
 
 .product {
