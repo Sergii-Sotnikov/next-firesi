@@ -58,6 +58,7 @@
 
 .pictureHeroMobileWrap {
   width: 100%;
+  height: auto;
   margin: 0 auto 32px;
 }
 
@@ -288,9 +289,14 @@
 
   .descriptionHeroAddtextMobile { display: none; }
 
-  .pictureHeroLogo { margin-bottom: 41px; }
+  .pictureHeroLogo{ 
+    width: 373px;
+    height: auto;
+    margin-bottom: 41px; }
 
   .pictureHero {
+    width: 563px;
+    height: auto;
     border-radius: 35px;
     z-index: 10;
   }

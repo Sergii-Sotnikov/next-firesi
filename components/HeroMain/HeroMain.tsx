@@ -2,7 +2,10 @@ import css from "./HeroMain.module.css";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
-import { TbTruckDelivery } from "react-icons/tb";
+
+import logoFiresi from "@/public/img/firesi@2x.png";
+import extinguisherDesktop from "@/public/img/extinguisher@2x.jpg";
+import extinguisherMobile from "@/public/img/extinguisher_mobile@2x.png";
 
 const HeroMain = () => {
   return (
@@ -28,26 +31,26 @@ const HeroMain = () => {
               </svg>
               Сертифіковано в Україні
             </span>
-            <Image
+             <Image
               className={css.pictureHeroLogo}
-              src="/img/firesi@2x.png"
-              width={373}
-              height={157}
+              src={logoFiresi}
               alt="Логотип Firesi"
+              placeholder="blur"
+              style={{ height: "auto" }}
             />
             <p className={css.descriptionHeroAddtextMobile}>
               Сертифіковано в Україні
             </p>
             <div className={css.pictureHeroMobileWrap}>
-              <Image
+               <Image
                 className={css.pictureHeroMobile}
-                src="/img/extinguisher_mobile@2x.png"
-                width={320}
-                height={121}
-                alt="Вогнегасник FIPRON"
-                sizes="(max-width: 1440px) 100vw, 562px" // подсказывает браузеру реальную ширину
+                src={extinguisherMobile}
+                alt="Вогнегасник FIPRON (mobile)"
+                placeholder="blur"
+                style={{ height: "auto" }}
               />
             </div>
+        
             <p className={css.descriptionHeroText}>
               Зупиніть будь яку пожежу за лічені секунди.
             </p>
@@ -64,12 +67,13 @@ const HeroMain = () => {
               </span>
             </Link>
           </div>
-          <Image
+           <Image
             className={css.pictureHero}
-            src="/img/extinguisher@2x.jpg"
-            width={562}
-            height={705}
+            src={extinguisherDesktop}
             alt="Вогнегасник FIPRON"
+            priority
+            placeholder="blur"
+            style={{ height: "auto" }}
           />
         </div>
       </div>
