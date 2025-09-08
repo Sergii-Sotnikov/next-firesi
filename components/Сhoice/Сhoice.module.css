@@ -13,22 +13,21 @@
   box-sizing: border-box;
 }
 
-.mySwiper { height: auto; }
+.mySwiper {
+  height: auto;
+}
 
-/* По умолчанию .swiper-slide имеет height: 100%; переопределяем */
 .mySwiper :global(.swiper-slide) {
   height: auto;
 }
 
-/* Пагинацию возвращаем в поток под контент слайда */
 .mySwiper :global(.swiper-pagination) {
-  position: static;         /* ← вместо absolute */
-  margin-top: 15px;
+  position: static;
+  margin-top: 25px;
   display: flex;
-  justify-content: center;  /* как нужно: left/center/right */
+  justify-content: center;
 }
 
-/* Стили буллетов как были */
 .mySwiper :global(.swiper-pagination-bullet) {
   background: transparent;
   border: 1.5px solid #fff;
@@ -36,7 +35,9 @@
   height: 8px;
   border-radius: 50%;
   opacity: 1;
-  transition: opacity .3s ease, transform .3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 .mySwiper :global(.swiper-pagination-bullet-active) {
   background-color: #fff;
@@ -182,29 +183,32 @@
   margin: 8px 0;
 }
 
-@media (min-width: 1440px) {.choicePagination {
-  display: flex;
-  justify-content: center; /* или left/right как нужно */
-  align-items: center;
-  margin-top: 20px; /* ваш отступ */
-}
+@media (min-width: 1440px) {
+  .choicePagination {
+    display: flex;
+    justify-content: center; /* или left/right как нужно */
+    align-items: center;
+    margin-top: 20px; /* ваш отступ */
+  }
 
-/* Сами буллеты – это классы, которые генерит Swiper (глобальные) */
-.choicePagination :global(.swiper-pagination-bullet) {
-  background: transparent;
-  border: 1.5px solid #fff;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  opacity: 1;
-  transition: opacity .3s ease, transform .3s ease;
-}
+  /* Сами буллеты – это классы, которые генерит Swiper (глобальные) */
+  .choicePagination :global(.swiper-pagination-bullet) {
+    background: transparent;
+    border: 1.5px solid #fff;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    opacity: 1;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
 
-.choicePagination :global(.swiper-pagination-bullet-active) {
-  background-color: #fff;
-  border-color: #fff;
-  transform: scale(1.05);
-}
+  .choicePagination :global(.swiper-pagination-bullet-active) {
+    background-color: #fff;
+    border-color: #fff;
+    transform: scale(1.05);
+  }
   .choiceMobileSwiper {
     display: none;
   }
@@ -231,160 +235,159 @@
   }
 
   .title {
-  font-family: "Cera Stencil PRO";
-  font-weight: 900;
-  font-style: Black;
-  font-size: 48px;
-  line-height: 1;
-  letter-spacing: 0;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0px;
-  margin-bottom: 95px;
-}
+    font-family: "Cera Stencil PRO";
+    font-weight: 900;
+    font-style: Black;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0px;
+    margin-bottom: 95px;
+  }
 
-.productList {
-  display: flex;
-  flex-direction: row;
-  gap: 57px;
-}
+  .productList {
+    display: flex;
+    flex-direction: row;
+    gap: 57px;
+  }
 
-.productItem {
-  width: 350px;
-  padding: 24px 15px;
-  border-radius: 25px;
-  box-shadow:
-    0px 1px 2px -1px rgba(0, 0, 0, 0.1),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column; 
-}
+  .productItem {
+    width: 350px;
+    padding: 24px 15px;
+    border-radius: 25px;
+    box-shadow:
+      0px 1px 2px -1px rgba(0, 0, 0, 0.1),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
 
-.productTitle {
-  font-family: var(--font-inter), sans-serif;
-  font-weight: 700;
-  font-size: 31px;
-  line-height: 1;
-  letter-spacing: 0;
-  text-align: center;
-  text-transform: uppercase;
-  color: #e00d1d;
-  margin: 0px;
-  margin-bottom: 22px;
-}
+  .productTitle {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e00d1d;
+    margin: 0px;
+    margin-bottom: 22px;
+  }
 
-.productName {
-  font-family: var(--font-inter), sans-serif;
-  font-weight: 700;
-  font-size: 31px;
-  line-height: 1;
-  letter-spacing: 0;
-  text-align: center;
-  color: #ffffff;
-  margin: 0px;
-  margin-bottom: 15px;
-}
+  .productName {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+    color: #ffffff;
+    margin: 0px;
+    margin-bottom: 15px;
+  }
 
-.productNameLogo {
-  color: #e00d1d;
-  margin-right: 10px;
-}
+  .productNameLogo {
+    color: #e00d1d;
+    margin-right: 10px;
+  }
 
-.product {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
+  .product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
 
-.productDescription {
-  width: 144px;
-  padding-top: 15px;
-  padding-left: 15px;
-}
+  .productDescription {
+    width: 144px;
+    padding-top: 15px;
+    padding-left: 15px;
+  }
 
-.descriptionName {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.4;
-  letter-spacing: 0;
-  color: #ffffff;
-  margin: 0px;
-}
+  .descriptionName {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: #ffffff;
+    margin: 0px;
+  }
 
-.descriptionList {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.4;
-  letter-spacing: 0;
-  color: #ffffff;
-  margin: 0px;
-  list-style-type: disc;
-}
+  .descriptionList {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    color: #ffffff;
+    margin: 0px;
+    list-style-type: disc;
+  }
 
-.descriptionItemText {
-  margin: 0px;
-}
+  .descriptionItemText {
+    margin: 0px;
+  }
 
-.productImage {
-  width: 164px;
-  height: 302px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-}
+  .productImage {
+    width: 164px;
+    height: 302px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
 
-.productImage img {
-  display: block;
-  max-height: 100%;
-  height: auto;
-  width: auto;
-}
+  .productImage img {
+    display: block;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }
 
-.classText {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.3;
-  letter-spacing: 0;
-  color: #ffffff;
-  margin: 0px;
-}
+  .classText {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: 0;
+    color: #ffffff;
+    margin: 0px;
+  }
 
-.classes {
-  margin-bottom: 22px;
-}
+  .classes {
+    margin-bottom: 22px;
+  }
 
-.textPrice {
-  font-family: var(--font-roboto), sans-serif;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: 0;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-top: auto;
-  margin-bottom: 0px;
-}
+  .textPrice {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: auto;
+    margin-bottom: 0px;
+  }
 
-
-.textPriceExchange{
-  font-family: var(--font-roboto), sans-serif;
-font-weight: 200;
-font-size: 16px;
-line-height: 1;
-letter-spacing: 0;
-text-align: center;
-color: #A599AB;
-margin-bottom: 0px;
-margin-top: 22px;
-}
+  .textPriceExchange {
+    font-family: var(--font-roboto), sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+    color: #a599ab;
+    margin-bottom: 0px;
+    margin-top: 22px;
+  }
 }
