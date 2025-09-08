@@ -1,10 +1,72 @@
 .HeaderCertificates{
-  display: none;
+    width: 100%;
+  margin: 0 auto;
+  width: 420px;
+  padding: 0px;
+  height: 32px;
+background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+
+
+}
+
+.containerHeader {
+  margin: 0 auto;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.navElem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0;
+  font-family:var(--font-roboto);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.linkLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  text-decoration: none;
+}
+
+.logoGif {
+  padding-bottom: 10px;
+}
+
+.logoTextHeader {
+  position: relative;
+  font-family: var(--font-inter), sans-serif;
+  color: #0a0000;
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 10px;
+  line-height: 1.5;
+  text-shadow:
+    -0.37px -0.37px 0 #ffb53f,
+    0.37px -0.37px 0 #ffb53f,
+    -0.37px 0.37px 0 #ffb53f,
+    0.37px 0.37px 0 #ffb53f;
 }
 
 @media (min-width: 1440px){
   .HeaderCertificates {
-    display: block;
   position: fixed;
   top: 0;
   left: 50%;
