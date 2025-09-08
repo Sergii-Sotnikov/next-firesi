@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, A11y, Keyboard } from "swiper/modules";
 import css from "./Сhoice.module.css";
 import Image from "next/image";
+import {price} from "@/src/data/products"
 
 // core styles
 import "swiper/css";
@@ -97,7 +98,7 @@ const ChoiceMobileSlider = () => {
               </ul>
             </div>
           </div>
-          <p className={css.textPrice}>вартість 50 eur</p>
+          <p className={css.textPrice}>вартість {price["FRSE-FS"]} eur</p>
           <p className={css.textPriceExchange}>
             розрахунок в гривнях по курсу НБУ
           </p>
@@ -178,7 +179,7 @@ const ChoiceMobileSlider = () => {
               </ul>
             </div>
           </div>
-          <p className={css.textPrice}>вартість 150 eur</p>
+          <p className={css.textPrice}>вартість {price["FRSE-F2"]} eur</p>
           <p className={css.textPriceExchange}>
             розрахунок в гривнях по курсу НБУ
           </p>
@@ -260,7 +261,7 @@ const ChoiceMobileSlider = () => {
               </ul>
             </div>
           </div>
-          <p className={css.textPrice}>вартість 300 eur</p>
+          <p className={css.textPrice}>вартість {price["FRSE-F6"]} eur</p>
           <p className={css.textPriceExchange}>
             розрахунок в гривнях по курсу НБУ
           </p>

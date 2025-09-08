@@ -1,6 +1,7 @@
 import ButtonOrderProduct from "../ButtonOrderProduct/ButtonOrderProduct";
 import ChoiceMobileSlider from "./ChoiceMobileSlider";
 import css from "./Сhoice.module.css";
+import {price} from "@/src/data/products"
 
 export default function Choice() {
   return (
@@ -92,7 +93,7 @@ export default function Choice() {
                 рослинної олії.
               </p>
             </div>
-            <p className={css.textPrice}>вартість 50 eur</p>
+            <p className={css.textPrice}>вартість {price["FRSE-FS"]} eur</p>
             <p className={css.textPriceExchange}>
               розрахунок в гривнях по курсу НБУ
             </p>
@@ -179,7 +180,7 @@ export default function Choice() {
                 рослинної олії.
               </p>
             </div>
-            <p className={css.textPrice}>вартість 150 eur</p>
+            <p className={css.textPrice}>вартість {price["FRSE-F2"]} eur</p>
             <p className={css.textPriceExchange}>
               розрахунок в гривнях по курсу НБУ
             </p>
@@ -266,7 +267,7 @@ export default function Choice() {
                 олії.
               </p>
             </div>
-            <p className={css.textPrice}>вартість 300 eur</p>
+            <p className={css.textPrice}>вартість {price["FRSE-F6"]} eur</p>
             <p className={css.textPriceExchange}>
               розрахунок в гривнях по курсу НБУ
             </p>
