@@ -32,7 +32,7 @@ const ContactMobile = () => {
       </li>
       <li className={css.navItem}>
         <Link
-          href="https://www.tiktok.com/"
+          href="https://www.tiktok.com/@stopfire.firesi?_t=ZM-8zYKw5JU7Jm"
           target="_blank"
           rel="noopener noreferrer"
           className={css.socItem}
