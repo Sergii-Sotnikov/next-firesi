@@ -54,7 +54,6 @@ const ChoiceMobileSlider = () => {
             className={css.imageChoiseMobile}
             src={frseFs}
             alt="Вогнегасник FRSE-FS"
-            priority
             placeholder="blur"
           />
           <div className={css.product}>

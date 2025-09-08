@@ -26,6 +26,11 @@
   padding-top: 32px;
 }
 
+.instructionsImage{
+  width: 288;
+  height: auto;
+}
+
 .instructionsList {
   display: flex;
   flex-direction: column;
@@ -58,6 +63,11 @@
   letter-spacing: 0;
   text-align: center;
   text-transform: uppercase;
+}
+
+.instructionsImage{
+  width: 1191;
+  height: auto;
 }
 
 .instructionsList {

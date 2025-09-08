@@ -11,6 +11,12 @@
   padding: 0 16px;
 }
 
+.declarationImage,
+.certificateImage{
+  width: 288px;
+  height: auto;
+}
+
 .title,
 .titleSert {
   color: #fff;
@@ -58,6 +64,11 @@
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 150px;
+}
+
+.declarationImage{
+  width: 1166px;
+  height: auto;
 }
 
 .heroTitle {
