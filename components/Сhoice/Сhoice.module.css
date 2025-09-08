@@ -13,10 +13,22 @@
   box-sizing: border-box;
 }
 
-.mySwiper :global(.swiper-pagination) {
-  position: relative;
-  margin-top: 15px;
+.mySwiper { height: auto; }
+
+/* По умолчанию .swiper-slide имеет height: 100%; переопределяем */
+.mySwiper :global(.swiper-slide) {
+  height: auto;
 }
+
+/* Пагинацию возвращаем в поток под контент слайда */
+.mySwiper :global(.swiper-pagination) {
+  position: static;         /* ← вместо absolute */
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;  /* как нужно: left/center/right */
+}
+
+/* Стили буллетов как были */
 .mySwiper :global(.swiper-pagination-bullet) {
   background: transparent;
   border: 1.5px solid #fff;
@@ -24,14 +36,11 @@
   height: 8px;
   border-radius: 50%;
   opacity: 1;
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
+  transition: opacity .3s ease, transform .3s ease;
 }
 .mySwiper :global(.swiper-pagination-bullet-active) {
   background-color: #fff;
   border-color: #fff;
-  opacity: 1;
   transform: scale(1.05);
 }
 
