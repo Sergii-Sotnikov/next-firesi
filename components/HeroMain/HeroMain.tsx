@@ -31,26 +31,24 @@ const HeroMain = () => {
               </svg>
               Сертифіковано в Україні
             </span>
-             <Image
+            <Image
               className={css.pictureHeroLogo}
               src={logoFiresi}
               alt="Логотип Firesi"
               placeholder="blur"
-              style={{ height: "auto" }}
             />
             <p className={css.descriptionHeroAddtextMobile}>
               Сертифіковано в Україні
             </p>
             <div className={css.pictureHeroMobileWrap}>
-               <Image
+              <Image
                 className={css.pictureHeroMobile}
                 src={extinguisherMobile}
                 alt="Вогнегасник FIPRON (mobile)"
                 placeholder="blur"
-                style={{ height: "auto" }}
               />
             </div>
-        
+
             <p className={css.descriptionHeroText}>
               Зупиніть будь яку пожежу за лічені секунди.
             </p>
@@ -67,7 +65,7 @@ const HeroMain = () => {
               </span>
             </Link>
           </div>
-           <Image
+          <Image
             className={css.pictureHero}
             src={extinguisherDesktop}
             alt="Вогнегасник FIPRON"
