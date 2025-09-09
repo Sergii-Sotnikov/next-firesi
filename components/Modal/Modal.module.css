@@ -19,18 +19,19 @@
   position: relative;
   width: 100%;
   max-width: 420px;
-  padding: 29px 16px 24px;
+  padding: 60px 16px 24px;
   border-radius: 11px;
   background-color: #111111;
   box-sizing: border-box;
   max-height: none;
   overflow: visible;
+  margin-top: 80px;
 }
 
 .closeButton {
   position: absolute;
-  top: 1px;
-  right: 3px;
+  top: 20px;
+  right: 20px;
   width: 32px;
   height: 32px;
   background: transparent;
@@ -42,10 +43,9 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-
 @media (min-width: 1440px) {
   .backdrop {
-    padding: 24px; 
+    padding: 24px;
   }
 
   .modal {
@@ -53,6 +53,7 @@
     padding: 70px 126px;
     border-radius: 25px;
     max-height: none;
+    margin-top: 0px;
   }
 
   .closeButton {

@@ -146,12 +146,13 @@
   }
 
 @media (min-width: 1440px) {
+
   .titleMob {
-    display: none;
+    display: none!important;
   }
   .mainDiv {
     margin: 0 auto;
-    width: 800px;
+    max-width: 800px;
     background-color: #111111;
     display: flex;
     flex-direction: column;
