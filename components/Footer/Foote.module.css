@@ -20,7 +20,7 @@
 .footerNavList {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
   padding-top: 8px;
   align-items: center;
   justify-content: center;
