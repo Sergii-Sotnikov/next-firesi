@@ -12,7 +12,7 @@ const HeroMain = () => {
     <section className={css.heroMain}>
       <div className={css.container}>
         <h1 className={css.heroMainTitle}>
-          іноваційна технологія
+          інноваційна технологія
           <br />
           <span className={css.heroMainTitleAdd}>
             прорив у світі <br className={css.mobileBr} /> пожежогасіння
