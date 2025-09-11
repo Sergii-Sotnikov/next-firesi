@@ -166,7 +166,7 @@ const ChoiceMobileSlider = () => {
                 </li>
                 <li className={css.descriptionItem}>
                   <p className={css.descriptionItemText}>
-                    гасіння літієвих акумуляторами (Li-ion, LiFePo4)
+                    гасіння літієвих акумуляторів (Li-ion, LiFePo4)
                   </p>
                 </li>
                 <li className={css.descriptionItem}>
@@ -246,7 +246,7 @@ const ChoiceMobileSlider = () => {
                 </li>
                 <li className={css.descriptionItem}>
                   <p className={css.descriptionItemText}>
-                    гасіння літієвих акумуляторами (Li-ion, LiFePo4)
+                    гасіння літієвих акумуляторів (Li-ion, LiFePo4)
                   </p>
                 </li>
                 <li className={css.descriptionItem}>
