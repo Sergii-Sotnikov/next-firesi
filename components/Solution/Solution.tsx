@@ -9,7 +9,7 @@ export default function Solution() {
         <p className={css.title}>Гасить абсолютно все!</p>
         <p className={css.addtitle}>
           багато загроз <br className={css.addtitleMobile}/> 
-          одне рішення<br className={css.addtitleMobile}/>
+          одне рішення <br className={css.addtitleMobile}/>
           вогнегасник <span className={css.addtitleMobileDefis}>- </span>FIRESI
         </p>
         <p className={css.text}>
