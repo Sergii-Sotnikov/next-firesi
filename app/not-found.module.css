@@ -1,0 +1,168 @@
+.notfound{
+    min-width: 100%;
+    padding: 200px 0;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 100%;
+    padding: 0 253px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+
+.errorImageWrap{
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+}
+
+
+.errorImage{
+  display: block;
+}
+
+
+.errorImageWrap::after{
+  content: "";
+  position: absolute;
+  width: 97px;
+  height: 102px;
+    top: 19px;
+    left: 174px;
+  background: url("/img/add404.png") no-repeat center / cover;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.titleError{
+    font-family: var(--font-alumni-pinstripe);
+font-weight: 800;
+font-size: 48px;
+line-height: 1;
+letter-spacing: 0.19em;
+text-align: center;
+color: #E00D1D;
+margin: 0px;
+}
+
+.textError{
+    font-family: 'Cera Stencil PRO Trial Medium';
+font-weight: 900;
+font-style: Black;
+font-size: 24px;
+line-height: 1.5;
+text-align: center;
+color: #ffffff;
+
+}
+
+.textErrorLogo{
+font-family: var(--font-inter);
+font-weight: 700;
+font-style: Bold;
+font-size: 27px;
+line-height: 1;
+text-align: center;
+  text-shadow:
+    -0.79px -0.57px 0 #ffb53f,
+    0.79px -0.79px 0 #ffb53f,
+    -0.79px 0.79px 0 #ffb53f,
+    0.79px 0.79px 0 #ffb53f;
+  transition: all 0.3s ease;
+  text-decoration: none;
+color: #040404;
+margin-left: 0 100px 0 10px;
+}
+
+.textErrorLogoAdd{
+    color: #E00D1D;
+}
+
+.btnBack {
+  height: 50px;
+  width: 230px;
+  margin: 0 auto;
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  background-image: url("/img/btn_fire_background.png");
+  background-size: 231px 105px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #000000;
+  text-shadow:
+    -0.59px -0.59px 0 #ffb53f,
+    0.59px -0.59px 0 #ffb53f,
+    -0.59px 0.59px 0 #ffb53f,
+    0.59px 0.59px 0 #ffb53f;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btnBack:hover,
+.btnBack:active {
+  color: #ffffff;
+  text-shadow:
+    -0.59px -0.59px 0 #000000,
+    0.59px -0.59px 0 #000000,
+    -0.59px 0.59px 0 #000000,
+    0.59px 0.59px 0 #000000;
+}
+
+.btnText {
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+.btnText::before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 41px;
+  position: absolute;
+  top: -5px;
+  left: 186px;
+  background-image: url("/img/fire.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.navError{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.addressPhone,
+.addressMail{
+font-family: var(--font-roboto);
+font-weight: 500;
+font-size: 32px;
+line-height: 1.43;
+letter-spacing: 0,13em;
+text-align: center;
+color: #ffffff;
+text-decoration: none;
+}
+
+
+

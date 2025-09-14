@@ -1,42 +1,47 @@
-import Link from 'next/link';
+import Link from "next/link";
+import css from "./not-found.module.css";
+import Image from "next/image";
+import { contacts } from "@/src/data/contacts";
+
 
 export default function NotFound() {
   return (
-    <div style={styles.wrapper}>
-      <h1 style={styles.title}>404</h1>
-      <p style={styles.text}>Сторінку не знайдено</p>
-      <Link href="/" style={styles.link}>
-        Повернутися на головну
-      </Link>
-    </div>
+    <section className={css.notfound}>
+      <div className={css.container}>
+       <div className={css.errorImageWrap}>
+          <Image
+            src="/img/desktop_404.png"
+            className={css.errorImage}
+            width={500}
+            height={200}
+            priority
+            alt="Сторінка не знайдена"
+          />
+        </div>
+        <h2 className={css.titleError}>
+          Сторінка не знайдена,
+          <br /> але ваша безпека завжди поруч.
+        </h2>
+        <p className={css.textError}>
+          Можливо, посилання застаріло або змінилось,
+          <br />
+          але команда <span className={css.textErrorLogo}>
+          {"\u00A0\u00A0\u00A0"}
+          Fire<span className={css.textErrorLogoAdd}>tech</span></span>{"\u00A0\u00A0\u00A0"}
+          готова допомогти:
+        </p>
+        <Link href="/" className={css.btnBack}>
+          <span className={css.btnText}>на головну</span>
+        </Link>
+        <nav className={css.navError}>
+        <a href="tel:+380989136599" className={css.addressPhone}>
+          {contacts.phone}
+        </a>
+        <a href="mailto:firesi@gmail.com" className={css.addressMail}>
+          {contacts.email}
+        </a>
+        </nav>
+      </div>
+    </section>
   );
 }
-
-const styles = {
-  wrapper: {
-    minHeight: '80vh',
-    display: 'flex',
-    flexDirection: 'column' as const,
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: '16px',
-    textAlign: 'center' as const,
-  },
-  title: {
-    fontSize: '72px',
-    fontWeight: 'bold',
-    margin: 0,
-  },
-  text: {
-    fontSize: '20px',
-    color: '#555',
-  },
-  link: {
-    marginTop: '12px',
-    padding: '10px 20px',
-    backgroundColor: '#e00d1d',
-    color: '#fff',
-    borderRadius: '6px',
-    textDecoration: 'none',
-  },
-};
