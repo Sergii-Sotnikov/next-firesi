@@ -209,7 +209,7 @@
 }
 
 .checkboxLabel {
-  padding: 5px 45px 5px 25px;
+  padding: 5px 45px 5px 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -217,7 +217,7 @@
   color: #fff;
   font-family: var(--font-roboto);
   font-weight: 400;
-  font-size: 12px;
+  font-size: clamp(12px, 4.6vw, 14px);
   line-height: 1.2;
   color: #fff;
 }
