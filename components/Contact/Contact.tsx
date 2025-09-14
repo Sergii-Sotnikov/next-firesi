@@ -195,7 +195,7 @@ export default function Contact() {
           <ul className={css.addressList}>
             <li className={css.addressItem}>
               <PhoneCall className={css.iconAddressPhone} size={42} />
-              <a href="tel:+380989136599" className={css.addressPhone}>
+              <a href={`tel:${contacts.email}`} className={css.addressPhone}>
                 {contacts.phone}
               </a>
             </li>
@@ -203,7 +203,7 @@ export default function Contact() {
               <svg className={css.iconEmail} width={42} height={42}>
                 <use href="/icons/sprite.svg#icon-email"></use>
               </svg>
-              <a href="mailto:firesi@gmail.com" className={css.addressMail}>
+              <a href={`mailto:${contacts.email}`} className={css.addressMail}>
                 {contacts.email}
               </a>
             </li>

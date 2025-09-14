@@ -34,10 +34,10 @@ export default function NotFound() {
           <span className={css.btnText}>на головну</span>
         </Link>
         <nav className={css.navError}>
-        <a href="tel:+380989136599" className={css.addressPhone}>
+        <a href={`tel:${contacts.email}`} className={css.addressPhone}>
           {contacts.phone}
         </a>
-        <a href="mailto:firesi@gmail.com" className={css.addressMail}>
+        <a href={`mailto:${contacts.email}`} className={css.addressMail}>
           {contacts.email}
         </a>
         </nav>
