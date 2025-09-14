@@ -87,17 +87,12 @@ export default function ІnstructionsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html 
-    lang="uk"
-    className={`${RobotoFont.variable} ${InterFont.variable}`}
-    >
-      <body>
+<>
         <HeaderCertificates />
         <main>{children}</main>
         <ContactMobile/>
         <Footer />
         <div id="modal-root" />
-      </body>
-    </html>
+</>
   );
 }

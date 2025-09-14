@@ -114,18 +114,13 @@ export default function FipronLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="uk"
-      className={`${RobotoFont.variable} ${AlumniSansSCFont.variable} ${AlumniSansPinstripeFont.variable} ${InterFont.variable}`}
-      >
-      <body>
+<>
         <HeaderFipron>
           <ClientModalButton productName="Замовити" id="1" />
         </HeaderFipron>
         <main>{children}</main>
         <Footer />
         <div id="modal-root" />
-      </body>
-    </html>
+</>
   );
 }
