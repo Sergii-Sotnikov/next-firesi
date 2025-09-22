@@ -97,7 +97,7 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
   return (
     <>
       <Toaster position="top-center" />
-      {!successful ? (<>
+      {successful ? (<>
       <p className={css.productName}>Замовити консультацію</p>
       <div className={css.callBackForm}>
         <Formik
