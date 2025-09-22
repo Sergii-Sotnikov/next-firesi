@@ -28,11 +28,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
-    {
-      url: "https://firetech.com.ua/apparat-dlya-mekhanicheskoy-chistki-litsa-v-domashnikh-usloviyakh-power-perfect-pore",
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
   ];
 }
