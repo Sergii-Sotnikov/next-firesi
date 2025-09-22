@@ -87,7 +87,6 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
       actions.resetForm();
       recaptchaRef.current?.reset();
       setRecaptchaToken(null);
-      closeModal();
     } catch (err) {
       console.error(err);
       toast.error("Сталася помилка при надсиланні. Спробуйте пізніше.");
