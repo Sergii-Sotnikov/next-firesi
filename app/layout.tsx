@@ -13,22 +13,12 @@ const AlumniSansPinstripeFont = Alumni_Sans_Pinstripe({ weight: ["400"], variabl
 const InterFont = Inter({ weight: ["400","500","700"], variable: "--font-inter", subsets: ["latin","cyrillic"], fallback: ["system-ui","Arial","sans-serif"], adjustFontFallback: false, display: "swap" });
 
 const siteUrl = "https://firetech.com.ua/";
-const ogImage = "/img/og/extinguisher.webp";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "FIRETECH - інноваційне рішення для пожежогасіння",
   description: "FIRESI - універсальні вогнегасники нового покоління...",
-  alternates: { canonical: "/" },
-  openGraph: {
-    title: "FIRETECH - інноваційне рішення для пожежогасіння",
-    description: "FIRESI - універсальні вогнегасники...",
-    url: "/",
-    siteName: "FIRETECH",
-    images: [{ url: ogImage, width: 563, height: 705, alt: "FIRETECH - інноваційне рішення для пожежогасіння" }],
-    locale: "uk_UA",
-    type: "website",
-  },
   robots: { index: true, follow: true, nocache: false, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
 };
 
