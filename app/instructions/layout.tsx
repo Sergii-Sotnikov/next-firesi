@@ -92,7 +92,6 @@ export default function ІnstructionsLayout({
         <main>{children}</main>
         <ContactMobile/>
         <Footer />
-        <div id="modal-root" />
 </>
   );
 }

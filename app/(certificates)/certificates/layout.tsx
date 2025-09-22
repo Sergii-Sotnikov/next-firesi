@@ -32,7 +32,6 @@ export default function CertificatesLayout({ children }: { children: React.React
       <main>{children}</main>
       <ContactMobile />
       <Footer />
-      <div id="modal-root" />
     </>
   );
 }

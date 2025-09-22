@@ -120,7 +120,6 @@ export default function FipronLayout({
         </HeaderFipron>
         <main>{children}</main>
         <Footer />
-        <div id="modal-root" />
 </>
   );
 }
