@@ -4,6 +4,7 @@ import CordFipron from "@/components/Fipron/CordFipron/CordFipron";
 import HeroFipron from "@/components/Fipron/HeroFipron/HeroFipron";
 import Mounting from "@/components/Fipron/Mounting/Mounting";
 import StickerFipron from "@/components/Fipron/StickerFipron/StickerFipron";
+import StickerVideo from "@/components/Fipron/StickerVideo/StickerVideo";
 import WorksFipron from "@/components/Fipron/WorksFipron/WorksFipron";
 
 const Fipron = () => {
@@ -14,10 +15,11 @@ const Fipron = () => {
       <CordFipron>
         <ClientModalButton productName="Замовити консультацію і розрахунок FIPRON Cord " />
       </CordFipron>
-            <StickerFipron>
+      <Mounting />
+      <StickerFipron>
         <ClientModalButton productName="Замовити консультацію і розрахунок FIPRON Sticker " />
       </StickerFipron>
-      <Mounting />
+      <StickerVideo />
       <Contact />
     </>
   );
