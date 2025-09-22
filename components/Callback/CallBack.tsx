@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import css from "./CallBack.module.css";
 import type { FormikHelpers } from "formik";
+import SuccessfullCall from "../Fipron/SuccessfullCall/SuccessfullCall";
 
 
 interface FormCallValues {
@@ -96,6 +97,7 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
   return (
     <>
       <Toaster position="top-center" />
+      {!successful ? (<>
       <p className={css.productName}>Замовити консультацію</p>
       <div className={css.callBackForm}>
         <Formik
@@ -230,6 +232,11 @@ export default function Callback({ closeModal, productName }: CallBackProps) {
           )}
         </Formik>
       </div>
+      </>):(<SuccessfullCall
+          closeModal={closeModal}
+          setSuccessful={setSuccessful}
+        />)}
+      
     </>
   );
 }
