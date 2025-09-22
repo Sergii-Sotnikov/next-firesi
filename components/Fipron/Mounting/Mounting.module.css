@@ -23,8 +23,21 @@
   line-height: 1;
   text-align: center;
   margin: 0px;
-  margin-bottom: 21px;
+  margin-bottom: 16px;
 }
+
+  .mountingText{
+  color: #ffffff;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: clamp(16px, 4.5vw, 18px);
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin: 0px;
+  margin-bottom: 60px;
+  }
 
 .videoWrapper {
   width: 100%;
@@ -59,8 +72,21 @@
 
   .mountingTitle {
     font-size: 40px;
+    font-weight: 900;
     line-height: 1;
-    margin: 0 0 80px;
+    margin: 0 0 60px;
+  }
+
+  .mountingText{
+  color: #ffffff;
+  padding-left: 25px;
+  padding-right: 50px;
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0px;
+  margin-bottom: 80px;
   }
 
   .videoWrapper {

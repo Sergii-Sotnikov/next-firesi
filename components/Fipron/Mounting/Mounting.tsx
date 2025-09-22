@@ -1,11 +1,17 @@
+import css from "./Mounting.module.css";
 
-import css from "./Mounting.module.css"
-
-const Mounting = ()=>{
-return (
+const Mounting = () => {
+  return (
     <section className={css.mounting}>
       <div className={css.container}>
-        <h2 className={css.mountingTitle}>як монтувати</h2>
+        <h2 className={css.mountingTitle}>Інструкція з монтажу:</h2>
+        <p className={css.mountingText}>
+          1. Вимкніть живлення електричної шафи.<br />
+          2. Зніміть захисну плівку з монтажних площ кріплення.<br />
+          3. Наклейте монтажні кріплення всередині електричної шафи та закріпіть шнур пластиковими стяжками.<br />
+          4. Переконайтеся, що пристрій надійно закріплений.<br />
+          5. Встановіть наклейку із зазначенням дати проведення монтажу.<br />
+        </p>
         <div className={css.videoWrapper}>
           <iframe
             width="100%"
@@ -20,6 +26,6 @@ return (
       </div>
     </section>
   );
-}
+};
 
-export default Mounting
+export default Mounting;

@@ -48,7 +48,7 @@ export default function Choice() {
                   </li>
                   <li className={css.descriptionItem}>
                     <p className={css.descriptionItemText}>
-                      Можна керувати лише однією рукою
+                      Можна керувати лише однією рукою, працює в будь-якому положенні.
                     </p>
                   </li>
                   <li className={css.descriptionItem}>
@@ -135,7 +135,7 @@ export default function Choice() {
                   </li>
                   <li className={css.descriptionItem}>
                     <p className={css.descriptionItemText}>
-                      гасіння літієвих акумуляторів (Li-ion, LiFePo4)
+                      Гасіння літієвих акумуляторів (Li-ion, LiFePo4)
                     </p>
                   </li>
                   <li className={css.descriptionItem}>
@@ -222,7 +222,7 @@ export default function Choice() {
                   </li>
                   <li className={css.descriptionItem}>
                     <p className={css.descriptionItemText}>
-                      гасіння літієвих акумуляторів (Li-ion, LiFePo4)
+                      Гасіння літієвих акумуляторів (Li-ion, LiFePo4)
                     </p>
                   </li>
                   <li className={css.descriptionItem}>
