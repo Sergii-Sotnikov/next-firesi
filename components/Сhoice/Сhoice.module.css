@@ -127,7 +127,7 @@
 .imageChoiseMobile {
   display: block;
   margin: 0 auto 8px;
-    width: 272px;
+    width: clamp(272px, 65vw, 352px);
   height: auto;
 }
 

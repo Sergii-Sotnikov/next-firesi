@@ -47,7 +47,7 @@ const ChoiceMobileSlider = () => {
             <p className={css.classText}>E — електрообладнання під напругою</p>
             <p className={css.classText}>
               F — кухонні жири й масла, може загасити до 20 літрів рослинної
-              олії.
+              олії
             </p>
           </div>
           <Image
@@ -84,7 +84,7 @@ const ChoiceMobileSlider = () => {
                 </li>
                 <li className={css.descriptionItem}>
                   <p className={css.descriptionItemText}>
-                    Можна керувати лише однією рукою, працює в будь-якому положенні.
+                    Можна керувати однією рукою, працює в будь-якому положенні.
                   </p>
                 </li>
                 <li className={css.descriptionItem}>
@@ -129,7 +129,7 @@ const ChoiceMobileSlider = () => {
             </p>
             <p className={css.classText}>
               F — кухонні жири й масла, може загасити до 100 літрів рослинної
-              олії.
+              олії
             </p>
           </div>
           <Image
@@ -209,7 +209,7 @@ const ChoiceMobileSlider = () => {
             <p className={css.classText}>E — електрообладнання під напругою</p>
             <p className={css.classText}>
               F — кухонні жири й масла, може гасити до 300 літрів рослинної
-              олії.
+              олії
             </p>
           </div>
           <Image

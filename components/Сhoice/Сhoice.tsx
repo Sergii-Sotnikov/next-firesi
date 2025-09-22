@@ -48,7 +48,7 @@ export default function Choice() {
                   </li>
                   <li className={css.descriptionItem}>
                     <p className={css.descriptionItemText}>
-                      Можна керувати лише однією рукою, працює в будь-якому положенні.
+                      Можна керувати однією рукою, працює в будь-якому положенні.
                     </p>
                   </li>
                   <li className={css.descriptionItem}>
