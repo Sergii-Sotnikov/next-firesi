@@ -8,8 +8,7 @@ interface SuccessfullCallProps {
 }
 
 const SuccessfullCall = ({
-  closeModal,
-  setSuccessful,
+  closeModal
 }: SuccessfullCallProps) => {
   return (
     <>
