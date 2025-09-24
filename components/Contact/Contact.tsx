@@ -14,6 +14,9 @@ import Link from "next/link";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
 import { contacts } from "@/src/data/contacts";
+import Modal from "../Modal/Modal";
+import SuccessfulOrder from "../SuccessfulOrder/SuccessfulOrder";
+import SuccessfullCall from "../Fipron/SuccessfullCall/SuccessfullCall";
 
 interface FormCallValues {
   name: string;
@@ -26,6 +29,11 @@ const myKeyRECAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 export default function Contact() {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [successful, setSuccessful] = useState<boolean>(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
 
   const initialFormCallValues: FormCallValues = {
     name: "",
@@ -72,8 +80,9 @@ export default function Contact() {
         const text = await res.text();
         throw new Error(text || "Помилка надсилання");
       }
-
       toast.success("Дякуємо! Ми вам зателефонуємо.");
+      setIsOpen(true);
+      setSuccessful(true);
       actions.resetForm();
       recaptchaRef.current?.reset();
       setRecaptchaToken(null);
@@ -109,7 +118,7 @@ export default function Contact() {
               onSubmit={handleSubmit}
               validationSchema={CallSchema}
             >
-              {({ isValid, dirty , isSubmitting }) => (
+              {({ isValid, dirty, isSubmitting }) => (
                 <Form className={css.form}>
                   <input
                     type="text"
@@ -183,7 +192,11 @@ export default function Contact() {
                   >
                     <span className={css.btnContactSpan}>
                       {isSubmitting ? "Відправка..." : "замовити дзвінок"}
-                      {isSubmitting ? "": <PhoneCall className={css.iconPhone} />}
+                      {isSubmitting ? (
+                        ""
+                      ) : (
+                        <PhoneCall className={css.iconPhone} />
+                      )}
                     </span>
                   </button>
                 </Form>
@@ -209,7 +222,9 @@ export default function Contact() {
             </li>
             <li className={css.addressItem}>
               <TbTruckDelivery className={css.iconAddressDelivery} size={42} />
-              <p className={css.addressDeliveryText}>доставка {contacts.delivery}</p>
+              <p className={css.addressDeliveryText}>
+                доставка {contacts.delivery}
+              </p>
             </li>
             <li className={css.addressItem}>
               <LiaMapMarkedAltSolid
@@ -226,7 +241,9 @@ export default function Contact() {
           <ul className={css.addressListMobile}>
             <li className={css.addressItem}>
               <TbTruckDelivery className={css.iconAddressDelivery} size={42} />
-              <p className={css.addressDeliveryText}>доставка {contacts.delivery}</p>
+              <p className={css.addressDeliveryText}>
+                доставка {contacts.delivery}
+              </p>
             </li>
 
             <li className={css.addressItem}>
@@ -290,6 +307,13 @@ export default function Contact() {
           </ul>
         </address>
       </div>
+      {isOpen && (
+        <Modal closeModal={closeModal}>
+          <SuccessfullCall
+            closeModal={closeModal}
+          />
+        </Modal>
+      )}
     </section>
   );
 }

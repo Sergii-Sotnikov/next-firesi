@@ -4,7 +4,7 @@ import { IoChevronBackOutline } from "react-icons/io5";
 
 interface SuccessfullCallProps {
   closeModal: () => void;
-  setSuccessful: Dispatch<SetStateAction<boolean>>;
+  setSuccessful?: Dispatch<SetStateAction<boolean>>;
 }
 
 const SuccessfullCall = ({
