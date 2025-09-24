@@ -48,9 +48,7 @@ export async function sendTelegramMessage(htmlMessage: string): Promise<void> {
       }
     );
     
-    if (response.ok){
-        console.log(response.ok, 'dasdasdasdasdasd')
-        return;} 
+    if (response.ok) return;
     
 
     // Ретраїмо на лімітах/тимчасових збоях
