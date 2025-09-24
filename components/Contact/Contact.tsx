@@ -29,7 +29,7 @@ const myKeyRECAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 export default function Contact() {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [successful, setSuccessful] = useState<boolean>(false);
+
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
@@ -81,7 +81,6 @@ export default function Contact() {
       }
       toast.success("Дякуємо! Ми вам зателефонуємо.");
       setIsOpen(true);
-      setSuccessful(true);
       actions.resetForm();
       recaptchaRef.current?.reset();
       setRecaptchaToken(null);
