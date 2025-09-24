@@ -3,6 +3,6 @@ export const contacts = {
   "email": "stopfirelviv@gmail.com",
   "address": "21 Zhovkivska Street, Malekhiv",
   "city": "Lviv",
-  "country": "Ukraine",
+  "country": "Ukr",
   "delivery": "Meest, SAT"
 } as const;
