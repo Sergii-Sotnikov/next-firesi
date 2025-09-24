@@ -15,7 +15,6 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
 import { contacts } from "@/src/data/contacts";
 import Modal from "../Modal/Modal";
-import SuccessfulOrder from "../SuccessfulOrder/SuccessfulOrder";
 import SuccessfullCall from "../Fipron/SuccessfullCall/SuccessfullCall";
 
 interface FormCallValues {
