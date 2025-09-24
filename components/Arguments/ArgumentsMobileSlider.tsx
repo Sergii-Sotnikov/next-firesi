@@ -53,7 +53,7 @@ const ArgumentsMobileSlider = () => {
             <li className={css.additionalItem}>
               <p className={css.text}>
                 вогнегасники FRSE-F2 та FRSE-F6, для використання на пожежах під
-                напругою до 1000В
+                напругою до 1000В.
               </p>
             </li>
           </ul>

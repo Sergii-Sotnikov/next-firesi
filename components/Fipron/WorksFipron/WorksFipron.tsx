@@ -9,7 +9,7 @@ const WorksFipron = () => {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/hbNLyqIrR3A"
+            src="https://www.youtube.com/embed/Ca9C34MVQy8"
             title="FIPRON Video"
             frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
