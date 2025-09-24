@@ -30,8 +30,6 @@ export default function Contact() {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
-
-  const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
   const initialFormCallValues: FormCallValues = {

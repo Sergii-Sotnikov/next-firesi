@@ -2,29 +2,9 @@ import type { Metadata } from "next";
 import "../globals.css";
 import HeaderCertificates from "@/components/HeaderCertificates/HeaderCertificates";
 import Footer from "@/components/Footer/Footer";
-import {
-  Roboto,
-  Inter
-} from "next/font/google";
 import ContactMobile from "@/components/ContactMobile/ContactMobile";
 
-const RobotoFont = Roboto({
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto",
-  subsets: ["latin", "cyrillic"],
-  fallback: ["system-ui", "Arial", "sans-serif"],
-  adjustFontFallback: false,
-  display: "swap",
-});
 
-const InterFont = Inter({
-  weight: ["400", "500", "700"],
-  variable: "--font-inter",
-  subsets: ["latin", "cyrillic"],
-  fallback: ["system-ui", "Arial", "sans-serif"],
-  adjustFontFallback: false,
-  display: "swap",
-});
 
 const siteUrl = "https://firetech.com.ua";
 const pagePath = "/instructions";

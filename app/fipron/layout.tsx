@@ -3,48 +3,8 @@ import "../globals.css";
 import HeaderFipron from "@/components/Fipron/HeaderFipron/HeaderFipron";
 import ClientModalButton from "@/components/Fipron/ClientModalButton/ClientModalButton";
 import Footer from "@/components/Footer/Footer";
-import {
-  Roboto,
-  Alumni_Sans_SC,
-  Alumni_Sans_Pinstripe,
-  Inter,
-} from "next/font/google";
 
-const RobotoFont = Roboto({
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto",
-  subsets: ["latin", "cyrillic"],
-  fallback: ["system-ui", "Arial", "sans-serif"],
-  adjustFontFallback: false,
-  display: "swap",
-});
 
-const AlumniSansSCFont = Alumni_Sans_SC({
-  weight: ["400", "500", "700"],
-  variable: "--font-alumni-sans-sc",
-  subsets: ["latin", "cyrillic"],
-  fallback: ["system-ui", "Arial", "sans-serif"],
-  adjustFontFallback: false,
-  display: "swap",
-});
-
-const AlumniSansPinstripeFont = Alumni_Sans_Pinstripe({
-  weight: ["400"],
-  variable: "--font-alumni-pinstripe",
-  subsets: ["latin"],
-  fallback: ["system-ui", "Arial", "sans-serif"],
-  adjustFontFallback: false,
-  display: "swap",
-});
-
-const InterFont = Inter({
-  weight: ["400", "500", "700"],
-  variable: "--font-inter",
-  subsets: ["latin", "cyrillic"],
-  fallback: ["system-ui", "Arial", "sans-serif"],
-  adjustFontFallback: false,
-  display: "swap",
-});
 
 const siteUrl = "https://firetech.com.ua/";
 const pagePath = "/fipron";

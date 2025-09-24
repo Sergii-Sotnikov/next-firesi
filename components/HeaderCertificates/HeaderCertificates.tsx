@@ -2,7 +2,7 @@
 import Link from "next/link";
 import css from "./HeaderCertificates.module.css"
 import { MdOutlineArrowBackIos } from "react-icons/md";
-import HeaderMobile from "@/components/Header/Mobile/HeaderMobile";
+
 
 
 
