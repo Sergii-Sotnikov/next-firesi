@@ -47,6 +47,8 @@ export default function Contact() {
       .required("Номер телефону обов'язковий"),
   });
 
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
   const handleSubmit = async (
     values: FormCallValues,
     actions: FormikHelpers<FormCallValues>
@@ -88,13 +90,12 @@ export default function Contact() {
     }
   };
 
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
-
   return (
     <section className={css.contact} id="contacts">
       <Toaster position="top-center" />
       <div className={css.container}>
         <h3 className={css.title}>контакти</h3>
+
         <div className={css.information}>
           <div className={css.mapWrapper}>
             <iframe
@@ -106,7 +107,7 @@ export default function Contact() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title={`Карта: ${contacts.address}, ${contacts.city}, ${contacts.country}`}
-            ></iframe>
+            />
           </div>
 
           <div className={css.contactForm}>
@@ -117,6 +118,7 @@ export default function Contact() {
             >
               {({ isValid, dirty, isSubmitting }) => (
                 <Form className={css.form}>
+                  {/* Honeypot */}
                   <input
                     type="text"
                     name="company"
@@ -133,6 +135,7 @@ export default function Contact() {
                       name="name"
                       className={css.inputName}
                       placeholder="введіть ІМ'Я"
+                      aria-label="Введіть ім'я"
                     />
                     <ErrorMessage
                       name="name"
@@ -149,6 +152,7 @@ export default function Contact() {
                       className={css.inputPhone}
                       placeholder="+380"
                       maxLength={13}
+                      aria-label="Введіть номер телефону у форматі +380XXXXXXXXX"
                     />
                     <ErrorMessage
                       name="phone"
@@ -164,6 +168,7 @@ export default function Contact() {
                       name="message"
                       className={css.inputMessage}
                       placeholder="Введіть Ваше повідомлення"
+                      aria-label="Введіть повідомлення"
                     />
                     <ErrorMessage
                       name="message"
@@ -171,6 +176,7 @@ export default function Contact() {
                       className={css.ErrorMessage}
                     />
                   </div>
+
                   {isValid && dirty && (
                     <div className={css.recaptchaWrap}>
                       <ReCAPTCHA
@@ -186,13 +192,13 @@ export default function Contact() {
                     className={css.btnContact}
                     type="submit"
                     disabled={!(isValid && dirty && recaptchaToken)}
+                    aria-disabled={!(isValid && dirty && !!recaptchaToken)}
+                    aria-label="Замовити дзвінок"
                   >
                     <span className={css.btnContactSpan}>
                       {isSubmitting ? "Відправка..." : "замовити дзвінок"}
-                      {isSubmitting ? (
-                        ""
-                      ) : (
-                        <PhoneCall className={css.iconPhone} />
+                      {!isSubmitting && (
+                        <PhoneCall className={css.iconPhone} aria-hidden="true" />
                       )}
                     </span>
                   </button>
@@ -201,33 +207,44 @@ export default function Contact() {
             </Formik>
           </div>
         </div>
+
         <address className={css.details}>
+          {/* Desktop list */}
           <ul className={css.addressList}>
             <li className={css.addressItem}>
-              <PhoneCall className={css.iconAddressPhone} size={42} />
-              <a href={`tel:${contacts.email}`} className={css.addressPhone}>
+              <PhoneCall className={css.iconAddressPhone} size={42} aria-hidden="true" />
+              {/* виправлено: було tel:${contacts.email} */}
+              <a
+                href={`tel:${contacts.phone}`}
+                className={css.addressPhone}
+                aria-label={`Зателефонувати: ${contacts.phone}`}
+              >
                 {contacts.phone}
               </a>
             </li>
+
             <li className={css.addressItem}>
-              <svg className={css.iconEmail} width={42} height={42}>
+              <svg className={css.iconEmail} width={42} height={42} aria-hidden="true">
                 <use href="/icons/sprite.svg#icon-email"></use>
               </svg>
-              <a href={`mailto:${contacts.email}`} className={css.addressMail}>
+              <a
+                href={`mailto:${contacts.email}`}
+                className={css.addressMail}
+                aria-label={`Написати на email: ${contacts.email}`}
+              >
                 {contacts.email}
               </a>
             </li>
+
             <li className={css.addressItem}>
-              <TbTruckDelivery className={css.iconAddressDelivery} size={42} />
+              <TbTruckDelivery className={css.iconAddressDelivery} size={42} aria-hidden="true" />
               <p className={css.addressDeliveryText}>
                 доставка {contacts.delivery}
               </p>
             </li>
+
             <li className={css.addressItem}>
-              <LiaMapMarkedAltSolid
-                className={css.iconAddressLocation}
-                size={42}
-              />
+              <LiaMapMarkedAltSolid className={css.iconAddressLocation} size={42} aria-hidden="true" />
               <p className={css.addressLocationText}>
                 {contacts.address}. <br />
                 {contacts.city}, {contacts.country}.
@@ -235,48 +252,59 @@ export default function Contact() {
             </li>
           </ul>
 
+          {/* Mobile list */}
           <ul className={css.addressListMobile}>
             <li className={css.addressItem}>
-              <TbTruckDelivery className={css.iconAddressDelivery} size={42} />
+              <TbTruckDelivery className={css.iconAddressDelivery} size={42} aria-hidden="true" />
               <p className={css.addressDeliveryText}>
                 доставка {contacts.delivery}
               </p>
             </li>
 
             <li className={css.addressItem}>
-              <LiaMapMarkedAltSolid
-                className={css.iconAddressLocation}
-                size={42}
-              />
+              <LiaMapMarkedAltSolid className={css.iconAddressLocation} size={42} aria-hidden="true" />
               <p className={css.addressLocationText}>
                 {contacts.address}. <br />
                 {contacts.city}, {contacts.country}.
               </p>
             </li>
+
             <li className={css.addressItem}>
-              <PhoneCall className={css.iconAddressPhone} size={42} />
-              <a href="tel:+380989136599" className={css.addressPhone}>
+              <PhoneCall className={css.iconAddressPhone} size={42} aria-hidden="true" />
+              
+              <a
+                href={`tel:${contacts.phone}`}
+                className={css.addressPhone}
+                aria-label={`Зателефонувати: ${contacts.phone}`}
+              >
                 {contacts.phone}
               </a>
             </li>
+
             <li className={css.addressItem}>
-              <svg className={css.iconEmail} width={42} height={42}>
+              <svg className={css.iconEmail} width={42} height={42} aria-hidden="true">
                 <use href="/icons/sprite.svg#icon-email"></use>
               </svg>
-              <a href="mailto:firesi@gmail.com" className={css.addressMail}>
+              <a
+                href={`mailto:${contacts.email}`}
+                className={css.addressMail}
+                aria-label={`Написати на email: ${contacts.email}`}
+              >
                 {contacts.email}
               </a>
             </li>
+
             <li>
-              <ul className={css.navList}>
+              <ul className={css.navList} aria-label="Соціальні мережі">
                 <li className={css.navItem}>
                   <Link
                     href="https://www.facebook.com/profile.php?id=61577673877070"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={css.socItem}
+                    aria-label="Facebook - сторінка Firetech"
                   >
-                    <FaFacebookF size={28} />
+                    <FaFacebookF size={28} aria-hidden="true" focusable="false" />
                   </Link>
                 </li>
                 <li className={css.navItem}>
@@ -285,8 +313,9 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={css.socItem}
+                    aria-label="Instagram - сторінка Firetech"
                   >
-                    <FaInstagram size={28} />
+                    <FaInstagram size={28} aria-hidden="true" focusable="false" />
                   </Link>
                 </li>
                 <li className={css.navItem}>
@@ -295,8 +324,9 @@ export default function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={css.socItem}
+                    aria-label="TikTok - сторінка Firetech"
                   >
-                    <AiFillTikTok size={28} />
+                    <AiFillTikTok size={28} aria-hidden="true" focusable="false" />
                   </Link>
                 </li>
               </ul>
@@ -304,11 +334,10 @@ export default function Contact() {
           </ul>
         </address>
       </div>
+
       {isOpen && (
         <Modal closeModal={closeModal}>
-          <SuccessfullCall
-            closeModal={closeModal}
-          />
+          <SuccessfullCall closeModal={closeModal} />
         </Modal>
       )}
     </section>
