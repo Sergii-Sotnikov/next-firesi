@@ -105,6 +105,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              title={`Карта: ${contacts.address}, ${contacts.city}, ${contacts.country}`}
             ></iframe>
           </div>
 
