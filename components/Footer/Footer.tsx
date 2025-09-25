@@ -36,8 +36,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={css.footerSocItem}
+                aria-label="Facebook - сторінка Firetech"
               >
-                <FaFacebookF size={32} />
+                <FaFacebookF size={32} aria-hidden="true" focusable="false"/>
               </Link>
             </li>
             <li className={css.footerNavItem}>
@@ -46,8 +47,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={css.footerSocItem}
+                aria-label="Instagram - сторінка Firetech"
               >
-                <FaInstagram size={32} />
+                <FaInstagram size={32} aria-hidden="true" focusable="false"/>
               </Link>
             </li>
             <li className={css.footerNavItem}>
@@ -56,8 +58,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={css.footerSocItem}
+                aria-label="TikTok - сторінка Firetech"
               >
-                <AiFillTikTok size={32} />
+                <AiFillTikTok size={32} aria-hidden="true" focusable="false"/>
               </Link>
             </li>
             </div>

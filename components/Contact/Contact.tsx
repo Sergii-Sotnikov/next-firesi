@@ -326,7 +326,7 @@ export default function Contact() {
                     className={css.socItem}
                     aria-label="TikTok - сторінка Firetech"
                   >
-                    <AiFillTikTok size={28} aria-hidden="true" focusable="false" />
+                    <AiFillTikTok size={28} aria-hidden="true" focusable="false"/>
                   </Link>
                 </li>
               </ul>
