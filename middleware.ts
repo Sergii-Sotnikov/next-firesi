@@ -17,7 +17,6 @@ export function middleware(req: NextRequest) {
   const protoHeader = req.headers.get("x-forwarded-proto");
   const proto = (protoHeader || url.protocol.replace(":", "")).toLowerCase();
 
-
   const targetHost = host === "www.firetech.com.ua" ? "firetech.com.ua" : host;
   const shouldForceHttps = isProd && !isPreview && !isLocalHost;
   const targetProto = shouldForceHttps ? "https" : proto;
@@ -25,7 +24,10 @@ export function middleware(req: NextRequest) {
 
   if (url.pathname === "/&") {
     url.pathname = "/";
+    return NextResponse.redirect(url, { status: 308 });
+
   }
+
 
   const needHostChange = targetHost !== host;
   const needProtoChange = targetProto !== proto;
@@ -39,9 +41,6 @@ export function middleware(req: NextRequest) {
   return NextResponse.next();
 }
 
-
 export const config = {
-  matcher: [
-    "/((?!_next/static|_next/image|assets/|fonts/|images/).*)",
-  ],
+  matcher: ["/((?!_next/static|_next/image|assets/|fonts/|images/).*)"],
 };
