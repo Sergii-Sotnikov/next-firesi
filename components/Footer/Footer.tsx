@@ -29,8 +29,7 @@ const Footer = () => {
                 Повернутись на початок
               </Link>
             </li>
-            <div className={css.wrapperSoc}>
-            <li className={css.footerNavItem}>
+            <li className={`${css.footerNavItem} ${css.mobileSoc}`}>
               <Link
                 href="https://www.facebook.com/profile.php?id=61577673877070"
                 target="_blank"
@@ -41,7 +40,7 @@ const Footer = () => {
                 <FaFacebookF size={32} aria-hidden="true" focusable="false"/>
               </Link>
             </li>
-            <li className={css.footerNavItem}>
+            <li className={`${css.footerNavItem} ${css.mobileSoc}`}>
               <Link
                 href="https://www.instagram.com/stop_fire_lviv?utm_source=ig_web_button_share_sheet&igsh=MWtwYmVvaDJieTI3dA%3D%3D"
                 target="_blank"
@@ -52,7 +51,7 @@ const Footer = () => {
                 <FaInstagram size={32} aria-hidden="true" focusable="false"/>
               </Link>
             </li>
-            <li className={css.footerNavItem}>
+            <li className={`${css.footerNavItem} ${css.mobileSoc}`}>
               <Link
                 href="https://www.tiktok.com/"
                 target="_blank"
@@ -63,8 +62,7 @@ const Footer = () => {
                 <AiFillTikTok size={32} aria-hidden="true" focusable="false"/>
               </Link>
             </li>
-            </div>
-          </ul>
+            </ul>
         </nav>
       </div>
     </section>
