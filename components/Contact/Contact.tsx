@@ -103,9 +103,9 @@ export default function Contact() {
               width={575}
               height={350}
               style={{ border: 0 }}
-              allowFullScreen
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
+              sandbox="allow-scripts allow-same-origin allow-popups"
               title={`Карта: ${contacts.address}, ${contacts.city}, ${contacts.country}`}
             />
           </div>
@@ -198,7 +198,10 @@ export default function Contact() {
                     <span className={css.btnContactSpan}>
                       {isSubmitting ? "Відправка..." : "замовити дзвінок"}
                       {!isSubmitting && (
-                        <PhoneCall className={css.iconPhone} aria-hidden="true" />
+                        <PhoneCall
+                          className={css.iconPhone}
+                          aria-hidden="true"
+                        />
                       )}
                     </span>
                   </button>
@@ -212,7 +215,11 @@ export default function Contact() {
           {/* Desktop list */}
           <ul className={css.addressList}>
             <li className={css.addressItem}>
-              <PhoneCall className={css.iconAddressPhone} size={42} aria-hidden="true" />
+              <PhoneCall
+                className={css.iconAddressPhone}
+                size={42}
+                aria-hidden="true"
+              />
               {/* виправлено: було tel:${contacts.email} */}
               <a
                 href={`tel:${contacts.phone}`}
@@ -224,7 +231,12 @@ export default function Contact() {
             </li>
 
             <li className={css.addressItem}>
-              <svg className={css.iconEmail} width={42} height={42} aria-hidden="true">
+              <svg
+                className={css.iconEmail}
+                width={42}
+                height={42}
+                aria-hidden="true"
+              >
                 <use href="/icons/sprite.svg#icon-email"></use>
               </svg>
               <a
@@ -237,14 +249,22 @@ export default function Contact() {
             </li>
 
             <li className={css.addressItem}>
-              <TbTruckDelivery className={css.iconAddressDelivery} size={42} aria-hidden="true" />
+              <TbTruckDelivery
+                className={css.iconAddressDelivery}
+                size={42}
+                aria-hidden="true"
+              />
               <p className={css.addressDeliveryText}>
                 доставка {contacts.delivery}
               </p>
             </li>
 
             <li className={css.addressItem}>
-              <LiaMapMarkedAltSolid className={css.iconAddressLocation} size={42} aria-hidden="true" />
+              <LiaMapMarkedAltSolid
+                className={css.iconAddressLocation}
+                size={42}
+                aria-hidden="true"
+              />
               <p className={css.addressLocationText}>
                 {contacts.address}. <br />
                 {contacts.city}, {contacts.country}.
@@ -255,14 +275,22 @@ export default function Contact() {
           {/* Mobile list */}
           <ul className={css.addressListMobile}>
             <li className={css.addressItem}>
-              <TbTruckDelivery className={css.iconAddressDelivery} size={42} aria-hidden="true" />
+              <TbTruckDelivery
+                className={css.iconAddressDelivery}
+                size={42}
+                aria-hidden="true"
+              />
               <p className={css.addressDeliveryText}>
                 доставка {contacts.delivery}
               </p>
             </li>
 
             <li className={css.addressItem}>
-              <LiaMapMarkedAltSolid className={css.iconAddressLocation} size={42} aria-hidden="true" />
+              <LiaMapMarkedAltSolid
+                className={css.iconAddressLocation}
+                size={42}
+                aria-hidden="true"
+              />
               <p className={css.addressLocationText}>
                 {contacts.address}. <br />
                 {contacts.city}, {contacts.country}.
@@ -270,8 +298,12 @@ export default function Contact() {
             </li>
 
             <li className={css.addressItem}>
-              <PhoneCall className={css.iconAddressPhone} size={42} aria-hidden="true" />
-              
+              <PhoneCall
+                className={css.iconAddressPhone}
+                size={42}
+                aria-hidden="true"
+              />
+
               <a
                 href={`tel:${contacts.phone}`}
                 className={css.addressPhone}
@@ -282,7 +314,12 @@ export default function Contact() {
             </li>
 
             <li className={css.addressItem}>
-              <svg className={css.iconEmail} width={42} height={42} aria-hidden="true">
+              <svg
+                className={css.iconEmail}
+                width={42}
+                height={42}
+                aria-hidden="true"
+              >
                 <use href="/icons/sprite.svg#icon-email"></use>
               </svg>
               <a
@@ -304,7 +341,11 @@ export default function Contact() {
                     className={css.socItem}
                     aria-label="Facebook - сторінка Firetech"
                   >
-                    <FaFacebookF size={28} aria-hidden="true" focusable="false" />
+                    <FaFacebookF
+                      size={28}
+                      aria-hidden="true"
+                      focusable="false"
+                    />
                   </Link>
                 </li>
                 <li className={css.navItem}>
@@ -315,7 +356,11 @@ export default function Contact() {
                     className={css.socItem}
                     aria-label="Instagram - сторінка Firetech"
                   >
-                    <FaInstagram size={28} aria-hidden="true" focusable="false" />
+                    <FaInstagram
+                      size={28}
+                      aria-hidden="true"
+                      focusable="false"
+                    />
                   </Link>
                 </li>
                 <li className={css.navItem}>
@@ -326,7 +371,11 @@ export default function Contact() {
                     className={css.socItem}
                     aria-label="TikTok - сторінка Firetech"
                   >
-                    <AiFillTikTok size={28} aria-hidden="true" focusable="false"/>
+                    <AiFillTikTok
+                      size={28}
+                      aria-hidden="true"
+                      focusable="false"
+                    />
                   </Link>
                 </li>
               </ul>
