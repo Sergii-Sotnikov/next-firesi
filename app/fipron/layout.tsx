@@ -4,10 +4,7 @@ import HeaderFipron from "@/components/Fipron/HeaderFipron/HeaderFipron";
 import ClientModalButton from "@/components/Fipron/ClientModalButton/ClientModalButton";
 import Footer from "@/components/Footer/Footer";
 
-
-
-const siteUrl = "https://firetech.com.ua/";
-const pagePath = "/fipron";
+const siteUrl = "https://firetech.com.ua";
 const ogImage = "/img/og/fipron.webp";
 
 export const metadata: Metadata = {
@@ -35,20 +32,19 @@ export const metadata: Metadata = {
     "квартира",
     "замовити консультацію",
   ],
-  alternates: {
-    canonical: "/fipron",
-  },
+  alternates: { canonical: "/fipron" },
   openGraph: {
-    title: `FIPRON: автономні системи пожежогасіння - Sticker та Cord`,
-    description: `FIPRON Sticker та FIPRON Cord гасять займання на старті: автономно, безпечно для електроніки й людей`,
-    url: `${siteUrl}${pagePath}`,
+    title: "FIPRON: автономні системи пожежогасіння - Sticker та Cord",
+    description:
+      "FIPRON Sticker та FIPRON Cord гасять займання на старті: автономно, безпечно для електроніки й людей",
+    url: "/fipron",
     siteName: "FIRETECH",
     images: [
       {
         url: ogImage,
         width: 557,
         height: 649,
-        alt: `FIPRON: автономні системи пожежогасіння`,
+        alt: "FIPRON: автономні системи пожежогасіння",
       },
     ],
     locale: "uk_UA",
@@ -74,12 +70,12 @@ export default function FipronLayout({
   children: React.ReactNode;
 }) {
   return (
-<>
-        <HeaderFipron>
-          <ClientModalButton productName="Замовити" id="1" />
-        </HeaderFipron>
-        <main>{children}</main>
-        <Footer />
-</>
+    <>
+      <HeaderFipron>
+        <ClientModalButton productName="Замовити" id="1" />
+      </HeaderFipron>
+      <main>{children}</main>
+      <Footer />
+    </>
   );
 }

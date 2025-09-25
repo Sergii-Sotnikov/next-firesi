@@ -4,10 +4,7 @@ import HeaderCertificates from "@/components/HeaderCertificates/HeaderCertificat
 import Footer from "@/components/Footer/Footer";
 import ContactMobile from "@/components/ContactMobile/ContactMobile";
 
-
-
-const siteUrl = "https://firetech.com.ua";
-const pagePath = "/instructions";
+const siteUrl = "https://firetech.com.ua"; // без конечного слэша
 const ogImage = "/img/webp/FRSE-F6_instructions.webp";
 
 export const metadata: Metadata = {
@@ -28,20 +25,19 @@ export const metadata: Metadata = {
     "обслуговування",
     "перевірка працездатності",
   ],
-  alternates: {
-    canonical: "/instructions",
-  },
+  alternates: { canonical: "/instructions" },
   openGraph: {
-    title: `Інструкція з використання | FIRETECH`,
-    description: `Покрокова інструкція з використання вогнегасника FRSE-F6, а також FIPRON Sticker та FIPRON Cord: монтаж, умови експлуатації, правила безпеки, обслуговування та перевірка працездатності.`,
-    url: `${siteUrl}${pagePath}`,
+    title: "Інструкція з використання | FIRETECH",
+    description:
+      "Покрокова інструкція з використання вогнегасника FRSE-F6, а також FIPRON Sticker та FIPRON Cord: монтаж, умови експлуатації, правила безпеки, обслуговування та перевірка працездатності.",
+    url: "/instructions", // относительный путь
     siteName: "FIRETECH",
     images: [
       {
         url: ogImage,
         width: 436,
         height: 630,
-        alt: `Інструкція з використання продукції FIRETECH`,
+        alt: "Інструкція з використання продукції FIRETECH",
       },
     ],
     locale: "uk_UA",
@@ -61,17 +57,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ІnstructionsLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function InstructionsLayout({ children }: { children: React.ReactNode }) {
   return (
-<>
-        <HeaderCertificates />
-        <main>{children}</main>
-        <ContactMobile/>
-        <Footer />
-</>
+    <>
+      <HeaderCertificates />
+      <main>{children}</main>
+      <ContactMobile />
+      <Footer />
+    </>
   );
 }
