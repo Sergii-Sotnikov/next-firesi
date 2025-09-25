@@ -12,7 +12,7 @@ const AlumniSansSCFont = Alumni_Sans_SC({ weight: ["400","500","700"], variable:
 const AlumniSansPinstripeFont = Alumni_Sans_Pinstripe({ weight: ["400"], variable: "--font-alumni-pinstripe", subsets: ["latin"], fallback: ["system-ui","Arial","sans-serif"], adjustFontFallback: false, display: "swap" });
 const InterFont = Inter({ weight: ["400","500","700"], variable: "--font-inter", subsets: ["latin","cyrillic"], fallback: ["system-ui","Arial","sans-serif"], adjustFontFallback: false, display: "swap" });
 
-const siteUrl = "https://firetech.com.ua/";
+const siteUrl = "https://firetech.com.ua";
 
 
 export const metadata: Metadata = {

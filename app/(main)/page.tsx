@@ -14,14 +14,21 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "FIRETECH - інноваційне рішення для пожежогасіння",
-  description: "FIRESI - універсальні вогнегасники нового покоління...",
+  description: "FIRESI - універсальні вогнегасники...",
   alternates: { canonical: "/" },
   openGraph: {
     title: "FIRETECH - інноваційне рішення для пожежогасіння",
     description: "FIRESI - універсальні вогнегасники...",
     url: "/",
     siteName: "FIRETECH",
-    images: [{ url: "/img/og/extinguisher.webp", width: 563, height: 705, alt: "FIRETECH - інноваційне рішення для пожежогасіння" }],
+    images: [
+      {
+        url: "/img/og/extinguisher.webp",
+        width: 563,
+        height: 705,
+        alt: "FIRETECH - інноваційне рішення для пожежогасіння",
+      },
+    ],
     locale: "uk_UA",
     type: "website",
   },
