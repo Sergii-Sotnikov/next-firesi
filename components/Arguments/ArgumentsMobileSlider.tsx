@@ -40,7 +40,7 @@ const ArgumentsMobileSlider = () => {
       <SwiperSlide aria-label="Аргумент 2">
         <div className={css.item}>
           <p className={css.number}>2</p>
-          <p className={css.itemTitle}>Гасить обаднання під напругою! </p>
+          <p className={css.itemTitle}>Гасить обладнання під напругою! </p>
           <p className={css.text}>
             Безпечний під час гасіння обладднання яке перебуває під напругою!!!
           </p>
