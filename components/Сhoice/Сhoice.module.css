@@ -46,9 +46,8 @@
 }
 
 .title {
-  font-family: "Cera Stencil PRO";
+  font-family: var(--font-cera-stencil);
   font-weight: 900;
-  font-style: Black;
   font-size: clamp(24px, 7vw, 32px);
   line-height: 1;
   text-align: center;
@@ -235,9 +234,8 @@
   }
 
   .title {
-    font-family: "Cera Stencil PRO";
+  font-family: var(--font-cera-stencil);
     font-weight: 900;
-    font-style: Black;
     font-size: 48px;
     line-height: 1;
     letter-spacing: 0;

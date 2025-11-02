@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "../globals.css";
 import HeaderFipron from "@/components/Fipron/HeaderFipron/HeaderFipron";
 import ClientModalButton from "@/components/Fipron/ClientModalButton/ClientModalButton";
-import Footer from "@/components/Footer/Footer";
 
 const siteUrl = "https://firetech.com.ua";
 const ogImage = "/img/og/fipron.webp";
@@ -75,7 +74,6 @@ export default function FipronLayout({
         <ClientModalButton productName="Замовити" id="1" />
       </HeaderFipron>
       <main>{children}</main>
-      <Footer />
     </>
   );
 }

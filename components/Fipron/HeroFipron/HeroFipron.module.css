@@ -38,9 +38,8 @@
 .heroTitleText {
   margin: 0;
   color: #ffffff;
-  font-family: "Cera Stencil PRO";
+  font-family: var(--font-cera-stencil);
   font-weight: 900;
-  font-style: Black;
   font-size: clamp(24px, 6.2vw, 28px);
   line-height: 1;
 }
@@ -130,9 +129,8 @@
   .heroTitleText {
     color: #ffffff;
     text-transform: uppercase;
-    font-family: "Cera Stencil PRO";
+  font-family: var(--font-cera-stencil);
     font-weight: 900;
-    font-style: Black;
     font-size: 48px;
     line-height: 1.5;
     letter-spacing: 0.03em;

@@ -15,7 +15,7 @@
  {
   color: #fff;
   margin: 0px 0px 21px 0px;
-  font-family: "Cera Stencil PRO";
+  font-family: var(--font-cera-stencil);
   font-weight: 900;
   font-style: Black;
   font-size: clamp(16px, 4.29vw, 18px);
@@ -55,7 +55,7 @@
 .title {
   color: #fff;
   margin: 0px 0px 93px 0px;
-  font-family: "Cera Stencil PRO";
+  font-family: var(--font-cera-stencil);
   font-weight: 900;
   font-style: Black;
   font-size: 48px;

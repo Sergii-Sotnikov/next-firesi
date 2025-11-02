@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import HeaderCertificates from "@/components/HeaderCertificates/HeaderCertificates";
-import Footer from "@/components/Footer/Footer";
 import ContactMobile from "@/components/ContactMobile/ContactMobile";
 
 const siteUrl = "https://firetech.com.ua";
@@ -44,10 +42,8 @@ export const metadata: Metadata = {
 export default function CertificatesLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <HeaderCertificates />
       <main>{children}</main>
       <ContactMobile />
-      <Footer />
     </>
   );
 }

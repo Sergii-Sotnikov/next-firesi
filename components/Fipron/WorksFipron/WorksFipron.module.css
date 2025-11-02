@@ -18,7 +18,7 @@
 .worksTitle {
   color: #ffffff;
   text-transform: uppercase;
-  font-family: "Cera Stencil PRO", sans-serif;
+  font-family: var(--font-cera-stencil);
   font-weight: 900;
   font-style: Black;
   font-size: clamp(20px, 6.2vw, 28px);
@@ -60,9 +60,8 @@
 .worksTitle {
   color: #ffffff;
   text-transform: uppercase;
-font-family: "Cera Stencil PRO", sans-serif;
+  font-family: var(--font-cera-stencil);
   font-weight: 900;
-  font-style: Black;
   font-size: 40px;
   line-height: 1;
   text-align: center;

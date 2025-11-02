@@ -10,7 +10,7 @@
   border: 1.4px solid rgb(255, 255, 255);
   border-radius: 4px;
   background-color: transparent;
-  font-family: "Cera Stencil PRO Trial Medium";
+  font-family: var(--font-cera-stencil);
   font-weight: 500;
   font-style: Medium;
   font-size: 24px;
@@ -66,7 +66,7 @@
   border: 1.7px solid rgb(255, 255, 255);
   border-radius: 7px;
   background-color: transparent;
-  font-family: "Cera Stencil PRO Trial Medium";
+  font-family: var(--font-cera-stencil);
   font-weight: 500;
   font-style: Medium;
   font-size: 29px;

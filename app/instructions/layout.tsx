@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "../globals.css";
-import HeaderCertificates from "@/components/HeaderCertificates/HeaderCertificates";
-import Footer from "@/components/Footer/Footer";
 import ContactMobile from "@/components/ContactMobile/ContactMobile";
 
 const siteUrl = "https://firetech.com.ua"; // без конечного слэша
@@ -60,10 +58,9 @@ export const metadata: Metadata = {
 export default function InstructionsLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <HeaderCertificates />
+      {/* <HeaderCertificates /> */}
       <main>{children}</main>
       <ContactMobile />
-      <Footer />
     </>
   );
 }
